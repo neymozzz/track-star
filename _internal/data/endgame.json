@@ -1,0 +1,879 @@
+{
+    "college_tiers": [
+        {
+            "id": "tier_elite_d1",
+            "requirements": {
+                "score_gte": 92
+            },
+            "offers": [
+                "Eugene",
+                "Austin",
+                "Baton Rouge",
+                "Gainesville",
+                "Fayetteville",
+                "Lexington",
+                "Corvallis",
+                "College Station"
+            ],
+            "template": [
+                "The call comes from a name on the wall of every track kid's bedroom. Full scholarship, travel stipend, and a coaching staff that has sent athletes to the Olympics.",
+                "They flew your coach out to talk. Full ride on the table. You're not choosing a school -- you're choosing a legacy program."
+            ]
+        },
+        {
+            "id": "tier_power5_d1",
+            "requirements": {
+                "score_gte": 82
+            },
+            "offers": [
+                "Los Angeles",
+                "Athens",
+                "Ann Arbor",
+                "Knoxville",
+                "Columbus",
+                "Tuscaloosa",
+                "Tallahassee",
+                "Chapel Hill",
+                "State College",
+                "Madison"
+            ],
+            "template": [
+                "A Power Five program offers a full athletic scholarship. The facilities are top-tier and the conference sends athletes to nationals every year.",
+                "They liked what they saw on your highlight tape. Scholarship offer, indoor and outdoor seasons, a roster built to compete at the top."
+            ]
+        },
+        {
+            "id": "tier_mid_major_d1",
+            "requirements": {
+                "score_gte": 70
+            },
+            "offers": [
+                "Cincinnati",
+                "Houston",
+                "Provo",
+                "Ames",
+                "Blacksburg",
+                "Boulder",
+                "Ypsilanti",
+                "South Orange",
+                "Boston",
+                "Greenville",
+                "Indianapolis",
+                "Milwaukee"
+            ],
+            "template": [
+                "A mid-major D1 program with a strong track history. Partial scholarship, a coach who believes in your upside, and a clear path to conference finals.",
+                "They recruit smart. The program punches above its weight, and you like what you see in the culture."
+            ]
+        },
+        {
+            "id": "tier_d2",
+            "requirements": {
+                "score_gte": 55
+            },
+            "offers": [
+                "Fox Valley State University",
+                "Highland State University",
+                "Cedar Ridge State University",
+                "Prairie Crossing State University",
+                "North Shore State University"
+            ],
+            "template": [
+                "A competitive D2 program known for churning out All-Americans. Partial aid and a coaching staff that develops athletes who slip through the D1 cracks.",
+                "Programs see upside. They like your toughness and week-to-week reliability. It's partial aid and a coach who believes you'll take a leap."
+            ]
+        },
+        {
+            "id": "tier_d3",
+            "requirements": {
+                "score_gte": 38
+            },
+            "offers": [
+                "Berkshire College",
+                "Northfield College",
+                "Elmwood College",
+                "Cannon River College",
+                "Sierra Grove College"
+            ],
+            "template": [
+                "An academically elite D3 program. No athletic scholarship -- they don't give them -- but financial aid is strong and the team competes seriously.",
+                "The academics drew you in first. The track program is a bonus. You'll train hard and graduate with a degree that opens doors."
+            ]
+        },
+        {
+            "id": "tier_club_run",
+            "requirements": {
+                "score_gte": 0
+            },
+            "offers": [
+                "Local University Club Team",
+                "Community College Program",
+                "Midland University",
+                "Indiana Tech"
+            ],
+            "template": [
+                "You keep competing because you love it. You find a program that fits your life.",
+                "Not every career needs a stadium. Some just need a place to start."
+            ]
+        }
+    ],
+    "career_epilogues": [
+        {
+            "id": "epi_olympic_medalist",
+            "requirements": {
+                "score_gte": 97
+            },
+            "text": [
+                "You stand on the medal podium. The anthem plays for someone else -- but the bronze around your neck is yours. You think about every 5 a.m. practice, every injury, every meet where you had nothing left and went anyway. This is what it was for.",
+                "The moment the final ends you know. You look at the board and see your name at the top of a result sheet that will exist forever. Olympic medalist. Nobody can take that.",
+                "Years later, people still ask about that final. You tell them about the quiet walk back to the warmup area, the noise fading, the medal heavy in your hands."
+            ]
+        },
+        {
+            "id": "epi_olympian",
+            "requirements": {
+                "score_gte": 93
+            },
+            "text": [
+                "You spent years racing at the edge of Olympic level, where one great day could change everything and one small mistake could end a season.",
+                "Trials-caliber track stayed within reach, and the standard you carried into big meets shaped how people remembered your career.",
+                "Even after your peak years, those near-Olympic seasons remained the benchmark you measured everything else against."
+            ]
+        },
+        {
+            "id": "epi_national_amateur_champ",
+            "requirements": {
+                "score_gte": 88
+            },
+            "text": [
+                "After college, you stayed in serious national-level amateur meets and proved your event still belonged in strong fields.",
+                "Your best post-college seasons showed that high school success had grown into something durable and respected.",
+                "You left the sport with the sense that, at your best, you could line up with almost anyone and belong there."
+            ]
+        },
+        {
+            "id": "epi_elite",
+            "requirements": {
+                "score_gte": 80
+            },
+            "event_variants": {
+                "sprint": [
+                    "College training clicked, and your best sprint races looked sharp, fluid, and fast enough to stand out."
+                ],
+                "hurdles": [
+                    "College training sharpened your rhythm and timing, and your best hurdle races carried real authority."
+                ],
+                "jumps": [
+                    "College training clicked, and your best jumps turned runway speed into marks people remembered."
+                ],
+                "throws": [
+                    "College training clicked, and your best throws started landing with the kind of authority serious athletes respect."
+                ],
+                "distance": [
+                    "College training clicked, and your best distance races showed patience, control, and a finishing gear that held up."
+                ]
+            },
+            "text": [
+                "College training clicks. Your best days get faster and faster.",
+                "You leave the sport with a highlight reel and a calm confidence: you belonged.",
+                "The people you raced with remember you as a standard-setter.",
+                "Years later, your college teammates still tell stories that start with your name.",
+                "You kept the varsity jacket. Not for the jacket -- for what it took to earn it.",
+                "When younger athletes ask what it was like, you tell them the truth: it was earned twice, once in training and once under the lights."
+            ]
+        },
+        {
+            "id": "epi_solid",
+            "requirements": {
+                "score_gte": 55
+            },
+            "text": [
+                "You become the athlete coaches trust in pressure situations.",
+                "Good seasons stack into a career you're proud to claim.",
+                "You were never flashy, but you were always there when it counted.",
+                "Your name comes up when coaches talk about athletes who got everything out of themselves.",
+                "The trophies fit on one shelf, but the habits lasted a lifetime.",
+                "You learned to compete, and that turned out to be transferable to everything else."
+            ]
+        },
+        {
+            "id": "epi_lifelong_runner",
+            "requirements": {
+                "score_gte": 0
+            },
+            "text": [
+                "You stay close to the sport -- open meets, alumni races, weekend training runs.",
+                "It never really ends. You just keep moving.",
+                "The finish lines are smaller now, but the reasons are bigger.",
+                "Some people quit sports and miss the winning. You just missed the moving, so you never stopped.",
+                "Every spring, when the first meets start up, something in you still checks the schedule."
+            ]
+        }
+    ],
+    "career_signatures": [
+        {
+            "id": "sig_big_meet_winner",
+            "priority": 100,
+            "requirements": {
+                "championship_titles_gte": 3
+            },
+            "event_variants": {
+                "sprint": [
+                    "When championships arrived, your sprint mechanics usually held together better than everyone else's."
+                ],
+                "hurdles": [
+                    "Big meets tended to bring out your best hurdle rhythm, and that is where your reputation was made."
+                ],
+                "jumps": [
+                    "Your biggest championship marks usually came when the runway felt loudest and the pressure was highest."
+                ],
+                "throws": [
+                    "In championship settings, you were known for producing serious marks when the circle tightened up."
+                ],
+                "distance": [
+                    "Your best distance races often came in championship fields, where patience and nerve mattered most."
+                ]
+            },
+            "text": [
+                "When championships arrived, you had a habit of finding another level."
+            ],
+            "title": "Big Meet Winner"
+        },
+        {
+            "id": "sig_podium_presence",
+            "priority": 80,
+            "requirements": {
+                "championship_podiums_gte": 5
+            },
+            "event_variants": {
+                "sprint": [
+                    "You built your career on surviving rounds, showing up in finals, and giving yourself a chance to matter."
+                ],
+                "hurdles": [
+                    "You became a regular presence in big hurdle finals, where clean races put you in the mix again and again."
+                ],
+                "jumps": [
+                    "Meet after meet, you gave yourself real chances with clean series and composed attempts."
+                ],
+                "throws": [
+                    "Across seasons, you kept putting together throwing series that made you a factor late in meets."
+                ],
+                "distance": [
+                    "You were the kind of distance racer who kept appearing near the front when races started to matter."
+                ]
+            },
+            "text": [
+                "You were the kind of athlete who kept showing up when results were on the line."
+            ],
+            "title": "Podium Presence"
+        },
+        {
+            "id": "sig_event_specialist",
+            "priority": 60,
+            "requirements": {
+                "specialization_ratio_gte": 0.6
+            },
+            "event_variants": {
+                "sprint": [
+                    "You became closely identified with one sprint event, and people knew exactly what version of you they were getting."
+                ],
+                "hurdles": [
+                    "You made one hurdle event your calling card, and the repetition sharpened your edge there."
+                ],
+                "jumps": [
+                    "One field event became your signature, and over time you learned how to own its tiny details."
+                ],
+                "throws": [
+                    "You turned one throwing event into your specialty, refining it until your best series had a clear identity."
+                ],
+                "distance": [
+                    "You became known for one distance race in particular, and your pacing instincts there grew unusually sharp."
+                ]
+            },
+            "text": [
+                "Over time, one event became unmistakably yours."
+            ],
+            "title": "Event Specialist"
+        },
+        {
+            "id": "sig_resilient_competitor",
+            "priority": 40,
+            "requirements": {
+                "injuries_gte": 2,
+                "experience_meets_gte": 24
+            },
+            "event_variants": {
+                "sprint": [
+                    "Even with setbacks, you kept returning to the blocks and rebuilding your race shape."
+                ],
+                "hurdles": [
+                    "Setbacks never fully erased your timing; you kept rebuilding your hurdle rhythm and finding your way back."
+                ],
+                "jumps": [
+                    "Injuries and interruptions cost you momentum, but you kept finding your way back to the runway."
+                ],
+                "throws": [
+                    "Training interruptions never fully broke your rhythm; you kept returning to the circle and competing."
+                ],
+                "distance": [
+                    "Interrupted seasons never pushed you out for long; you kept returning to mileage, patience, and racing."
+                ]
+            },
+            "text": [
+                "Setbacks changed parts of the journey, but they never fully took you out of it."
+            ],
+            "title": "Resilient Competitor"
+        },
+        {
+            "id": "sig_serial_champion",
+            "priority": 110,
+            "requirements": {
+                "championship_titles_gte": 6
+            },
+            "event_variants": {
+                "sprint": [
+                    "Championship sprint finals stopped being tests and became showcases; winning them was simply what you did."
+                ],
+                "hurdles": [
+                    "Championship hurdle races bent to your rhythm so often that opponents raced for second before the gun."
+                ],
+                "jumps": [
+                    "Championship runways became your stage; the biggest marks kept coming when the medals were on the line."
+                ],
+                "throws": [
+                    "Championship circles belonged to you; year after year, the winning mark had your name beside it."
+                ],
+                "distance": [
+                    "Championship distance fields learned to race for second; when it counted, the front of the pack was yours."
+                ]
+            },
+            "text": [
+                "Winning championships stopped being the dream and became the routine."
+            ],
+            "title": "Serial Champion"
+        },
+        {
+            "id": "sig_decorated_veteran",
+            "priority": 70,
+            "requirements": {
+                "experience_meets_gte": 40,
+                "achievements_gte": 6
+            },
+            "event_variants": {
+                "sprint": [
+                    "Four years of sprint races left a trail of accolades, and the resume spoke before you ever settled into the blocks."
+                ],
+                "hurdles": [
+                    "Season after season over the barriers added up to a list of honors most hurdlers only read about."
+                ],
+                "jumps": [
+                    "The medals and marks accumulated quietly until your name carried weight at every pit and runway in the region."
+                ],
+                "throws": [
+                    "Every season in the circle added another line to the resume, until the introductions took a while."
+                ],
+                "distance": [
+                    "The miles turned into medals, and by the end your name on a start list changed how the race was run."
+                ]
+            },
+            "text": [
+                "The honors piled up a season at a time until the resume spoke for itself."
+            ],
+            "title": "Decorated Veteran"
+        },
+        {
+            "id": "sig_iron_availability",
+            "priority": 50,
+            "requirements": {
+                "injuries_lte": 0,
+                "experience_meets_gte": 30
+            },
+            "event_variants": {
+                "sprint": [
+                    "Four years of sprinting and you never missed a start; your durability became as feared as your speed."
+                ],
+                "hurdles": [
+                    "In an event that punishes bodies, you cleared every season without missing a meet."
+                ],
+                "jumps": [
+                    "All those takeoffs and landings, and you answered the call every single week."
+                ],
+                "throws": [
+                    "Through every training cycle and every heavy week, you never missed a competition."
+                ],
+                "distance": [
+                    "All that mileage and you never missed a race; showing up healthy became your quiet superpower."
+                ]
+            },
+            "text": [
+                "Whatever else happened, you were always on the start line."
+            ],
+            "title": "Never Missed a Start"
+        },
+        {
+            "id": "sig_grinder",
+            "priority": 20,
+            "requirements": {
+                "experience_meets_gte": 24
+            },
+            "event_variants": {
+                "sprint": [
+                    "No shortcuts, no drama -- just four years of showing up to sprint against whoever was in the next lane."
+                ],
+                "hurdles": [
+                    "You stacked hurdle races week after week, and the steady work became its own kind of identity."
+                ],
+                "jumps": [
+                    "Week after week you took your attempts, marked your steps, and got a little harder to beat."
+                ],
+                "throws": [
+                    "You took your three throws every week, rain or shine, and the work compounded quietly."
+                ],
+                "distance": [
+                    "You logged the races the way you logged the miles -- steadily, honestly, without ceremony."
+                ]
+            },
+            "text": [
+                "Nothing about your career was handed over. Every result was built a week at a time."
+            ],
+            "title": "The Grinder"
+        }
+    ],
+    "post_hs_lines": {
+        "conditional_lines": {
+            "technique_85_mentality_85": "After racing, you became a respected collegiate track coach.",
+            "technique_80": "You stayed close to the sport, helping younger athletes with technique and meet-day preparation.",
+            "strength_95": {
+                "throws": "For a while, your power translated into another arena before track kept drawing you back.",
+                "default": "For a while, your physicality translated into another arena before track pulled you back in."
+            },
+            "strength_85": "You kept one foot in the weight room long after your racing days ended.",
+            "speed_90": {
+                "sprint": "You were invited to sprint camps and private sessions, where younger athletes wanted to learn from your speed.",
+                "hurdles": "You became a valued voice at speed and hurdle camps, where younger athletes wanted to learn your rhythm and race habits.",
+                "jumps": "You spent time around jump camps and runway sessions, where younger athletes wanted to learn from your speed and timing.",
+                "default": "Your athletic quickness kept drawing younger athletes to you for advice and training sessions."
+            },
+            "stamina_88": {
+                "distance": "Long runs stayed with you, and eventually you found your way to road races and the marathon scene.",
+                "default": "Endurance work stayed part of your life long after your main racing years ended."
+            },
+            "recovery_85": "You learned how to train smart, and that kept you active for decades.",
+            "toughness_88": "People remembered you as someone who showed up when conditions were hardest."
+        },
+        "random_pool": [
+            "At 41, you were still fit enough to win the occasional turkey trot.",
+            "You helped organize a community road race that kept the local running scene alive.",
+            "People from the local high school still called when they needed an extra set of eyes on meet day.",
+            "You kept a pair of spikes on a shelf and never fully stopped thinking like a racer.",
+            "Masters meets gave you a second competitive life, and you came away with a few medals there too.",
+            "You never lost your taste for the quiet, early miles before sunrise."
+        ]
+    },
+    "career_outcomes": [
+        {
+            "id": "out_olympic_medalist",
+            "title": "Olympic Medalist",
+            "prestige": 100,
+            "requirements": {
+                "score_gte": 97,
+                "achievements_gte": 10,
+                "championship_titles_gte": 3,
+                "experience_meets_gte": 44,
+                "specialization_ratio_gte": 0.5,
+                "injuries_lte": 1
+            },
+            "text": [
+                "You qualified for the Trials and turned the moment into history, reaching an Olympic podium through years of precision under pressure."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You became an Olympic medalist in sprint events, delivering perfect mechanics when the margin was microscopic."
+                ],
+                "jumps": [
+                    "You earned an Olympic medal in the jumps by hitting your biggest mark when the final was at stake."
+                ],
+                "hurdles": [
+                    "You won an Olympic medal in hurdles by trusting your cadence under pressure no one can simulate."
+                ],
+                "throws": [
+                    "You became an Olympic medalist in the throws with world-class timing, power, and competitive control."
+                ],
+                "distance": [
+                    "You reached the Olympic podium in distance racing through tactical patience and fearless closing pace."
+                ]
+            }
+        },
+        {
+            "id": "out_olympic_trials_qualifier",
+            "title": "Olympic Trials Qualifier",
+            "prestige": 90,
+            "requirements": {
+                "score_gte": 90,
+                "achievements_gte": 8,
+                "championship_titles_gte": 2,
+                "experience_meets_gte": 40,
+                "specialization_ratio_gte": 0.45
+            },
+            "text": [
+                "You earned an Olympic Trials lane and proved your event translated to the highest domestic stage, where margins are measured in fractions."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You reached Olympic Trials form in sprint events, where hundredths separated lanes and you still belonged."
+                ],
+                "jumps": [
+                    "You qualified for Olympic Trials in the jumps by pairing speed on the runway with clutch board discipline."
+                ],
+                "hurdles": [
+                    "You qualified for Olympic Trials in hurdles by holding race rhythm at speeds few athletes can sustain."
+                ],
+                "throws": [
+                    "You made Olympic Trials in the throws by refining release windows until elite marks became repeatable."
+                ],
+                "distance": [
+                    "You reached the Olympic Trials in distance races through years of volume, timing, and race-day restraint."
+                ]
+            }
+        },
+        {
+            "id": "out_national_level_competitor",
+            "title": "National-Level Competitor",
+            "prestige": 80,
+            "requirements": {
+                "score_gte": 82,
+                "achievements_gte": 6,
+                "championship_titles_gte": 1,
+                "experience_meets_gte": 36,
+                "specialization_ratio_gte": 0.4
+            },
+            "text": [
+                "Your college career matured into national-level racing, with consistent championship performances that kept your name in serious conversations."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "At the national level, your sprint execution stayed sharp enough to survive rounds and contend in finals."
+                ],
+                "jumps": [
+                    "You reached national standards in the jumps by repeating quality attempts when others fouled or faded."
+                ],
+                "hurdles": [
+                    "You became a national-level hurdler by pairing speed with composure over barriers when races got tight."
+                ],
+                "throws": [
+                    "You rose to national throwing circles through technical discipline and the ability to adjust mid-competition."
+                ],
+                "distance": [
+                    "National distance fields tested everything, and you answered with controlled pacing and a reliable late move."
+                ]
+            }
+        },
+        {
+            "id": "out_college_scholarship_athlete",
+            "title": "College Scholarship Athlete",
+            "prestige": 65,
+            "requirements": {
+                "score_gte": 70,
+                "achievements_gte": 4,
+                "championship_podiums_gte": 2,
+                "experience_meets_gte": 30,
+                "specialization_ratio_gte": 0.35
+            },
+            "text": [
+                "You signed a scholarship offer and delivered as a dependable college contributor, turning potential into repeat results when it counted."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "On scholarship, you delivered in high-pressure sprint races and kept producing when lineups tightened."
+                ],
+                "jumps": [
+                    "Your scholarship career turned runway consistency into points, and your best jumps came in big meets."
+                ],
+                "hurdles": [
+                    "Your scholarship years were built on rhythm and precision, and your hurdle races held up under pressure."
+                ],
+                "throws": [
+                    "You earned scholarship value by building dependable throwing rounds and finding extra distance late in seasons."
+                ],
+                "distance": [
+                    "You justified the scholarship with smart distance racing and strong championship splits when it mattered."
+                ]
+            }
+        },
+        {
+            "id": "out_coaching_career",
+            "title": "Coaching Career",
+            "prestige": 55,
+            "requirements": {
+                "score_gte": 65,
+                "achievements_gte": 5,
+                "championship_podiums_gte": 2,
+                "experience_meets_gte": 30
+            },
+            "text": [
+                "After competing, you moved to the other side of the clipboard and built a coaching career grounded in detail, trust, and race-day composure."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You became a sprint coach known for starts, transition mechanics, and race plans athletes could trust."
+                ],
+                "jumps": [
+                    "You built your coaching name in the jumps, translating technical detail into consistent championship marks."
+                ],
+                "hurdles": [
+                    "You built a coaching career teaching hurdle rhythm, helping athletes race fast without losing form."
+                ],
+                "throws": [
+                    "You transitioned into throws coaching, where your technical eye helped athletes unlock cleaner releases."
+                ],
+                "distance": [
+                    "You moved into distance coaching and developed runners who understood pacing as well as grit."
+                ]
+            }
+        },
+        {
+            "id": "out_injury_what_if",
+            "title": "Injury What-If Career",
+            "prestige": 45,
+            "requirements": {
+                "score_gte": 60,
+                "achievements_gte": 4,
+                "injuries_gte": 2,
+                "experience_meets_gte": 24
+            },
+            "text": [
+                "You showed national-caliber flashes, but repeated injuries changed the arc; teammates still talk about what might have been on a healthy run."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "Injuries interrupted your sprint peak, leaving behind split times that still hint at what was possible."
+                ],
+                "jumps": [
+                    "Injuries limited your jumping run, but your peak attempts still get mentioned as near-breakthrough moments."
+                ],
+                "hurdles": [
+                    "Repeated setbacks in hurdle cycles changed the arc, and people still wonder about your healthy ceiling."
+                ],
+                "throws": [
+                    "Setbacks in training cycles narrowed your throwing prime, though your top marks proved real upside."
+                ],
+                "distance": [
+                    "Injury blocks disrupted your distance build, and your best races remain a strong what-if story."
+                ]
+            }
+        },
+        {
+            "id": "out_walk_on_college_athlete",
+            "title": "Walk-On College Athlete",
+            "prestige": 35,
+            "requirements": {
+                "score_gte": 35,
+                "achievements_gte": 1,
+                "experience_meets_gte": 20
+            },
+            "text": [
+                "You walked on at the college level and earned your place through consistency, handling the grind without guarantees and improving each season."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You walked on and carved out relay spots through clean starts and relentless sprint work."
+                ],
+                "jumps": [
+                    "You walked on and kept improving in the field, stacking marks through patient technical work."
+                ],
+                "hurdles": [
+                    "You walked on and earned trust in hurdle groups by turning technique reps into meet-day results."
+                ],
+                "throws": [
+                    "You walked on and found your place in the throws crew with steady gains and reliable series."
+                ],
+                "distance": [
+                    "You walked on and became a dependable scorer by handling mileage and racing with discipline."
+                ]
+            }
+        },
+        {
+            "id": "out_olympic_finalist",
+            "title": "Olympic Finalist",
+            "prestige": 95,
+            "requirements": {
+                "score_gte": 94,
+                "achievements_gte": 9,
+                "championship_titles_gte": 3,
+                "experience_meets_gte": 42,
+                "specialization_ratio_gte": 0.5
+            },
+            "text": [
+                "You made an Olympic final and competed with the best in the world, close enough to the podium to know exactly what it costs."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You reached an Olympic sprint final, one of the eight fastest people alive on the night it mattered."
+                ],
+                "jumps": [
+                    "You jumped in an Olympic final, trading attempts with the best in the world under the brightest lights."
+                ],
+                "hurdles": [
+                    "You ran an Olympic hurdle final, holding world-class rhythm on the sport's biggest stage."
+                ],
+                "throws": [
+                    "You threw in an Olympic final, your best series landing among the greatest in the world."
+                ],
+                "distance": [
+                    "You raced an Olympic distance final, covering every move the world's best could throw at you."
+                ]
+            }
+        },
+        {
+            "id": "out_conference_champion",
+            "title": "Conference Champion",
+            "prestige": 75,
+            "requirements": {
+                "score_gte": 76,
+                "achievements_gte": 5,
+                "championship_titles_gte": 1,
+                "experience_meets_gte": 33,
+                "specialization_ratio_gte": 0.4
+            },
+            "text": [
+                "Your college years peaked with a conference title, the kind of championship that hangs in a field house forever."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You won a conference sprint title and anchored the program's points for years."
+                ],
+                "jumps": [
+                    "You became a conference champion in the jumps, your winning mark posted on the field house wall."
+                ],
+                "hurdles": [
+                    "You took a conference hurdle crown with the cleanest race of your life when it counted most."
+                ],
+                "throws": [
+                    "You won a conference title in the circle, out-throwing the field on championship weekend."
+                ],
+                "distance": [
+                    "You closed out a conference final to win the title, the race your teammates still bring up."
+                ]
+            }
+        },
+        {
+            "id": "out_school_record_legacy",
+            "title": "School Record Legacy",
+            "prestige": 60,
+            "requirements": {
+                "score_gte": 66,
+                "achievements_gte": 4,
+                "championship_podiums_gte": 3,
+                "experience_meets_gte": 28
+            },
+            "text": [
+                "Your name went up on the record board and stayed there, the mark every kid in the program measured themselves against."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "Your sprint times became the school standard, the numbers taped inside lockers as the ones to chase."
+                ],
+                "jumps": [
+                    "Your best jump became the school record, the tape mark on the runway nobody has reached since."
+                ],
+                "hurdles": [
+                    "Your hurdle record outlasted your years there, a time that made every successor race history as well as the field."
+                ],
+                "throws": [
+                    "Your throw stood as the school record, the sector line coaches point to when they talk about ceilings."
+                ],
+                "distance": [
+                    "Your distance records anchored the school's all-time list, splits that still settle arguments at practice."
+                ]
+            }
+        },
+        {
+            "id": "out_team_captain",
+            "title": "College Team Captain",
+            "prestige": 50,
+            "requirements": {
+                "score_gte": 55,
+                "achievements_gte": 3,
+                "experience_meets_gte": 28
+            },
+            "text": [
+                "You became the athlete a college program was built around day to day -- captain, standard-setter, the one coaches trusted with the room."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You captained a college sprint group, setting the tone in the blocks and in the weight room."
+                ],
+                "jumps": [
+                    "You led a college jumps crew, the veteran voice at the pit who steadied championship nerves."
+                ],
+                "hurdles": [
+                    "You captained the hurdle group, the one who taught freshmen how to race scared and clean at once."
+                ],
+                "throws": [
+                    "You anchored a college throws squad as captain, running the circle with an even hand."
+                ],
+                "distance": [
+                    "You captained the distance group, the one who set the paces and held the standard on long days."
+                ]
+            }
+        },
+        {
+            "id": "out_late_bloomer",
+            "title": "Late Bloomer",
+            "prestige": 40,
+            "requirements": {
+                "score_gte": 45,
+                "achievements_gte": 2,
+                "experience_meets_gte": 24
+            },
+            "text": [
+                "Your best track came at the very end of high school, and you carried that late momentum into a college career that kept trending up."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "Your sprint times dropped fastest in your final season, and college coaches bet on the trajectory."
+                ],
+                "jumps": [
+                    "Your biggest jumps came late, and the upward arc earned you a college runway to keep climbing."
+                ],
+                "hurdles": [
+                    "Your hurdle races clicked in your last season, and the late surge carried you onto a college roster."
+                ],
+                "throws": [
+                    "Your marks jumped in your final year as the technique caught up, and college coaches saw a thrower still ascending."
+                ],
+                "distance": [
+                    "Your final season was your best by every measure, and a college program took the bet on where you were headed."
+                ]
+            }
+        },
+        {
+            "id": "out_club_runner_for_life",
+            "title": "Athlete for Life",
+            "prestige": 20,
+            "requirements": {
+                "score_gte": 0
+            },
+            "text": [
+                "The results faded, but the sport never did; you kept training, kept entering, and kept the athlete part of yourself alive."
+            ],
+            "event_variants": {
+                "sprint": [
+                    "You never stopped being a sprinter at heart, still finding open meets and a lane to attack."
+                ],
+                "jumps": [
+                    "You kept jumping wherever there was a pit and an open entry, because the flight never got old."
+                ],
+                "hurdles": [
+                    "You kept a set of hurdles in your life one way or another, coaching kids over their first barriers."
+                ],
+                "throws": [
+                    "You kept throwing at open meets and alumni gatherings, the implement bag never quite retired."
+                ],
+                "distance": [
+                    "You folded into the local running scene, where the races got longer and the stopwatch got kinder."
+                ]
+            }
+        }
+    ]
+}

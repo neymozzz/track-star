@@ -1,0 +1,274 @@
+{
+  "version": "1.3",
+  "meet_rosters": {
+    "regular_season": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "local",
+        "club",
+        "class"
+      ]
+    },
+    "club_championship": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "club",
+        "class"
+      ]
+    },
+    "class_meet": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "class",
+        "state"
+      ]
+    },
+    "state_meet": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "state",
+        "regional"
+      ]
+    },
+    "regional_meet": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "regional",
+        "national"
+      ]
+    },
+    "national_meet": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "national",
+        "elite"
+      ]
+    }
+  },
+  "npc_teams_by_tier": {
+    "local": [
+      "Jefferson High",
+      "Franklin High",
+      "Northside High",
+      "Central High School",
+      "Kennedy High School",
+      "Lakewood High School",
+      "Pioneer High School",
+      "Liberty High School",
+      "Eastside High School",
+      "Grandview High School"
+    ],
+    "club": [
+      "Lincoln High School",
+      "Washington Academy",
+      "Eastbrook High",
+      "Heritage Academy",
+      "Grove Hills Academy",
+      "Central High School",
+      "Liberty High School",
+      "Maple Ridge Academy",
+      "Parkview Academy",
+      "Clearwater High School"
+    ],
+    "class": [
+      "Roosevelt High School",
+      "Westview High",
+      "St. Xavier Academy",
+      "Bishop Carroll High School",
+      "Heritage Academy",
+      "Grove Hills Academy",
+      "Stonebridge High School",
+      "Fairfield Prep",
+      "Crestwood High School",
+      "Hillcrest High School"
+    ],
+    "state": [
+      "Riverside Prep",
+      "Summit Academy",
+      "Holy Cross Prep",
+      "St. Joseph's Academy",
+      "Notre Dame High School",
+      "St. Xavier Academy",
+      "Bayshore Prep",
+      "Thornton Academy",
+      "Maple Ridge Academy",
+      "Fairfield Prep"
+    ],
+    "regional": [
+      "Central Prep",
+      "Valley Crest High School",
+      "Ridgeview High School",
+      "Oakmont Prep",
+      "Redwood Academy",
+      "Silverlake High School",
+      "Horizon High School",
+      "Canyon Ridge Prep",
+      "Evergreen High School",
+      "Northgate Academy",
+      "Holy Cross Prep",
+      "Notre Dame High School",
+      "Bishop Carroll High School"
+    ],
+    "national": [
+      "Central Prep",
+      "Valley Crest High School",
+      "Ridgeview High School",
+      "Oakmont Prep",
+      "Redwood Academy",
+      "Silverlake High School",
+      "Horizon High School",
+      "Canyon Ridge Prep",
+      "Evergreen High School",
+      "Northgate Academy",
+      "Holy Cross Prep",
+      "Notre Dame High School",
+      "Bishop Carroll High School"
+    ]
+  },
+  "rivalry_levelup": {
+    "1": [
+      "You have crossed paths with {name} enough times now. This is personal.",
+      "A rivalry is forming. {name} knows your name, and you know theirs.",
+      "Every time {name} shows up on the start list, the race feels different.",
+      "{name} has become a familiar face in championship fields. The head-to-head record matters now.",
+      "What started as coincidence has become a pattern. You and {name} keep finding each other.",
+      "You used to scan the heat sheet for your own name. Now you look for {name} first.",
+      "The coaches have noticed. When you and {name} line up, the stopwatches come out.",
+      "It is not random anymore. You and {name} are racing each other, not just the field."
+    ],
+    "2": [
+      "The rivalry with {name} has a real edge now. Neither of you is backing down.",
+      "{name} is more than a competitor at this point. Every matchup feels like a statement.",
+      "You can feel the tension when {name} checks in at the same event. This one runs deeper.",
+      "Fierce rival. The meets where {name} shows up are the ones you remember.",
+      "The crowd notices when you and {name} are in the same heat. So do you.",
+      "Your teammates talk about {name} before the meet even starts. They know what this means to you.",
+      "Other races are races. When {name} is on the line, it is something else entirely.",
+      "You do not need a rival to compete. But {name} makes you compete harder."
+    ],
+    "3": [
+      "{name} is the name you think about on rest days.",
+      "Nemesis. There is no race that matters more than the one with {name} on the line.",
+      "You and {name} have pushed each other past what either of you thought was possible.",
+      "This is the rivalry that defines your career. {name} feels the same way.",
+      "When people talk about your career, they will talk about {name} too.",
+      "You have memorized {name}'s warmup routine, lane preferences, the way they settle into blocks. This is personal.",
+      "Every meet without {name} in the field feels like practice. Every meet with them feels like the final.",
+      "Years from now you will remember exactly two things about high school track: your best race, and {name}."
+    ]
+  },
+  "rivalry_leveldown": {
+    "2": [
+      "You have started to get the better of {name}. They are no longer a nemesis — just a fierce rival.",
+      "The tide has turned with {name}. The pressure you used to feel is starting to ease.",
+      "{name} still shows up. But you are starting to feel like the one in control.",
+      "You have put together a run that {name} cannot ignore. The dynamic is shifting.",
+      "What was once a nightmare matchup with {name} has become a winnable race.",
+      "The rivalry with {name} is still real. The balance of power is not what it was.",
+      "{name} still lines up like the favorite. The results have stopped agreeing.",
+      "Your coach does not circle {name}'s name on the heat sheet anymore. Neither do you.",
+      "Somewhere in the last few meets, the fear traded sides. {name} feels it now.",
+      "You used to study {name}'s races. Lately it feels like they are studying yours.",
+      "Beating {name} used to be the story of the meet. Now it is just the result.",
+      "{name} is pressing in ways they never used to. That is what chasing looks like."
+    ],
+    "1": [
+      "The dynamic has shifted. {name} is no longer driving this — you are.",
+      "You have won enough of these to take the sting out. {name} is still a rival, just not a threat.",
+      "You used to wonder if you could beat {name}. Now you wonder if they can beat you.",
+      "The rivalry with {name} has cooled. Still competitive, but you are on top.",
+      "Three straight wins. {name} is on the back foot and both of you know it.",
+      "{name} used to make you nervous. That feeling has been replaced by something quieter: confidence.",
+      "{name} still runs hard. It just does not decide your race anymore.",
+      "The matchup with {name} has gone quiet. Wins will do that.",
+      "You caught {name} watching your warmup this time. Funny how that flipped.",
+      "The edge is gone from this one. {name} shows up, you handle it, everyone moves on.",
+      "Your teammates stopped asking about {name}. The scoreboard answered for you.",
+      "There was a time {name} set the pace for your whole season. That time has passed."
+    ]
+  },
+  "rivalry_flavor": {
+    "dominance": [
+      "You have owned this matchup lately. {name} has to be wondering what it takes.",
+      "Three straight wins. {name} keeps showing up, but the results keep going your way.",
+      "At some point, dominance becomes expectation. You are there with {name}.",
+      "{name} has not beaten you in a while. That does not mean they have stopped trying.",
+      "You are in {name}'s head right now. They know it. You know it.",
+      "The win streak speaks for itself. {name} needs to find something new.",
+      "Confidence against {name} is not arrogance when the results back it up.",
+      "Every time {name} lines up against you, they are chasing. You are setting the pace.",
+      "{name} used to push you. Lately, you have been the one doing the pushing.",
+      "There is a rhythm to beating {name} now. Find them at the start, lose them by the finish.",
+      "{name} changed their warmup, their spikes, their race plan. The results have not changed.",
+      "Respect is still there with {name} -- it just flows one direction these days.",
+      "You do not circle meets with {name} in them anymore. They circle yours.",
+      "Coaches use your matchup with {name} as an example now. You are not the cautionary half.",
+      "{name} will figure something out eventually. Champions usually force them to.",
+      "The streak against {name} is long enough that people stopped counting. You have not."
+    ],
+    "underdog": [
+      "{name} has had your number recently. The gap is not talent -- it is something else.",
+      "Three losses in a row stings. {name} is not unbeatable, but you have not proven it lately.",
+      "You know what {name} looks like from behind. Time to change that.",
+      "The losses are piling up. {name} is not doing anything special -- you are just not executing.",
+      "Somewhere in the last few meets, {name} figured something out that you have not.",
+      "Your coach says the gap is closing. The results say otherwise. {name} keeps winning.",
+      "You have watched {name} celebrate enough times. Something has to give.",
+      "Losing to {name} used to surprise you. Now it just makes you angry.",
+      "The next time you and {name} race, something needs to be different. And it starts with you."
+    ],
+    "close": [
+      "This rivalry is as tight as they come. Neither of you can pull away.",
+      "Every matchup with {name} could go either way. That is what makes it worth watching.",
+      "The record says it all -- dead even. Someone has to break through eventually.",
+      "You and {name} trade wins like they are going out of style. Neither of you gives an inch.",
+      "Coin-flip rivalry. {name} wins one, you win one. The margin never gets comfortable.",
+      "Your coach calls it the best matchup in the league. {name}'s coach probably says the same thing.",
+      "When you and {name} race, the rest of the field is background noise.",
+      "Dead even. The next head-to-head will feel like the tiebreaker no matter what the actual record says.",
+      "There is no clear favorite between you and {name}. That is exactly why it matters so much."
+    ],
+    "championship": [
+      "You and {name} have shared a championship field. That changes a rivalry.",
+      "The biggest stages bring out the best matchups. You and {name} have been there.",
+      "Championship matchups with {name} are the ones that stick with you after the season ends.",
+      "Regular season wins are nice. What you really want is to beat {name} when the stakes are real.",
+      "State, regionals, nationals -- somewhere along the way, {name} stopped being just another opponent.",
+      "The championship fields get smaller. The fact that you and {name} are both still in them says something.",
+      "You do not forget championship races. You especially do not forget the ones with {name} in them.",
+      "When the meet matters, {name} is always there. That is what makes them worth respecting."
+    ],
+    "first_at_tier": [
+      "First time seeing {name} at this level. They belong here. So do you.",
+      "The competition just got sharper. {name} made the same jump you did.",
+      "New stage, same rival. {name} qualified for this round too.",
+      "You knew {name} would be here eventually. Now it is real.",
+      "The field is better at this level, but {name} is still the one you are watching.",
+      "Moving up a tier does not reset the rivalry. If anything, it raises the stakes."
+    ],
+    "streak_reversal": [
+      "You flipped the script on {name}. The wins are coming your way now.",
+      "After all those losses, this streak feels earned. {name} is the one chasing now.",
+      "{name} had your number for a while. Not anymore.",
+      "The momentum shifted. {name} can feel it too.",
+      "You were on the wrong side of this rivalry for too long. That changed.",
+      "Turning a losing record into a winning one against {name} -- that is the kind of thing that defines a season."
+    ],
+    "season_context": [
+      "Senior year rivalries hit different. Every race with {name} could be the last.",
+      "You have been racing {name} since freshman year. Look how far you have both come.",
+      "Four years of this. You and {name} have a history that most athletes never get.",
+      "This rivalry started when neither of you knew what you were doing. Now you are both dangerous.",
+      "Last chance to settle the score with {name}. Make it count.",
+      "Freshman year you watched {name} from three places back. The gap is not there anymore."
+    ],
+    "emerging": [
+      "You have crossed paths with {name} a couple times now. Something is building.",
+      "{name} has noticed you. The feeling is mutual.",
+      "Only a handful of races in, but {name} already knows your name.",
+      "Too early to call it a rivalry. Ask again in a few weeks.",
+      "First impressions: {name} is not going to make this easy.",
+      "You and {name} keep ending up in the same races. It is not a coincidence anymore."
+    ]
+  }
+}

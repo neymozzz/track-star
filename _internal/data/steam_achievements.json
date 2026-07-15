@@ -1,0 +1,157 @@
+{
+    "steam_achievements": [
+        {
+            "id": "steam_sprint_legend",
+            "name": "Sprint Legend",
+            "description": "Run the 100m in under 11.0 seconds.",
+            "steam_id": "STEAM_SPRINT_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "100m"},
+                {"type": "value_lte", "value": 11.0}
+            ]
+        },
+        {
+            "id": "steam_800m_legend",
+            "name": "800m Legend",
+            "description": "Run the 800m in under 1:50 (110 seconds).",
+            "steam_id": "STEAM_800M_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "800m"},
+                {"type": "value_lte", "value": 110.0}
+            ]
+        },
+        {
+            "id": "steam_distance_legend",
+            "name": "Distance Legend",
+            "description": "Run the 1600m in under 4:15 (255 seconds).",
+            "steam_id": "STEAM_DISTANCE_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "1600m"},
+                {"type": "value_lte", "value": 255.0}
+            ]
+        },
+        {
+            "id": "steam_shot_put_legend",
+            "name": "Shot Put Legend",
+            "description": "Put the shot 18 meters or farther.",
+            "steam_id": "STEAM_SHOT_PUT_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "Shot Put"},
+                {"type": "value_gte", "value": 18.0}
+            ]
+        },
+        {
+            "id": "steam_javelin_legend",
+            "name": "Javelin Legend",
+            "description": "Throw the javelin 75 meters or farther.",
+            "steam_id": "STEAM_JAVELIN_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "Javelin"},
+                {"type": "value_gte", "value": 75.0}
+            ]
+        },
+        {
+            "id": "steam_discus_legend",
+            "name": "Discus Legend",
+            "description": "Throw the discus 65 meters or farther.",
+            "steam_id": "STEAM_DISCUS_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "Discus"},
+                {"type": "value_gte", "value": 65.0}
+            ]
+        },
+        {
+            "id": "steam_long_jump_legend",
+            "name": "Long Jump Legend",
+            "description": "Long jump 7.5 meters or farther.",
+            "steam_id": "STEAM_LONG_JUMP_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "Long Jump"},
+                {"type": "value_gte", "value": 7.5}
+            ]
+        },
+        {
+            "id": "steam_triple_jump_legend",
+            "name": "Triple Jump Legend",
+            "description": "Triple jump 16.0 meters or farther.",
+            "steam_id": "STEAM_TRIPLE_JUMP_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "Triple Jump"},
+                {"type": "value_gte", "value": 16.0}
+            ]
+        },
+        {
+            "id": "steam_high_jump_legend",
+            "name": "High Jump Legend",
+            "description": "Clear 2.10 meters in the High Jump.",
+            "steam_id": "STEAM_HIGH_JUMP_LEGEND",
+            "conditions": [
+                {"type": "event_is", "event": "High Jump"},
+                {"type": "value_gte", "value": 2.1}
+            ]
+        },
+        {
+            "id": "steam_rivalry_nemesis",
+            "name": "Nemesis",
+            "description": "Defeat rivals 10 times across your career.",
+            "steam_id": "STEAM_RIVALRY_NEMESIS",
+            "conditions": [
+                {"type": "career_rival_total_wins_gte", "value": 10}
+            ]
+        },
+        {
+            "id": "steam_double_national_champ",
+            "name": "Back-to-Back Legend",
+            "description": "Win the National Meet twice across your career.",
+            "steam_id": "STEAM_DOUBLE_NATIONAL_CHAMP",
+            "conditions": [
+                {"type": "career_national_wins_gte", "value": 2}
+            ]
+        },
+        {
+            "id": "steam_four_national_qualifiers",
+            "name": "Four-Year Qualifier",
+            "description": "Qualify for the National Meet four times across your career.",
+            "steam_id": "STEAM_FOUR_NATIONAL_QUALIFIERS",
+            "conditions": [
+                {"type": "career_national_quals_gte", "value": 4}
+            ]
+        },
+        {
+            "id": "steam_state_dynasty",
+            "name": "State Dynasty",
+            "description": "Win the State Meet three times across your career.",
+            "steam_id": "STEAM_STATE_DYNASTY",
+            "conditions": [
+                {"type": "career_state_wins_gte", "value": 3}
+            ]
+        },
+        {
+            "id": "steam_trophy_room",
+            "name": "Trophy Room",
+            "description": "Win 15 championship meets across your career.",
+            "steam_id": "STEAM_TROPHY_ROOM",
+            "conditions": [
+                {"type": "career_championship_wins_gte", "value": 15}
+            ]
+        },
+        {
+            "id": "steam_four_national_titles",
+            "name": "Untouchable",
+            "description": "Win the National Meet all four seasons.",
+            "steam_id": "STEAM_FOUR_NATIONAL_TITLES",
+            "conditions": [
+                {"type": "career_national_wins_gte", "value": 4}
+            ]
+        },
+        {
+            "id": "steam_olympic_medalist",
+            "name": "Olympic Medalist",
+            "description": "Finish your career at the Olympic Medalist tier.",
+            "steam_id": "STEAM_OLYMPIC_MEDALIST",
+            "conditions": [
+                {"type": "career_score_gte", "value": 97}
+            ]
+        }
+    ]
+}

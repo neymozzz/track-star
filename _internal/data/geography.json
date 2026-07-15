@@ -1,0 +1,87 @@
+{
+  "geography": {
+    "structure": {
+      "player_class": "class_1",
+      "player_league": "league_1",
+      "classes": {
+        "class_1": { "leagues": ["league_1", "league_2", "league_3"] }
+      },
+      "leagues": {
+        "league_1": {
+          "schools": ["lg1_s1", "lg1_s2", "lg1_s3", "lg1_s4", "lg1_s5", "lg1_s6", "lg1_s7", "lg1_s8"]
+        },
+        "league_2": {
+          "schools": ["lg2_s1", "lg2_s2", "lg2_s3", "lg2_s4", "lg2_s5", "lg2_s6", "lg2_s7", "lg2_s8"]
+        },
+        "league_3": {
+          "schools": ["lg3_s1", "lg3_s2", "lg3_s3", "lg3_s4", "lg3_s5", "lg3_s6", "lg3_s7", "lg3_s8"]
+        }
+      },
+      "state_schools": ["st_s1", "st_s2", "st_s3", "st_s4", "st_s5", "st_s6", "st_s7", "st_s8", "st_s9", "st_s10"],
+      "regional_schools": ["rg_s1", "rg_s2", "rg_s3", "rg_s4", "rg_s5", "rg_s6", "rg_s7", "rg_s8", "rg_s9", "rg_s10", "rg_s11", "rg_s12", "rg_s13"],
+      "national_schools": ["nt_s1", "nt_s2", "nt_s3", "nt_s4", "nt_s5", "nt_s6", "nt_s7", "nt_s8", "nt_s9", "nt_s10", "nt_s11", "nt_s12", "nt_s13"]
+    },
+    "skins": {
+      "lg1_s1": { "team_id": "jefferson_high" },
+      "lg1_s2": { "team_id": "franklin_high" },
+      "lg1_s3": { "team_id": "northside_high" },
+      "lg1_s4": { "team_id": "lincoln_hs" },
+      "lg1_s5": { "team_id": "washington_academy" },
+      "lg1_s6": { "team_id": "eastbrook_high" },
+      "lg1_s7": { "team_id": "roosevelt_hs" },
+      "lg1_s8": { "name": "Kennedy High School" },
+      "lg2_s1": { "team_id": "westview_high" },
+      "lg2_s2": { "team_id": "riverside_prep" },
+      "lg2_s3": { "name": "Heritage Academy" },
+      "lg2_s4": { "name": "Grove Hills Academy" },
+      "lg2_s5": { "name": "Central High School" },
+      "lg2_s6": { "name": "Liberty High School" },
+      "lg2_s7": { "name": "Maple Ridge Academy" },
+      "lg2_s8": { "name": "Parkview Academy" },
+      "lg3_s1": { "team_id": "summit_academy" },
+      "lg3_s2": { "team_id": "central_prep" },
+      "lg3_s3": { "name": "Clearwater High School" },
+      "lg3_s4": { "name": "Stonebridge High School" },
+      "lg3_s5": { "name": "Fairfield Prep" },
+      "lg3_s6": { "name": "Crestwood High School" },
+      "lg3_s7": { "name": "Hillcrest High School" },
+      "lg3_s8": { "name": "Lakewood High School" },
+      "st_s1": { "name": "Holy Cross Prep" },
+      "st_s2": { "name": "St. Joseph's Academy" },
+      "st_s3": { "name": "Notre Dame High School" },
+      "st_s4": { "name": "St. Xavier Academy" },
+      "st_s5": { "name": "Bayshore Prep" },
+      "st_s6": { "name": "Thornton Academy" },
+      "st_s7": { "name": "Bishop Carroll High School" },
+      "st_s8": { "name": "Trinity Prep" },
+      "st_s9": { "name": "Harbor City High School" },
+      "st_s10": { "name": "Westlake Academy" },
+      "rg_s1": { "team_id": "valley_crest_hs" },
+      "rg_s2": { "team_id": "ridgeview_hs" },
+      "rg_s3": { "team_id": "oakmont_prep" },
+      "rg_s4": { "team_id": "redwood_academy" },
+      "rg_s5": { "team_id": "silverlake_hs" },
+      "rg_s6": { "name": "Sierra Vista High School" },
+      "rg_s7": { "name": "Cascade Prep" },
+      "rg_s8": { "name": "Blue Ridge Academy" },
+      "rg_s9": { "name": "Lakeshore Prep" },
+      "rg_s10": { "name": "Iron Mountain High School" },
+      "rg_s11": { "name": "Prairie View Academy" },
+      "rg_s12": { "name": "Golden Valley High School" },
+      "rg_s13": { "name": "Sunset Hills High School" },
+      "nt_s1": { "team_id": "horizon_hs" },
+      "nt_s2": { "team_id": "canyon_ridge_prep" },
+      "nt_s3": { "team_id": "evergreen_hs" },
+      "nt_s4": { "team_id": "northgate_academy" },
+      "nt_s5": { "name": "Pacific Crest Academy" },
+      "nt_s6": { "name": "Atlantic Heights Prep" },
+      "nt_s7": { "name": "Great Lakes Academy" },
+      "nt_s8": { "name": "Desert Palm High School" },
+      "nt_s9": { "name": "Twin Rivers Prep" },
+      "nt_s10": { "name": "Copper Canyon High School" },
+      "nt_s11": { "name": "Northern Lights Academy" },
+      "nt_s12": { "name": "Bay Harbor Prep" },
+      "nt_s13": { "name": "Kingsbridge Academy" }
+    }
+  }
+}

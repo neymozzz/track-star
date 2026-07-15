@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Star (Demo)</title>
+  <link rel="stylesheet" href="../../src/track_star/web/static/css/track_star_theme.css" />
+  <link rel="stylesheet" href="css/demo.css" />
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../../src/track_star/web/static/js/utils.js"></script>
+  <script src="../../src/track_star/web/static/js/app.js"></script>
+  <script src="js/demo_overrides.js"></script>
+  <script>
+    // Wait for pywebview to inject its bridge before booting the app.
+    function waitForApi(retries) {
+      if (typeof pywebview !== 'undefined' && pywebview.api) {
+        App.init();
+      } else if (retries > 0) {
+        setTimeout(function () { waitForApi(retries - 1); }, 100);
+      } else {
+        document.getElementById('app').innerHTML =
+          '<div class="error-banner">Could not connect to game API. Please restart.</div>';
+      }
+    }
+    waitForApi(50);
+  </script>
+  <script>
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'F11') {
+        e.preventDefault();
+        if (typeof pywebview !== 'undefined' && pywebview.api) {
+          pywebview.api.toggle_fullscreen();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Race Animation</title>
+<link rel="stylesheet" href="css/track_star_theme.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--bg-primary);
+    font-family: var(--font-mono);
+}
+
+#race-wrap {
+    padding: 20px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 100vh;
+}
+
+#race-header {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+#race-canvas {
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+/* ── lane rows ─────────────────────────────── */
+
+.lane-row {
+    position: relative;
+    height: 28px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.lane-row:nth-child(even) .lane-track-area {
+    background: rgba(255,255,255,0.018);
+}
+
+.lane-label {
+    position: relative;
+    z-index: 5;
+    width: 130px;
+    min-width: 130px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px 0 6px;
+    font-size: 10px;
+    background: var(--bg-primary);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.lane-num {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    min-width: 10px;
+    text-align: right;
+}
+
+.lane-color-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.lane-athlete-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-primary);
+}
+
+.lane-athlete-name.is-player {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.lane-track-area {
+    position: relative;
+    flex: 1;
+    height: 28px;
+    overflow: hidden;
+}
+
+/* scrolling dash pattern */
+.lane-scroll-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 36px,
+        rgba(255,255,255,0.055) 36px,
+        rgba(255,255,255,0.055) 38px
+    );
+    background-size: 38px 100%;
+    background-repeat: repeat;
+    pointer-events: none;
+}
+
+/* ── runner elements ───────────────────────── */
+
+.lane-trail {
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    opacity: 0.30;
+    pointer-events: none;
+    will-change: width;
+}
+
+.lane-dot {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 3;
+    will-change: left;
+}
+
+.lane-dot.is-player {
+    box-shadow: 0 0 7px 1px var(--accent);
+}
+
+/* ── time badge ────────────────────────────── */
+
+.time-badge {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 9px;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 3px;
+    padding: 1px 6px;
+    white-space: nowrap;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.time-badge.show {
+    opacity: 1;
+}
+
+/* ── phase markers ─────────────────────────── */
+
+.phase-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.20);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.phase-label {
+    position: absolute;
+    top: 3px;
+    font-size: 8px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-dim, var(--text-muted));
+    z-index: 2;
+    transform: translateX(-50%);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* ── finish line ───────────────────────────── */
+
+#finish-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    z-index: 4;
+    pointer-events: none;
+    /* checkerboard stripe */
+    background-color: #fff;
+    background-image:
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+    background-size: 8px 8px;
+    background-position: 0 0, 4px 4px;
+}
+
+/* ── footer ────────────────────────────────── */
+
+#race-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+#status-label {
+    flex: 1;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* compact layout when loaded as an iframe inside the results screen */
+body.in-iframe #race-wrap {
+    min-height: 0;
+    padding: 8px 12px;
+    gap: 8px;
+}
+</style>
+</head>
+<body>
+<div id="race-wrap">
+    <div id="race-header" id="event-name-label">&mdash;</div>
+    <div id="race-canvas"></div>
+    <div id="race-footer">
+        <span id="status-label"></span>
+        <label class="results-skip-toggle" style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-muted);cursor:pointer;">
+            <input type="checkbox" id="skip-toggle" style="accent-color:var(--accent);">
+            Skip animation
+        </label>
+        <button class="btn btn--ghost" id="btn-replay" style="font-family:var(--font-mono);font-size:11px;width:auto;padding:0 16px;">
+            &#8635; Replay
+        </button>
+        <button class="btn btn--primary" id="btn-next-results" style="font-family:var(--font-mono);font-size:11px;display:none;background:#cc2222;box-shadow:none;width:auto;min-width:0;padding:0 16px;">
+            Results &#8594;
+        </button>
+    </div>
+</div>
+
+<script>
+/* ── constants ────────────────────────────────────────────── */
+var FINISH_LINE_PCT = 0.80;
+var RACE_MS         = 3800;
+var STAGGER_MS      = 900;
+var OVERSHOOT_PX    = 120;
+var START_X         = 28;
+
+var LABEL_W           = 130;   /* left lane-label column width, px */
+var PRE_RACE_DELAY_MS = 1500;  /* pause before animation starts, ms */
+var LANE_H       = 28;    /* lane row height, px */
+var DOT_D        = 10;    /* dot diameter, px */
+var BADGE_GAP    = 10;    /* px right of finish line for badge */
+var SCROLL_RATIO = 0.9;   /* bg scroll per px of runner travel */
+
+var NPC_COLORS = [
+    '#c9944a',
+    '#94a3b8',
+    '#f97316',
+    '#a78bfa',
+    '#22c55e',
+    '#14b8a6',
+    '#f472b6'
+];
+
+var PROFILE_SETTINGS = {
+    sprint:   { RACE_MS: 3800, STAGGER_MS:  900 },
+    middle:   { RACE_MS: 5000, STAGGER_MS: 2000 },
+    distance: { RACE_MS: 7000, STAGGER_MS: 3000 }
+};
+
+/* ── sample data (replaced at runtime by game) ─────────────── */
+var RACE_CONFIG = {
+    event:        '100m',
+    meetName:     'League Meet 4',
+    eventProfile: 'sprint',
+    athletes: [
+        { id: 1, lane: 1, name: 'Carter',   isPlayer: false, finishPos: 3, time: '11.42' },
+        { id: 2, lane: 2, name: 'YOU',       isPlayer: true,  finishPos: 1, time: '11.18' },
+        { id: 3, lane: 3, name: 'Williams',  isPlayer: false, finishPos: 5, time: '11.67' },
+        { id: 4, lane: 4, name: 'Brooks',    isPlayer: false, finishPos: 2, time: '11.31' },
+        { id: 5, lane: 5, name: 'Osei',      isPlayer: false, finishPos: 7, time: '11.89' },
+        { id: 6, lane: 6, name: 'Thomas',    isPlayer: false, finishPos: 4, time: '11.54' },
+        { id: 7, lane: 7, name: 'Rivera',    isPlayer: false, finishPos: 6, time: '11.78' },
+        { id: 8, lane: 8, name: 'Kim',       isPlayer: false, finishPos: 8, time: '11.97' }
+    ]
+};
+
+/* ── easing (sprint path — do not alter) ──────────────────── */
+function easeInOut(t) {
+    t = t < 0 ? 0 : t > 1 ? 1 : t;
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
+/* ── module state ──────────────────────────────────────────── */
+var canvasWidth   = 0;
+var finishLineX   = 0;   /* px from canvas left edge */
+var finishTrackX  = 0;   /* px from track-area left edge */
+var rafId         = null;
+var delayTimer    = null;
+var startTime     = null;
+var runners       = [];
+var activeProfile = null;
+
+var elCanvas  = document.getElementById('race-canvas');
+var elStatus  = document.getElementById('status-label');
+var elReplay  = document.getElementById('btn-replay');
+var elNext    = document.getElementById('btn-next-results');
+var elHeader  = document.getElementById('race-header');
+var elSkip    = document.getElementById('skip-toggle');
+
+/* ── DOM construction ─────────────────────────────────────── */
+function buildDOM() {
+    elCanvas.innerHTML = '';
+    runners = [];
+
+    activeProfile = PROFILE_SETTINGS[RACE_CONFIG.eventProfile] || PROFILE_SETTINGS.sprint;
+    var profRaceMs    = activeProfile.RACE_MS;
+    var profStaggerMs = activeProfile.STAGGER_MS;
+
+    canvasWidth  = elCanvas.offsetWidth || 640;
+    finishLineX  = Math.round(canvasWidth * FINISH_LINE_PCT);
+    finishTrackX = finishLineX - LABEL_W;
+
+    elHeader.textContent = RACE_CONFIG.event + ' \u2014 ' + RACE_CONFIG.meetName;
+    elStatus.textContent = '';
+
+    var athletes  = RACE_CONFIG.athletes;
+    var n         = athletes.length;
+    var npcIdx    = 0;
+    var totalDist = finishTrackX - START_X + OVERSHOOT_PX;
+    var crossDist = finishTrackX - START_X;
+
+    for (var i = 0; i < n; i++) {
+        var ath   = athletes[i];
+        var color = ath.isPlayer ? 'var(--accent)' : NPC_COLORS[npcIdx++ % NPC_COLORS.length];
+        var pos   = ath.finishPos;
+
+        var duration = profRaceMs + (pos - 1) * profStaggerMs / Math.max(n - 1, 1);
+
+        /* lane row */
+        var row = document.createElement('div');
+        row.className = 'lane-row';
+
+        /* lane label: color dot + number + name */
+        var lbl = document.createElement('div');
+        lbl.className = 'lane-label';
+
+        var colorDot = document.createElement('span');
+        colorDot.className = 'lane-color-dot';
+        colorDot.style.background = color;
+        lbl.appendChild(colorDot);
+
+        var laneNum = document.createElement('span');
+        laneNum.className = 'lane-num';
+        laneNum.textContent = String(ath.lane || i + 1);
+        lbl.appendChild(laneNum);
+
+        var laneNameSpan = document.createElement('span');
+        laneNameSpan.className = 'lane-athlete-name' + (ath.isPlayer ? ' is-player' : '');
+        laneNameSpan.textContent = ath.name || '';
+        lbl.appendChild(laneNameSpan);
+
+        row.appendChild(lbl);
+
+        /* track area */
+        var area = document.createElement('div');
+        area.className = 'lane-track-area';
+        row.appendChild(area);
+
+        /* scrolling background */
+        var scrollBg = document.createElement('div');
+        scrollBg.className = 'lane-scroll-bg';
+        area.appendChild(scrollBg);
+
+        /* trail */
+        var trail = document.createElement('div');
+        trail.className = 'lane-trail';
+        trail.style.background = color;
+        trail.style.left = START_X + 'px';
+        trail.style.width = '0px';
+        area.appendChild(trail);
+
+        /* dot */
+        var dot = document.createElement('div');
+        dot.className = 'lane-dot' + (ath.isPlayer ? ' is-player' : '');
+        dot.style.background = color;
+        dot.style.left = START_X + 'px';
+        area.appendChild(dot);
+
+        /* time badge */
+        var badge = document.createElement('div');
+        badge.className = 'time-badge';
+        badge.style.left = (finishTrackX + BADGE_GAP) + 'px';
+        badge.textContent = '#' + pos + '  ' + ath.time;
+        area.appendChild(badge);
+
+        elCanvas.appendChild(row);
+
+        runners.push({
+            dot:       dot,
+            trail:     trail,
+            scrollBg:  scrollBg,
+            badge:     badge,
+            duration:  duration,
+            totalDist: totalDist,
+            crossDist: crossDist,
+            crossed:   false
+        });
+    }
+
+    /* finish line */
+    var fl = document.createElement('div');
+    fl.id = 'finish-line';
+    fl.style.left = finishLineX + 'px';
+    elCanvas.appendChild(fl);
+
+
+    elCanvas.style.height = (n * LANE_H) + 'px';
+}
+
+/* ── animation loop ───────────────────────────────────────── */
+function tick(ts) {
+    if (startTime === null) { startTime = ts; }
+    var elapsed = ts - startTime;
+    var allDone = true;
+
+    for (var i = 0; i < runners.length; i++) {
+        var r = runners[i];
+        var t = elapsed / r.duration;
+        if (t < 1) { allDone = false; }
+        t = t < 0 ? 0 : t > 1 ? 1 : t;
+
+        var x = START_X + easeInOut(t) * r.totalDist;
+
+        r.dot.style.left    = x + 'px';
+        r.trail.style.width = Math.max(0, x - START_X) + 'px';
+
+        if (!r.crossed) {
+            r.scrollBg.style.backgroundPosition = (-x * SCROLL_RATIO) + 'px 0';
+        }
+
+        if (!r.crossed && x >= START_X + r.crossDist) {
+            r.crossed = true;
+            r.badge.classList.add('show');
+        }
+    }
+
+    if (!allDone) {
+        rafId = requestAnimationFrame(tick);
+    } else {
+        elStatus.textContent = 'Race complete.';
+        rafId = null;
+        onRaceComplete();
+    }
+}
+
+/* ── start / reset ────────────────────────────────────────── */
+function startRace() {
+    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+    if (delayTimer !== null) { clearTimeout(delayTimer); delayTimer = null; }
+    startTime = null;
+    buildDOM();
+    if (elSkip && elSkip.checked) {
+        skipToEnd();
+        return;
+    }
+    elStatus.textContent = 'Get set\u2026';
+    delayTimer = setTimeout(function () {
+        delayTimer = null;
+        elStatus.textContent = '';
+        rafId = requestAnimationFrame(tick);
+    }, PRE_RACE_DELAY_MS);
+}
+
+/* ── skip to end ──────────────────────────────────────────── */
+function skipToEnd() {
+    if (delayTimer !== null) { clearTimeout(delayTimer); delayTimer = null; }
+    if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+    for (var i = 0; i < runners.length; i++) {
+        var r = runners[i];
+        var x = START_X + r.totalDist;
+        r.dot.style.left    = x + 'px';
+        r.trail.style.width = Math.max(0, x - START_X) + 'px';
+        r.scrollBg.style.backgroundPosition = (-x * SCROLL_RATIO) + 'px 0';
+        if (!r.crossed) {
+            r.crossed = true;
+            r.badge.classList.add('show');
+        }
+    }
+    elStatus.textContent = 'Race complete.';
+    onRaceComplete();
+}
+
+/* ── pywebview completion callback ───────────────────────── */
+function fireResultsCallback() {
+    try {
+        if (window.parent && window.parent !== window && window.parent._onRaceAnimComplete) {
+            window.parent._onRaceAnimComplete();
+        }
+    } catch (e) { /* cross-origin guard */ }
+    try {
+        if (window.pywebview && window.pywebview.api && window.pywebview.api.on_race_complete) {
+            window.pywebview.api.on_race_complete();
+        }
+    } catch (e) { /* not in pywebview context */ }
+}
+
+function onRaceComplete() {
+    if (!elNext) { return; }
+    var isLast = true;
+    try {
+        if (window.parent && window.parent !== window && window.parent._pendingRaceIsLast === false) {
+            isLast = false;
+        }
+    } catch (e) { /* cross-origin guard */ }
+    elNext.textContent = isLast ? 'Results \u2192' : 'Next \u2192';
+    elNext.style.display = '';
+}
+
+/* ── pywebview data bridge ────────────────────────────────── */
+function init() {
+    /* detect iframe context and apply compact layout */
+    try {
+        if (window.self !== window.top) {
+            document.body.classList.add('in-iframe');
+        }
+    } catch (e) { /* cross-origin guard */ }
+
+    function applyData(data) {
+        if (data && typeof data === 'object') {
+            var keys = Object.keys(data);
+            for (var k = 0; k < keys.length; k++) {
+                RACE_CONFIG[keys[k]] = data[keys[k]];
+            }
+        }
+    }
+    function run() {
+        if (RACE_CONFIG._skipAnim) {
+            buildDOM();
+            skipToEnd();
+        } else {
+            startRace();
+        }
+    }
+
+    /* 1. parent window config (iframe mode) */
+    try {
+        if (window.parent && window.parent !== window && window.parent._pendingRaceConfig) {
+            applyData(window.parent._pendingRaceConfig);
+            run();
+            return;
+        }
+    } catch (e) { /* cross-origin guard */ }
+
+    /* 2. pywebview API */
+    try {
+        if (window.pywebview && window.pywebview.api && window.pywebview.api.get_race_data) {
+            window.pywebview.api.get_race_data().then(function (data) {
+                applyData(data);
+                run();
+            }).catch(function () {
+                console.log('pywebview get_race_data failed, using mock data');
+                run();
+            });
+            return;
+        }
+    } catch (e) { /* pywebview unavailable */ }
+
+    /* 3. mock fallback */
+    console.log('pywebview unavailable, using mock data');
+    run();
+}
+
+elReplay.addEventListener('click', function () {
+    if (elNext) { elNext.style.display = 'none'; }
+    startRace();
+});
+
+elNext.addEventListener('click', function () {
+    elNext.style.display = 'none';
+    fireResultsCallback();
+});
+
+elSkip.addEventListener('change', function () {
+    if (elSkip.checked && runners.length) { skipToEnd(); }
+});
+
+window.addEventListener('load', init);
+</script>
+</body>
+</html>

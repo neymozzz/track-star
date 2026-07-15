@@ -1,0 +1,586 @@
+{
+    "achievements": [
+        {
+            "id": "ach_first_win",
+            "name": "First Win",
+            "description": "Win any meet in any event.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 1
+                }
+            ]
+        },
+        {
+            "id": "ach_first_pb",
+            "name": "First Personal Best",
+            "description": "Set your first PR in any event.",
+            "conditions": [
+                {
+                    "type": "pb_true"
+                }
+            ]
+        },
+        {
+            "id": "ach_first_podium",
+            "name": "First Podium",
+            "description": "Finish top 3 in any meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 3
+                }
+            ]
+        },
+        {
+            "id": "ach_first_rivalry_win",
+            "name": "Rivalry Win",
+            "description": "Beat a rival in a meet for the first time.",
+            "conditions": [
+                {
+                    "type": "rival_win_true"
+                }
+            ]
+        },
+        {
+            "id": "ach_three_pbs_season",
+            "name": "On a Tear",
+            "description": "Set 3 personal bests in a single season.",
+            "conditions": [
+                {
+                    "type": "season_pbs_gte",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": "ach_energy_manager",
+            "name": "Iron Discipline",
+            "description": "Complete a full season without dropping below 30 energy.",
+            "conditions": [
+                {
+                    "type": "season_no_very_low_energy",
+                    "eval_at_season_end": true
+                }
+            ]
+        },
+        {
+            "id": "ach_back_to_back_wins",
+            "name": "Back to Back",
+            "description": "Win two consecutive meets.",
+            "conditions": [
+                {
+                    "type": "consecutive_wins_gte",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "id": "ach_four_season_athlete",
+            "name": "Four-Year Athlete",
+            "description": "Complete all four seasons.",
+            "conditions": [
+                {
+                    "type": "year_equals",
+                    "value": 4
+                },
+                {
+                    "type": "week_gte",
+                    "value": 13
+                }
+            ]
+        },
+        {
+            "id": "ach_top_five_nationals",
+            "name": "National Contender",
+            "description": "Finish top 5 at the National Meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 5
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "national_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_multi_event_podium",
+            "name": "Versatile Competitor",
+            "description": "Earn podium finishes in two different events in the same season.",
+            "conditions": [
+                {
+                    "type": "season_multi_event_podiums_gte",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "id": "ach_championship_hat_trick",
+            "name": "Championship Hat Trick",
+            "description": "Win three championship meets across your career.",
+            "conditions": [
+                {
+                    "type": "career_championship_wins_gte",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": "ach_clean_hurdles",
+            "name": "Clean Hurdles",
+            "description": "Run the 400mH without a hurdle error.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "400mH"
+                },
+                {
+                    "type": "flag_true",
+                    "flag": "no_hurdle_errors"
+                }
+            ]
+        },
+        {
+            "id": "ach_state_champion",
+            "name": "State Champion",
+            "description": "Win first place at the State Meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 1
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "state_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_regional_podium",
+            "name": "Regional Podium",
+            "description": "Finish top 3 at the Regional Meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 3
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "regional_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_regional_champion",
+            "name": "Regional Champion",
+            "description": "Win first place at the Regional Meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 1
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "regional_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_national_podium",
+            "name": "National Podium",
+            "description": "Finish top 3 at the National Meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 3
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "national_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_national_champion",
+            "name": "National Champion",
+            "description": "Win first place at the National Meet.",
+            "conditions": [
+                {
+                    "type": "place_lte",
+                    "place": 1
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "national_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_pb_at_nationals",
+            "name": "Peak at Nationals",
+            "description": "Set a personal best at the National Meet.",
+            "conditions": [
+                {
+                    "type": "pb_true"
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "national_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_sprint_sub12",
+            "name": "Sub-12 Sprinter",
+            "description": "Run the 100m in under 12.0 seconds.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "100m"
+                },
+                {
+                    "type": "value_lte",
+                    "value": 12.0
+                }
+            ]
+        },
+        {
+            "id": "ach_sprint_elite",
+            "name": "Sprint Elite",
+            "description": "Run the 100m in under 11.5 seconds.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "100m"
+                },
+                {
+                    "type": "value_lte",
+                    "value": 11.5
+                }
+            ]
+        },
+        {
+            "id": "ach_distance_sub5",
+            "name": "Sub-5 Mile",
+            "description": "Run the 1600m in under 5:00 (300 seconds).",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "1600m"
+                },
+                {
+                    "type": "value_lte",
+                    "value": 300.0
+                }
+            ]
+        },
+        {
+            "id": "ach_distance_elite",
+            "name": "Distance Elite",
+            "description": "Run the 1600m in under 4:30 (270 seconds).",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "1600m"
+                },
+                {
+                    "type": "value_lte",
+                    "value": 270.0
+                }
+            ]
+        },
+        {
+            "id": "ach_throw_15m",
+            "name": "15-Meter Shot",
+            "description": "Put the shot 15 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Shot Put"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 15.0
+                }
+            ]
+        },
+        {
+            "id": "ach_javelin_60m",
+            "name": "60-Meter Javelin",
+            "description": "Throw the javelin 60 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Javelin"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "id": "ach_jump_7m",
+            "name": "Seven Meters",
+            "description": "Long jump 7.0 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Long Jump"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 7.0
+                }
+            ]
+        },
+        {
+            "id": "ach_hurdle_state_win",
+            "name": "State Hurdle Champion",
+            "description": "Win the 400mH at the State Meet.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "400mH"
+                },
+                {
+                    "type": "place_lte",
+                    "place": 1
+                },
+                {
+                    "type": "meet_type_is",
+                    "meet_type": "state_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_rival_win",
+            "name": "Beat Your Rival",
+            "description": "Finish ahead of a rival in any meet.",
+            "conditions": [
+                {
+                    "type": "rival_win"
+                }
+            ]
+        },
+        {
+            "id": "ach_rival_streak",
+            "name": "Rivalry Streak",
+            "description": "Win three straight meets against a rival.",
+            "conditions": [
+                {
+                    "type": "rival_win"
+                },
+                {
+                    "type": "rival_streak_gte",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": "ach_qual_class",
+            "name": "Class Qualifier",
+            "description": "Qualify for the Class Meet for the first time.",
+            "conditions": [
+                {
+                    "type": "qualification_gained",
+                    "meet_type": "class_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_qual_state",
+            "name": "State Qualifier",
+            "description": "Qualify for the State Meet for the first time.",
+            "conditions": [
+                {
+                    "type": "qualification_gained",
+                    "meet_type": "state_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_qual_regional",
+            "name": "Regional Qualifier",
+            "description": "Qualify for the Regional Meet for the first time.",
+            "conditions": [
+                {
+                    "type": "qualification_gained",
+                    "meet_type": "regional_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_qual_national",
+            "name": "National Qualifier",
+            "description": "Qualify for the National Meet for the first time.",
+            "conditions": [
+                {
+                    "type": "qualification_gained",
+                    "meet_type": "national_meet"
+                }
+            ]
+        },
+        {
+            "id": "ach_rival_three_wins_season",
+            "name": "Handle Your Rival",
+            "description": "Beat a rival three times in a season.",
+            "conditions": [
+                {
+                    "type": "rival_wins_gte",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "id": "ach_season_no_very_low",
+            "name": "Steady Fuel",
+            "description": "Finish a season without energy dropping below very low.",
+            "conditions": [
+                {
+                    "type": "season_no_very_low_energy"
+                },
+                {
+                    "type": "week_equals",
+                    "week": 13
+                }
+            ]
+        },
+        {
+            "id": "ach_final_year_pb",
+            "name": "Senior Year PB",
+            "description": "Set a personal best in your final season.",
+            "conditions": [
+                {
+                    "type": "year_equals",
+                    "year": 4
+                },
+                {
+                    "type": "pb_true"
+                }
+            ]
+        },
+        {
+            "id": "ach_800m_sub2",
+            "name": "Sub-2 Minute 800",
+            "description": "Run the 800m in under 2:00 (120 seconds).",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "800m"
+                },
+                {
+                    "type": "value_lte",
+                    "value": 120.0
+                }
+            ]
+        },
+        {
+            "id": "ach_800m_elite",
+            "name": "Kick for Days",
+            "description": "Run the 800m in under 1:55 (115 seconds).",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "800m"
+                },
+                {
+                    "type": "value_lte",
+                    "value": 115.0
+                }
+            ]
+        },
+        {
+            "id": "ach_high_jump_180",
+            "name": "Hang Time",
+            "description": "Clear 1.80 meters in the High Jump.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "High Jump"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 1.8
+                }
+            ]
+        },
+        {
+            "id": "ach_high_jump_200",
+            "name": "Sky High",
+            "description": "Clear 2.00 meters in the High Jump.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "High Jump"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 2.0
+                }
+            ]
+        },
+        {
+            "id": "ach_triple_jump_13m",
+            "name": "Triple Threat",
+            "description": "Triple jump 13.0 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Triple Jump"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 13.0
+                }
+            ]
+        },
+        {
+            "id": "ach_triple_jump_15m",
+            "name": "Hop Skip Legend",
+            "description": "Triple jump 15.0 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Triple Jump"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 15.0
+                }
+            ]
+        },
+        {
+            "id": "ach_discus_40m",
+            "name": "40-Meter Discus",
+            "description": "Throw the discus 40 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Discus"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 40.0
+                }
+            ]
+        },
+        {
+            "id": "ach_discus_55m",
+            "name": "Discus Elite",
+            "description": "Throw the discus 55 meters or farther.",
+            "conditions": [
+                {
+                    "type": "event_is",
+                    "event": "Discus"
+                },
+                {
+                    "type": "value_gte",
+                    "value": 55.0
+                }
+            ]
+        }
+    ]
+}

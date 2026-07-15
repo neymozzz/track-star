@@ -1,0 +1,1498 @@
+{
+    "teams": [
+        {
+            "id": "jefferson_high",
+            "name": "Jefferson High",
+            "colors": [
+                "#7C3AED",
+                "#FBBF24"
+            ],
+            "tier_tags": [
+                "local"
+            ]
+        },
+        {
+            "id": "franklin_high",
+            "name": "Franklin High",
+            "colors": [
+                "#1D4ED8",
+                "#F97316"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ]
+        },
+        {
+            "id": "northside_high",
+            "name": "Northside High",
+            "colors": [
+                "#064E3B",
+                "#F59E0B"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ]
+        },
+        {
+            "id": "lincoln_hs",
+            "name": "Lincoln High School",
+            "colors": [
+                "#1E3A8A",
+                "#F59E0B"
+            ],
+            "tier_tags": [
+                "local",
+                "club",
+                "class"
+            ]
+        },
+        {
+            "id": "washington_academy",
+            "name": "Washington Academy",
+            "colors": [
+                "#7F1D1D",
+                "#D1D5DB"
+            ],
+            "tier_tags": [
+                "club",
+                "class"
+            ]
+        },
+        {
+            "id": "eastbrook_high",
+            "name": "Eastbrook High",
+            "colors": [
+                "#0E7490",
+                "#F3F4F6"
+            ],
+            "tier_tags": [
+                "club",
+                "class"
+            ]
+        },
+        {
+            "id": "roosevelt_hs",
+            "name": "Roosevelt High School",
+            "colors": [
+                "#111827",
+                "#EF4444"
+            ],
+            "tier_tags": [
+                "local",
+                "club",
+                "class",
+                "state"
+            ]
+        },
+        {
+            "id": "westview_high",
+            "name": "Westview High",
+            "colors": [
+                "#15803D",
+                "#FCD34D"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ]
+        },
+        {
+            "id": "riverside_prep",
+            "name": "Riverside Prep",
+            "colors": [
+                "#9A3412",
+                "#1E3A8A"
+            ],
+            "tier_tags": [
+                "class",
+                "state",
+                "regional"
+            ]
+        },
+        {
+            "id": "summit_academy",
+            "name": "Summit Academy",
+            "colors": [
+                "#312E81",
+                "#FBBF24"
+            ],
+            "tier_tags": [
+                "state",
+                "regional"
+            ]
+        },
+        {
+            "id": "central_prep",
+            "name": "Central Prep",
+            "colors": [
+                "#0F766E",
+                "#F97316"
+            ],
+            "tier_tags": [
+                "state",
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "valley_crest_hs",
+            "name": "Valley Crest High School",
+            "colors": [
+                "#7C2D12",
+                "#ECFDF5"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "ridgeview_hs",
+            "name": "Ridgeview High School",
+            "colors": [
+                "#1F2937",
+                "#F59E0B"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "oakmont_prep",
+            "name": "Oakmont Prep",
+            "colors": [
+                "#0B4F6C",
+                "#F4D35E"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "redwood_academy",
+            "name": "Redwood Academy",
+            "colors": [
+                "#7C3E0E",
+                "#E5E7EB"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "silverlake_hs",
+            "name": "Silverlake High School",
+            "colors": [
+                "#0B3D91",
+                "#FDE68A"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "horizon_hs",
+            "name": "Horizon High School",
+            "colors": [
+                "#14532D",
+                "#A3E635"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "canyon_ridge_prep",
+            "name": "Canyon Ridge Prep",
+            "colors": [
+                "#5B21B6",
+                "#F9A8D4"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "evergreen_hs",
+            "name": "Evergreen High School",
+            "colors": [
+                "#0F766E",
+                "#99F6E4"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        },
+        {
+            "id": "northgate_academy",
+            "name": "Northgate Academy",
+            "colors": [
+                "#7F1D1D",
+                "#FECACA"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ]
+        }
+    ],
+    "npcs": [
+        {
+            "id": "npc_marcus_chen",
+            "name": "Marcus Chen",
+            "team_id": "roosevelt_hs",
+            "events": [
+                "100m",
+                "200m"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 78,
+                "Agility": 82,
+                "Strength": 60,
+                "Stamina": 55,
+                "Toughness": 62,
+                "Mentality": 70,
+                "Technique": 74,
+                "Recovery": 60
+            },
+            "bio": "A fearless starter who loves head-to-head showdowns.",
+            "dossier_bio": "Marcus thrives on the tension of a close race and will trade leads all the way through the line. {He} spent the summer drilling block starts with {his} club coach, and the improvement shows -- {his} reaction times are among the best in the classification. Opponents who let {him} get to the 60-meter mark even will not like how the last 40 plays out.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_carlos_reyes",
+            "name": "Carlos Reyes",
+            "team_id": "central_prep",
+            "events": [
+                "110mH",
+                "400mH"
+            ],
+            "tier_tags": [
+                "class",
+                "state",
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 76,
+                "Agility": 80,
+                "Strength": 62,
+                "Stamina": 66,
+                "Toughness": 68,
+                "Mentality": 73,
+                "Technique": 82,
+                "Recovery": 64
+            },
+            "bio": "Technically sharp hurdler with late-race composure.",
+            "dossier_bio": "Carlos is a four-event qualifier who has placed at every level from class meets to nationals. {His} three-step pattern between hurdles is textbook, and {he} rarely loses form even when fatigued in the 400mH. Coaches from across the state point to {him} as the standard for technical hurdling at the prep level.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_tyler_patton",
+            "name": "Tyler Patton",
+            "team_id": "lincoln_hs",
+            "events": [
+                "1600m",
+                "3200m"
+            ],
+            "tier_tags": [
+                "local",
+                "club",
+                "class"
+            ],
+            "stats": {
+                "Speed": 55,
+                "Agility": 58,
+                "Strength": 50,
+                "Stamina": 80,
+                "Toughness": 70,
+                "Mentality": 66,
+                "Technique": 60,
+                "Recovery": 72
+            },
+            "bio": "Grinder who wins by refusing to fade.",
+            "dossier_bio": "Tyler is the kind of runner who makes you earn every place. {He} runs high mileage in the offseason and it pays off in the second half of every distance race. Not the fastest guy on any start list, but {he} is relentless -- {he} has a habit of picking off fading runners over the final 800 meters.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_darius_whitfield",
+            "name": "Darius Whitfield",
+            "team_id": "valley_crest_hs",
+            "events": [
+                "100m",
+                "200m",
+                "400m"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 90,
+                "Agility": 86,
+                "Strength": 70,
+                "Stamina": 65,
+                "Toughness": 78,
+                "Mentality": 82,
+                "Technique": 80,
+                "Recovery": 68
+            },
+            "bio": "Top-ten nationally. You know {his} name before the meet starts.",
+            "dossier_bio": "Darius is the headliner. {He} has run sub-10.5 in the 100m and can drop a 47-flat 400m when the field pushes {him}. College scouts have been tracking {him} since sophomore year, and {he} carries himself like someone who already knows where the next level is. When {he} walks into a meet, the seedings shift.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_elena_solis",
+            "name": "Elias Solis",
+            "team_id": "summit_academy",
+            "events": [
+                "800m",
+                "1600m"
+            ],
+            "tier_tags": [
+                "state",
+                "regional"
+            ],
+            "stats": {
+                "Speed": 68,
+                "Agility": 65,
+                "Strength": 55,
+                "Stamina": 84,
+                "Toughness": 79,
+                "Mentality": 77,
+                "Technique": 70,
+                "Recovery": 80
+            },
+            "bio": "Patient kicker -- {he} runs the first three laps to set up the last 200.",
+            "dossier_bio": "Elias has the rare ability to look relaxed at a pace that would bury most runners. {He} sits in the pack through 1200 meters and then unleashes a finishing kick that has won {him} two state-level medals already. {His} coach calls {him} the most tactically mature runner on the team.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_kenji_okoro",
+            "name": "Kenji Okoro",
+            "team_id": "westview_high",
+            "events": [
+                "Shot Put",
+                "Discus",
+                "Javelin"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 50,
+                "Agility": 55,
+                "Strength": 82,
+                "Stamina": 52,
+                "Toughness": 74,
+                "Mentality": 68,
+                "Technique": 79,
+                "Recovery": 57
+            },
+            "bio": "Built for the ring. {His} technique was cleaned up over the offseason.",
+            "dossier_bio": "Kenji spent the offseason working with a private throws coach and the results are obvious -- {his} shot put spin is tighter and {his} discus release angle has flattened out. {He} competes in all three throws and scores in at least two at every meet. The raw power was always there; now the technique is catching up.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_priya_nair",
+            "name": "Priyan Nair",
+            "team_id": "riverside_prep",
+            "events": [
+                "Long Jump",
+                "Triple Jump",
+                "High Jump"
+            ],
+            "tier_tags": [
+                "class",
+                "state",
+                "regional"
+            ],
+            "stats": {
+                "Speed": 75,
+                "Agility": 84,
+                "Strength": 62,
+                "Stamina": 60,
+                "Toughness": 66,
+                "Mentality": 72,
+                "Technique": 82,
+                "Recovery": 62
+            },
+            "bio": "{His} approach speed is elite. The technique showed up senior year.",
+            "dossier_bio": "Priyan was always the fastest guy on the runway, but early in {his} career the jumps were inconsistent. That changed this year. {His} takeoff timing has locked in, and now {he} is converting that elite speed into marks that place at the regional level in all three jumping events. A serious multi-event threat when {he} is on.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_jaylen_cross",
+            "name": "Jaylen Cross",
+            "team_id": "eastbrook_high",
+            "events": [
+                "400m",
+                "800m"
+            ],
+            "tier_tags": [
+                "club",
+                "class"
+            ],
+            "stats": {
+                "Speed": 70,
+                "Agility": 67,
+                "Strength": 60,
+                "Stamina": 74,
+                "Toughness": 68,
+                "Mentality": 65,
+                "Technique": 66,
+                "Recovery": 64
+            },
+            "bio": "Competing up every chance {he} gets. Strong finisher on both events.",
+            "dossier_bio": "Jaylen is the kind of competitor who enters every invitational {he} can find, always looking for a faster field. {He} doubles the 400m and 800m with a quick turnaround and still runs hard in both. {His} finishing speed over the last 100 meters is better than {his} seed times suggest, and {he} is improving fast.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_oliver_shaw",
+            "name": "Oliver Shaw",
+            "team_id": "central_prep",
+            "events": [
+                "3200m"
+            ],
+            "tier_tags": [
+                "state",
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 60,
+                "Agility": 62,
+                "Strength": 54,
+                "Stamina": 90,
+                "Toughness": 85,
+                "Mentality": 80,
+                "Technique": 68,
+                "Recovery": 86
+            },
+            "bio": "Ran a 9:02 as a junior. {He}'s been chasing the school record ever since.",
+            "dossier_bio": "Oliver is a nationally ranked 3200m runner who trains like a college athlete already. {He} logs serious mileage year-round, and {his} race IQ is well beyond {his} age -- {he} knows exactly when to push the pace and when to sit. The school record is 8:54, and everyone in the program expects {him} to break it before the season ends.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_luca_bennett",
+            "name": "Luca Bennett",
+            "team_id": "franklin_high",
+            "events": [
+                "100m",
+                "200m"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 68,
+                "Agility": 71,
+                "Strength": 56,
+                "Stamina": 50,
+                "Toughness": 58,
+                "Mentality": 61,
+                "Technique": 64,
+                "Recovery": 57
+            },
+            "bio": "Quick out of the blocks and aggressive through the curve.",
+            "dossier_bio": "Luca is a sophomore who already races like an upperclassman. {He} explodes out of the blocks with zero hesitation and attacks the 200m curve hard enough to unsettle runners in the lanes around {him}. The endurance is not quite there yet for longer sprints, but in anything under 25 seconds, {he} is a handful.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_malik_hayes",
+            "name": "Malik Hayes",
+            "team_id": "northside_high",
+            "events": [
+                "110mH",
+                "400mH"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 66,
+                "Agility": 72,
+                "Strength": 56,
+                "Stamina": 58,
+                "Toughness": 60,
+                "Mentality": 62,
+                "Technique": 70,
+                "Recovery": 58
+            },
+            "bio": "Still rough between barriers, but fearless whenever the race gets messy.",
+            "dossier_bio": "Malik clips hurdles, stutters between barriers, and still finishes close enough to scare you. {He} is a raw talent who converted from flat sprints last year and has not fully polished {his} technique. But {his} speed between the sticks is real, and in chaotic local-level races where everyone is rattled, that fearlessness is a weapon.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_devin_hart",
+            "name": "Devin Hart",
+            "team_id": "ridgeview_hs",
+            "events": [
+                "110mH",
+                "400mH"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 84,
+                "Agility": 87,
+                "Strength": 66,
+                "Stamina": 72,
+                "Toughness": 76,
+                "Mentality": 79,
+                "Technique": 88,
+                "Recovery": 70
+            },
+            "bio": "Clean trail leg, calm championship temperament, and almost no wasted motion.",
+            "dossier_bio": "Devin is the most technically sound hurdler you will face at the national level. {His} trail leg clearance is textbook, {his} stride pattern between barriers never breaks down, and {he} races championship rounds like they are Tuesday practice reps. Multiple D1 programs are watching {him} closely, and the attention has not affected {his} focus one bit.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_nolan_price",
+            "name": "Nolan Price",
+            "team_id": "redwood_academy",
+            "events": [
+                "800m",
+                "1600m"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 74,
+                "Agility": 68,
+                "Strength": 58,
+                "Stamina": 88,
+                "Toughness": 82,
+                "Mentality": 80,
+                "Technique": 72,
+                "Recovery": 83
+            },
+            "bio": "Controls the middle laps and dares everyone else to respond late.",
+            "dossier_bio": "Nolan does not chase. {He} sets the pace from the gun, dares the field to follow, and then kicks again when everyone expects {him} to fade. {His} 800m-1600m double at last year's regional championship earned {him} two medals and a reputation as someone who races to break the field, not just to win.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_gavin_rowe",
+            "name": "Gavin Rowe",
+            "team_id": "roosevelt_hs",
+            "events": [
+                "1600m",
+                "3200m"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 61,
+                "Agility": 60,
+                "Strength": 52,
+                "Stamina": 84,
+                "Toughness": 76,
+                "Mentality": 71,
+                "Technique": 63,
+                "Recovery": 77
+            },
+            "bio": "Not flashy, but {he} keeps squeezing the pace until the field breaks.",
+            "dossier_bio": "Gavin will never be the most talented runner in the race, and {he} does not care. {He} is methodical -- {he} trains consistently, runs within {himself}, and chips a second or two off {his} PRs every season. In the 3200m, that kind of steady pressure wears people down. By the final mile, most runners behind {him} have already given up.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_brady_sloan",
+            "name": "Brady Sloan",
+            "team_id": "franklin_high",
+            "events": [
+                "Shot Put",
+                "Discus"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 46,
+                "Agility": 50,
+                "Strength": 72,
+                "Stamina": 50,
+                "Toughness": 66,
+                "Mentality": 60,
+                "Technique": 68,
+                "Recovery": 54
+            },
+            "bio": "Strong enough to matter already, with just enough technique to steal local wins.",
+            "dossier_bio": "Brady is a football lineman who throws shot put and discus in the spring because {his} football coach told {him} to. The surprising part is how much {he} actually likes it. {His} technique is still rough around the edges, but {he} is strong enough to win local meets on power alone. If {he} ever commits to the ring full-time, watch out.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_teo_morales",
+            "name": "Teo Morales",
+            "team_id": "oakmont_prep",
+            "events": [
+                "Discus",
+                "Javelin"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 62,
+                "Agility": 66,
+                "Strength": 78,
+                "Stamina": 55,
+                "Toughness": 74,
+                "Mentality": 77,
+                "Technique": 84,
+                "Recovery": 60
+            },
+            "bio": "A polished release point makes {his} best throws look effortless.",
+            "dossier_bio": "Teo is the thrower other throwers study. {His} discus release is clean enough to make senior coaches stop and stare, and {his} javelin approach has a smoothness that belies how hard {he} is actually throwing. {He} has been a national qualifier in both events and carries the quiet confidence of someone who has already proven {himself} at the highest level.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_camden_ross",
+            "name": "Camden Ross",
+            "team_id": "jefferson_high",
+            "events": [
+                "High Jump",
+                "Long Jump"
+            ],
+            "tier_tags": [
+                "local"
+            ],
+            "stats": {
+                "Speed": 63,
+                "Agility": 69,
+                "Strength": 54,
+                "Stamina": 50,
+                "Toughness": 57,
+                "Mentality": 59,
+                "Technique": 66,
+                "Recovery": 55
+            },
+            "bio": "Still learning the details, but {his} bounce shows up in every meet.",
+            "dossier_bio": "Camden is all raw potential right now. {He} cleared 5-10 in high jump on pure athleticism before anyone taught {him} a proper Fosbury approach, and {his} long jump marks are creeping up as {his} runway mechanics improve. The ceiling is high if {he} sticks with it -- right now {he} is just the local kid who out-bounces everyone.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_zane_callow",
+            "name": "Zane Callow",
+            "team_id": "silverlake_hs",
+            "events": [
+                "Long Jump",
+                "Triple Jump",
+                "High Jump"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 82,
+                "Agility": 88,
+                "Strength": 66,
+                "Stamina": 58,
+                "Toughness": 72,
+                "Mentality": 78,
+                "Technique": 86,
+                "Recovery": 64
+            },
+            "bio": "Big-meet jumper whose series usually gets better as the competition tightens.",
+            "dossier_bio": "Zane is a championship-caliber multi-event jumper who somehow produces {his} best marks under the most pressure. In the long jump, {he} will foul the first two attempts and then rip a mark on the final jump that wins the competition. {He} competes across three jumping events at the national level and has medaled in two of them.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_deon_wiggins",
+            "name": "Deon Wiggins",
+            "team_id": "jefferson_high",
+            "events": [
+                "Long Jump",
+                "Triple Jump"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 65,
+                "Agility": 70,
+                "Strength": 55,
+                "Stamina": 50,
+                "Toughness": 58,
+                "Mentality": 60,
+                "Technique": 63,
+                "Recovery": 54
+            },
+            "bio": "Raw athleticism that makes {him} unpredictable on the runway.",
+            "dossier_bio": "Deon is a basketball player who jumped into track because {his} gym teacher saw {him} clear a park bench. {His} long jump approach is inconsistent and {his} triple jump phases are still out of rhythm, but the pure explosiveness is undeniable. On {his} best day, {he} can beat anyone at the local level -- the problem is nobody knows which day that will be.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_reggie_thorn",
+            "name": "Reggie Thorn",
+            "team_id": "franklin_high",
+            "events": [
+                "100m",
+                "400m"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 67,
+                "Agility": 64,
+                "Strength": 58,
+                "Stamina": 55,
+                "Toughness": 62,
+                "Mentality": 58,
+                "Technique": 60,
+                "Recovery": 56
+            },
+            "bio": "All-out from the gun. Fades late but never lets you forget {he} was there.",
+            "dossier_bio": "Reggie runs every race like it is {his} last. {He} takes the 100m out at full effort and attacks the 400m with the same reckless aggression, which means {he} is either winning by daylight at 200 meters or dying over the final straight. The inconsistency keeps {him} at the local level for now, but {he} is always a factor through the first half of the race.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_isaac_flores",
+            "name": "Isaac Flores",
+            "team_id": "washington_academy",
+            "events": [
+                "800m",
+                "1500m"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 58,
+                "Agility": 56,
+                "Strength": 52,
+                "Stamina": 72,
+                "Toughness": 65,
+                "Mentality": 63,
+                "Technique": 58,
+                "Recovery": 68
+            },
+            "bio": "Patient front-runner who turns early leads into honest victories.",
+            "dossier_bio": "Isaac is a smart, steady runner who likes to grab the lead early and control the pace from the front. {He} does not have a devastating kick, but {he} almost never blows up either -- {his} splits are remarkably even for a runner at the club level. The 800m and 1500m double is {his} bread and butter, and {he} handles the workload without complaint.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_hector_vega",
+            "name": "Hector Vega",
+            "team_id": "northside_high",
+            "events": [
+                "Shot Put",
+                "Javelin"
+            ],
+            "tier_tags": [
+                "local"
+            ],
+            "stats": {
+                "Speed": 44,
+                "Agility": 48,
+                "Strength": 70,
+                "Stamina": 48,
+                "Toughness": 64,
+                "Mentality": 57,
+                "Technique": 65,
+                "Recovery": 52
+            },
+            "bio": "Heavy lifter who showed up to track on a dare and never left.",
+            "dossier_bio": "Hector wandered over from the weight room on a bet and threw 38 feet on {his} first day. {His} technique is unrefined and {his} footwork in the ring is basically nonexistent, but the sheer strength makes {him} competitive at the local level in shot put and javelin. {He} genuinely enjoys the throwing events now and has started asking {his} coach for extra practice time.",
+            "competition_category": "men"
+        },
+        {
+            "id": "npc_maya_thompson",
+            "name": "Maya Thompson",
+            "competition_category": "women",
+            "team_id": "jefferson_high",
+            "events": [
+                "100m",
+                "200m"
+            ],
+            "tier_tags": [
+                "local"
+            ],
+            "stats": {
+                "Speed": 64,
+                "Agility": 68,
+                "Strength": 52,
+                "Stamina": 50,
+                "Toughness": 56,
+                "Mentality": 58,
+                "Technique": 61,
+                "Recovery": 54
+            },
+            "bio": "Explosive over the first half of every sprint and never shy about racing up a tier.",
+            "dossier_bio": "Maya has one gear: full speed. {She} rockets out of the blocks and builds a gap before the field even settles into stride. The second half of {her} races is less polished -- {she} tends to tighten up late -- but at the local level, the damage is already done by then. {She} signs up for every invitational {she} can find, always looking for a faster heat."
+        },
+        {
+            "id": "npc_sienna_brooks",
+            "name": "Sienna Brooks",
+            "competition_category": "women",
+            "team_id": "eastbrook_high",
+            "events": [
+                "100m",
+                "200m",
+                "400m"
+            ],
+            "tier_tags": [
+                "club",
+                "class"
+            ],
+            "stats": {
+                "Speed": 73,
+                "Agility": 75,
+                "Strength": 58,
+                "Stamina": 61,
+                "Toughness": 64,
+                "Mentality": 67,
+                "Technique": 69,
+                "Recovery": 60
+            },
+            "bio": "Strong through the curve and dangerous whenever the 400 opens too fast.",
+            "dossier_bio": "Sienna is a versatile sprinter who can line up in the 100m, 200m, or 400m and place in all three. {Her} real strength is the curve -- {she} runs relaxed through the bend while other runners tense up, and that efficiency gives {her} an edge over the back half. In the 400m, {she} feeds off fast openers and chases down runners who go out too hard."
+        },
+        {
+            "id": "npc_naomi_price",
+            "name": "Naomi Price",
+            "competition_category": "women",
+            "team_id": "central_prep",
+            "events": [
+                "100m",
+                "200m",
+                "400m"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 89,
+                "Agility": 85,
+                "Strength": 68,
+                "Stamina": 70,
+                "Toughness": 77,
+                "Mentality": 81,
+                "Technique": 79,
+                "Recovery": 66
+            },
+            "bio": "National-class sprint talent with the kind of poise that changes a whole meet.",
+            "dossier_bio": "Naomi is the most complete sprinter in the country at the prep level. {She} runs all three sprint distances at or near national-qualifying marks, and {she} does it with a calm that makes championship rounds feel routine. Coaches describe {her} as unflappable -- {she} has never visibly panicked in a race, even when the field is stacked. The college recruitment race for {her} is already well underway."
+        },
+        {
+            "id": "npc_alina_reyes",
+            "name": "Alina Reyes",
+            "competition_category": "women",
+            "team_id": "roosevelt_hs",
+            "events": [
+                "100mH",
+                "400mH"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 74,
+                "Agility": 79,
+                "Strength": 58,
+                "Stamina": 64,
+                "Toughness": 66,
+                "Mentality": 69,
+                "Technique": 78,
+                "Recovery": 60
+            },
+            "bio": "Quick between hurdles and still getting sharper each month.",
+            "dossier_bio": "Alina picked up hurdling as a sophomore and has been on a steep improvement curve ever since. {Her} speed between barriers is already class-level, and {her} technique gets noticeably better from meet to meet. {She} watches film of {her} own races and shows up the next week with adjustments. The ceiling is high if {she} keeps this trajectory."
+        },
+        {
+            "id": "npc_zoe_kim",
+            "name": "Zoe Kim",
+            "competition_category": "women",
+            "team_id": "summit_academy",
+            "events": [
+                "100mH",
+                "400mH"
+            ],
+            "tier_tags": [
+                "state",
+                "regional"
+            ],
+            "stats": {
+                "Speed": 80,
+                "Agility": 84,
+                "Strength": 61,
+                "Stamina": 69,
+                "Toughness": 72,
+                "Mentality": 75,
+                "Technique": 84,
+                "Recovery": 65
+            },
+            "bio": "Technically polished hurdler who seems to get cleaner as the stakes rise.",
+            "dossier_bio": "Zoe is a student of the event. {She} can tell you {her} three-step count to the inch, and {her} trail leg clearance barely changes from warmups to finals. What makes {her} dangerous at the state and regional level is that {she} actually gets sharper under pressure -- {her} best times have all come in championship heats, never in regular-season invitationals."
+        },
+        {
+            "id": "npc_danielle_okafor",
+            "name": "Danielle Okafor",
+            "competition_category": "women",
+            "team_id": "ridgeview_hs",
+            "events": [
+                "100mH",
+                "400mH"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 87,
+                "Agility": 90,
+                "Strength": 66,
+                "Stamina": 74,
+                "Toughness": 78,
+                "Mentality": 82,
+                "Technique": 88,
+                "Recovery": 69
+            },
+            "bio": "Every hurdle looks identical. That consistency is why {she} keeps winning major rounds.",
+            "dossier_bio": "Danielle is the kind of hurdler who makes the event look mechanical -- every clearance at the same height, every landing in the same spot, every stride between barriers perfectly measured. That robotic consistency is what separates {her} from the field at nationals. {She} does not rely on one big race; {she} just never runs a bad one. Coaches call {her} the most reliable hurdler in the state."
+        },
+        {
+            "id": "npc_leila_hassan",
+            "name": "Leila Hassan",
+            "competition_category": "women",
+            "team_id": "franklin_high",
+            "events": [
+                "800m"
+            ],
+            "tier_tags": [
+                "club"
+            ],
+            "stats": {
+                "Speed": 62,
+                "Agility": 60,
+                "Strength": 52,
+                "Stamina": 74,
+                "Toughness": 68,
+                "Mentality": 66,
+                "Technique": 61,
+                "Recovery": 70
+            },
+            "bio": "Settles into rhythm early and keeps making people pay for going out too hot.",
+            "dossier_bio": "Leila is a one-event specialist who has turned the 800m into {her} personal laboratory. {She} studies splits, paces {her} training runs to the second, and refuses to get pulled into a fast first lap. At the club level, that patience is a weapon -- half the field goes out too hard, and Leila picks them off one by one in the final 300 meters."
+        },
+        {
+            "id": "npc_arianna_doyle",
+            "name": "Arianna Doyle",
+            "competition_category": "women",
+            "team_id": "riverside_prep",
+            "events": [
+                "800m",
+                "1600m"
+            ],
+            "tier_tags": [
+                "class",
+                "state",
+                "regional"
+            ],
+            "stats": {
+                "Speed": 68,
+                "Agility": 65,
+                "Strength": 54,
+                "Stamina": 82,
+                "Toughness": 76,
+                "Mentality": 74,
+                "Technique": 69,
+                "Recovery": 78
+            },
+            "bio": "She is never rattled by pace changes and always has a response over the final lap.",
+            "dossier_bio": "Arianna is a competitor who seems to have an answer for every move. Surge at 600? {She} matches it. Slow the pace to a crawl? {She} sits and waits. {Her} 800m-1600m double has been a scoring machine at the state and regional level for two seasons, and {her} ability to read a race in real time gives {her} an edge that pure fitness alone cannot match."
+        },
+        {
+            "id": "npc_ella_morales",
+            "name": "Ella Morales",
+            "competition_category": "women",
+            "team_id": "valley_crest_hs",
+            "events": [
+                "800m",
+                "1600m"
+            ],
+            "tier_tags": [
+                "regional"
+            ],
+            "stats": {
+                "Speed": 72,
+                "Agility": 67,
+                "Strength": 55,
+                "Stamina": 86,
+                "Toughness": 80,
+                "Mentality": 78,
+                "Technique": 71,
+                "Recovery": 81
+            },
+            "bio": "Patient and punishing. She almost always saves the best move for the last 250.",
+            "dossier_bio": "Ella is a predator in the back half of distance races. {She} sits behind the leaders with unsettling calm, waiting for the moment when the pace starts to bite. Then {she} moves, usually with 250 to go, and very few runners at the regional level can respond. {Her} 800m is {her} stronger event, but {she} doubles the 1600m just to keep {her} race sharpness up."
+        },
+        {
+            "id": "npc_hannah_sloan",
+            "name": "Hannah Sloan",
+            "competition_category": "women",
+            "team_id": "westview_high",
+            "events": [
+                "1600m",
+                "3200m"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 60,
+                "Agility": 58,
+                "Strength": 50,
+                "Stamina": 83,
+                "Toughness": 75,
+                "Mentality": 70,
+                "Technique": 62,
+                "Recovery": 77
+            },
+            "bio": "A steady grinder who keeps clipping the pace until the field gives in.",
+            "dossier_bio": "Hannah is not flashy and does not pretend to be. {She} trains six days a week, runs consistent splits in every workout, and brings that same metronomic approach to race day. In the 1600m and 3200m, that consistency is devastating -- {she} does not blow anyone away, but {she} grinds down every runner who tries to hang with {her} over the final half-mile."
+        },
+        {
+            "id": "npc_brielle_nguyen",
+            "name": "Brielle Nguyen",
+            "competition_category": "women",
+            "team_id": "central_prep",
+            "events": [
+                "1600m",
+                "3200m"
+            ],
+            "tier_tags": [
+                "state",
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 68,
+                "Agility": 63,
+                "Strength": 53,
+                "Stamina": 90,
+                "Toughness": 84,
+                "Mentality": 81,
+                "Technique": 70,
+                "Recovery": 85
+            },
+            "bio": "National-level distance runner who controls races by making every lap honest.",
+            "dossier_bio": "Brielle is the pace-setter nobody wants to follow. {She} runs from the front, keeps every lap within a second of the last, and dares the field to match {her} workload. At the national level, that strategy separates the contenders from the pretenders fast. {She} has qualified for nationals in both the 1600m and 3200m and is considered one of the top distance prospects in {her} class."
+        },
+        {
+            "id": "npc_madison_cole",
+            "name": "Madison Cole",
+            "competition_category": "women",
+            "team_id": "northgate_academy",
+            "events": [
+                "1600m",
+                "3200m"
+            ],
+            "tier_tags": [
+                "national"
+            ],
+            "stats": {
+                "Speed": 71,
+                "Agility": 64,
+                "Strength": 55,
+                "Stamina": 92,
+                "Toughness": 86,
+                "Mentality": 83,
+                "Technique": 72,
+                "Recovery": 87
+            },
+            "bio": "Looks calm no matter how punishing the pace gets, which is why {she} is still there at the bell.",
+            "dossier_bio": "Madison is the runner you forget about until it is too late. {She} races at the back of the lead pack with a blank expression while the leaders burn matches, and then {she} floats past them over the final 400 like the first 1200 meters never happened. {Her} ability to absorb pain without showing it is legendary on the national circuit. Several elite D1 programs already have {her} on their radar."
+        },
+        {
+            "id": "npc_kennedy_wells",
+            "name": "Kennedy Wells",
+            "competition_category": "women",
+            "team_id": "northside_high",
+            "events": [
+                "Shot Put",
+                "Discus"
+            ],
+            "tier_tags": [
+                "local",
+                "club"
+            ],
+            "stats": {
+                "Speed": 46,
+                "Agility": 50,
+                "Strength": 71,
+                "Stamina": 49,
+                "Toughness": 65,
+                "Mentality": 59,
+                "Technique": 67,
+                "Recovery": 53
+            },
+            "bio": "Already strong enough to bully local fields when {her} release point cooperates.",
+            "dossier_bio": "Kennedy showed up to the throws circle with a volleyball background and a frame that suggests {she} belongs there. {Her} shot put power is already enough to dominate local fields, and {her} discus has flashes of real distance when {her} release timing clicks. The technique is still a work in progress, but {she} is coachable and competitive, which means the ceiling is a long way off."
+        },
+        {
+            "id": "npc_samara_vega",
+            "name": "Samara Vega",
+            "competition_category": "women",
+            "team_id": "roosevelt_hs",
+            "events": [
+                "Shot Put",
+                "Discus",
+                "Javelin"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 52,
+                "Agility": 56,
+                "Strength": 80,
+                "Stamina": 51,
+                "Toughness": 73,
+                "Mentality": 68,
+                "Technique": 78,
+                "Recovery": 57
+            },
+            "bio": "Multi-event thrower with enough technique to score in three places on the same day.",
+            "dossier_bio": "Samara is the rare thrower who can score meaningful points in shot put, discus, and javelin at the same meet. {She} spent two years refining {her} technique across all three implements, and the consistency shows -- {she} rarely has a zero in any event. At the state level, that triple-scoring ability makes {her} one of the most valuable field athletes on any roster."
+        },
+        {
+            "id": "npc_iris_delgado",
+            "name": "Iris Delgado",
+            "competition_category": "women",
+            "team_id": "redwood_academy",
+            "events": [
+                "Discus",
+                "Javelin"
+            ],
+            "tier_tags": [
+                "regional"
+            ],
+            "stats": {
+                "Speed": 60,
+                "Agility": 64,
+                "Strength": 77,
+                "Stamina": 54,
+                "Toughness": 74,
+                "Mentality": 76,
+                "Technique": 83,
+                "Recovery": 60
+            },
+            "bio": "The release is smooth, the runway is clean, and the marks keep stacking up.",
+            "dossier_bio": "Iris is a technician. {Her} discus release has the kind of clean, repeatable motion that coaches build highlight reels around, and {her} javelin approach is just as polished. {She} does not have the brute strength of some throwers, but {her} consistency and timing produce marks that hold up at the regional level. When the competition matters most, {her} form never wavers."
+        },
+        {
+            "id": "npc_talia_rivera",
+            "name": "Talia Rivera",
+            "competition_category": "women",
+            "team_id": "riverside_prep",
+            "events": [
+                "Long Jump",
+                "High Jump"
+            ],
+            "tier_tags": [
+                "class",
+                "state"
+            ],
+            "stats": {
+                "Speed": 72,
+                "Agility": 79,
+                "Strength": 58,
+                "Stamina": 55,
+                "Toughness": 63,
+                "Mentality": 68,
+                "Technique": 77,
+                "Recovery": 58
+            },
+            "bio": "A natural jumper whose runway confidence keeps growing with every championship round.",
+            "dossier_bio": "Talia has the kind of natural bounce that coaches notice immediately. {Her} long jump approach has gotten more aggressive each season, and {her} high jump technique -- which started as pure athleticism -- now includes a real Fosbury arc. {She} performs best at championship meets, where the adrenaline seems to add inches to {her} marks. A state-level contender in both events."
+        },
+        {
+            "id": "npc_nia_clarke",
+            "name": "Nia Clarke",
+            "competition_category": "women",
+            "team_id": "silverlake_hs",
+            "events": [
+                "Long Jump",
+                "Triple Jump",
+                "High Jump"
+            ],
+            "tier_tags": [
+                "regional",
+                "national"
+            ],
+            "stats": {
+                "Speed": 84,
+                "Agility": 88,
+                "Strength": 64,
+                "Stamina": 58,
+                "Toughness": 72,
+                "Mentality": 79,
+                "Technique": 85,
+                "Recovery": 63
+            },
+            "bio": "Championship jumper whose best attempts usually arrive when the meet is on the line.",
+            "dossier_bio": "Nia is the jumper everyone dreads seeing on the start list at a big meet. {She} competes in long jump, triple jump, and high jump at the national level, and {her} defining trait is that {she} saves {her} best for the final round. When the pressure is highest and one jump decides the medal, Nia almost always delivers. Multiple D1 programs are recruiting {her} as a multi-event prospect."
+        },
+        {
+            "id": "npc_jocelyn_park",
+            "name": "Jocelyn Park",
+            "competition_category": "women",
+            "team_id": "oakmont_prep",
+            "events": [
+                "Long Jump",
+                "Triple Jump"
+            ],
+            "tier_tags": [
+                "class",
+                "regional"
+            ],
+            "stats": {
+                "Speed": 78,
+                "Agility": 82,
+                "Strength": 60,
+                "Stamina": 56,
+                "Toughness": 68,
+                "Mentality": 74,
+                "Technique": 81,
+                "Recovery": 61
+            },
+            "bio": "Consistent on the board and dangerous in meets where everyone else starts chasing fouls.",
+            "dossier_bio": "Jocelyn wins meets by not beating herself. While other jumpers foul their way out of contention, {she} hits the board clean attempt after attempt and stacks solid marks. {Her} long jump and triple jump consistency has earned {her} placements from class meets all the way to regionals. {She} is not always the most explosive jumper in the field, but {she} is almost always the most reliable."
+        }
+    ],
+    "npc_name_pool": [
+        "Aiden Brooks",
+        "Jackson Miller",
+        "Ethan Nguyen",
+        "Mason Patel",
+        "Ryan Parker",
+        "Noah Kim",
+        "Wyatt Rivera",
+        "Luke Young",
+        "Caleb Harper",
+        "Mason Thompson",
+        "Dylan Davis",
+        "Owen Monroe",
+        "Carter Walker",
+        "Grayson Ellis",
+        "Drew Hayes",
+        "Blake Turner",
+        "Hunter Scott",
+        "Landon Reed",
+        "Cole Bennett",
+        "Evan Marshall",
+        "Nolan Fletcher",
+        "Owen Graves",
+        "Eli Hawkins",
+        "Mason Conrad",
+        "Jaxon Mercer",
+        "Caleb Rhodes",
+        "Isaiah Torres",
+        "Dominic Vance",
+        "Marcus Webb",
+        "Elijah Santos",
+        "Finn Calloway",
+        "Leo Castillo",
+        "Xavier Pham",
+        "Kai Okafor",
+        "Tyrese Bolton",
+        "Aiden Cross",
+        "Liam Porter",
+        "Noah Fitzgerald",
+        "Ethan Holt",
+        "Samuel Pierce",
+        "Daniel Ortiz",
+        "Gabriel Reyes",
+        "Adrian Knox",
+        "Brendan Walsh",
+        "Connor McCoy",
+        "Donovan Price",
+        "Quinton Fields",
+        "Rasheed Larson",
+        "Terrell Banks",
+        "DeShawn Carter",
+        "Jaylen Murphy",
+        "Kobe Bridges",
+        "Trey Holloway",
+        "Andre Washington",
+        "Vincent Pruitt",
+        "Roland Stubbs",
+        "Cedric Malone",
+        "Jerome Benson",
+        "Deon Thornton",
+        "Arturo Vega",
+        "Mateo Salinas",
+        "Reuben Crane",
+        "Tobias Garrett",
+        "Fletcher Hines",
+        "Wade Davenport",
+        "Archer Bloom",
+        "Rowan Finley",
+        "Beckett Solis",
+        "Sterling Marsh",
+        "Daxton Briggs",
+        "Reid Callahan",
+        "Cruz Navarro",
+        "Ivan Petrov",
+        "Nikolai Brennan",
+        "Jasper Whitmore",
+        "Emmett Hollister",
+        "Hugo Delacroix",
+        "Luca Romano",
+        "Dante Ferraro",
+        "Marco Ibarra"
+    ],
+    "npc_name_pool_women": [
+        "Megan Hart",
+        "Audrey Quinn",
+        "Natalie Greer",
+        "Kayla Sutton",
+        "Riley Boone",
+        "Alyssa Mendez",
+        "Farrah Lin",
+        "Mallory Knox",
+        "Serena Bishop",
+        "Kelsey Vaughn",
+        "Chelsea Drake",
+        "Morgan Tate",
+        "Ashley Reed",
+        "Selena Pierce",
+        "Dani Cooper",
+        "Marissa Lane",
+        "Taylor Boone",
+        "Cassidy Holt",
+        "Ava Bennett",
+        "Layla Flores",
+        "Camila Ortiz",
+        "Jasmine Carter",
+        "Sydney Marshall",
+        "Brooke Ellis",
+        "Faith Holloway",
+        "Cora Patel",
+        "Vivian Santos",
+        "Keira Lawson",
+        "Autumn Harper",
+        "Reese Monroe",
+        "Peyton Cross",
+        "Mila Castillo",
+        "Kendall James",
+        "Adrianna Fields",
+        "Bianca Torres",
+        "Aaliyah Banks",
+        "Imani Whitaker",
+        "Simone Beauchamp",
+        "Aisha Rahman",
+        "Priya Menon",
+        "Mei Tanaka",
+        "Lucia Moretti",
+        "Valentina Cruz",
+        "Rosa Fuentes",
+        "Gabriela Marquez",
+        "Ximena Alvarez",
+        "Noelle Fontaine",
+        "Ingrid Larsen",
+        "Anya Petrova",
+        "Katarina Volkov",
+        "Zora Ellington",
+        "Tamia Woodson",
+        "Deja Coleman",
+        "Kiara Simmons",
+        "Amara Diallo",
+        "Chidinma Eze",
+        "Yuki Nakamura",
+        "Harper Linwood",
+        "Sloane Ackerman",
+        "Emerson Blake",
+        "Tatum Reilly",
+        "Quinn Abernathy",
+        "Delaney Foss",
+        "Wren Sinclair",
+        "Maeve Gallagher",
+        "Saoirse Byrne",
+        "Fiona McAllister",
+        "Greta Holm",
+        "Elsa Lindqvist",
+        "Amelie Girard",
+        "Chiara Esposito",
+        "Daniela Herrera",
+        "Paola Rincon",
+        "Alondra Beltran",
+        "Jada Pemberton",
+        "Nyla Freeman",
+        "Zaria Hendricks",
+        "Ayana Brooks",
+        "Leilani Kealoha",
+        "Malia Fonoti",
+        "Josephine Hale",
+        "Ruby Stanton",
+        "Celeste Navarro",
+        "Marisol Ochoa"
+    ],
+    "first_name_pool": [
+        "Aiden", "Marcus", "Deshawn", "Elijah", "Caleb", "Jordan", "Malik", "Tyler",
+        "Brandon", "Isaiah", "Xavier", "Logan", "Ethan", "Noah", "Lucas", "Mason",
+        "Jayden", "Carter", "Dylan", "Owen", "Gabriel", "Julian", "Miles", "Trevor",
+        "Devin", "Andre", "Darius", "Terrell", "Quentin", "Ramon", "Diego", "Mateo",
+        "Santiago", "Luis", "Omar", "Tariq", "Jamal", "Kofi", "Kwame", "Hiro",
+        "Kenji", "Daniel", "Samuel", "Joseph", "David", "Nathan", "Aaron", "Adam",
+        "Patrick", "Sean", "Liam", "Connor", "Declan", "Finn", "Cole", "Wyatt",
+        "Grant", "Reid", "Blake", "Chase"
+    ],
+    "first_name_pool_women": [
+        "Maya", "Zoe", "Aaliyah", "Imani", "Nia", "Jasmine", "Destiny", "Kayla",
+        "Alyssa", "Brianna", "Sierra", "Savannah", "Autumn", "Willow", "Harper", "Avery",
+        "Riley", "Quinn", "Peyton", "Morgan", "Camila", "Sofia", "Valentina", "Lucia",
+        "Elena", "Amara", "Zara", "Leila", "Naomi", "Ruby", "Grace", "Chloe",
+        "Lily", "Ella", "Nora", "Hazel", "Ivy", "Stella", "Violet", "Aurora",
+        "Luna", "Mia", "Emma", "Olivia", "Ava", "Isabella", "Charlotte", "Amelia",
+        "Evelyn", "Abigail", "Keisha", "Tamara", "Simone", "Gabrielle", "Monique", "Priya",
+        "Anika", "Mei", "Yuki", "Sana"
+    ],
+    "last_name_pool": [
+        "Brooks", "Carter", "Chen", "Coleman", "Cruz", "Davis", "Diaz", "Edwards",
+        "Ellis", "Evans", "Foster", "Freeman", "Garcia", "Gibson", "Gomez", "Grant",
+        "Gray", "Green", "Griffin", "Hall", "Harris", "Hayes", "Henderson", "Hernandez",
+        "Hicks", "Holmes", "Howard", "Hughes", "Jackson", "James", "Jenkins", "Johnson",
+        "Jones", "Kelly", "Kim", "King", "Lee", "Lewis", "Long", "Lopez",
+        "Marshall", "Martin", "Martinez", "McCoy", "Mills", "Mitchell", "Moore", "Morales",
+        "Murphy", "Murray", "Nelson", "Nguyen", "Okafor", "Ortiz", "Owens", "Park",
+        "Patel", "Patterson", "Perez", "Perry", "Peterson", "Porter", "Powell", "Price",
+        "Ramirez", "Reed", "Reyes", "Richardson", "Rivera", "Roberts", "Robinson", "Rodriguez",
+        "Ross", "Russell", "Sanders", "Santos", "Scott", "Simmons", "Singh", "Stewart",
+        "Sullivan", "Tanaka", "Taylor", "Thompson", "Torres", "Turner", "Walker", "Ward",
+        "Washington", "Watson", "Webb", "West", "Williams", "Wilson", "Wright", "Young"
+    ]
+}

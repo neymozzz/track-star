@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field Event \u2014 Track Star</title>
+  <link rel="stylesheet" href="css/track_star_theme.css">
+  <style>
+    /* ── Field Event Screen (local only; no new variables) ── */
+    .field-screen {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .field-content {
+      width: 100%;
+      max-width: 1060px;
+      padding: 28px 44px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .field-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .field-svg-wrap {
+      width: 100%;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .field-queue {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field-athlete-row {
+      display: grid;
+      grid-template-columns: 14px 1fr auto 64px;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      transition: border-color var(--transition-fast), background var(--transition-fast);
+      font-size: 13px;
+    }
+
+    .field-athlete-row.row-active {
+      border-color: var(--border-accent);
+      background: var(--bg-card-active);
+    }
+
+    .field-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .field-name {
+      color: var(--text-primary);
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .field-name--player {
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .field-distance {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-align: right;
+      opacity: 0;
+    }
+
+    .field-distance.revealed {
+      color: var(--text-primary);
+      animation: dist-fade 0.35s ease forwards;
+    }
+
+    .field-rank {
+      text-align: right;
+    }
+
+    .field-rank-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .field-controls {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* btn--ghost: standalone, no dependency on .btn */
+    .btn--ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: auto;
+      padding: 0 24px;
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: color var(--transition-fast),
+                  border-color var(--transition-fast),
+                  background var(--transition-fast);
+    }
+
+    .btn--ghost:hover:not(:disabled) {
+      color: var(--text-primary);
+      border-color: var(--border-accent);
+      background: var(--bg-card);
+    }
+
+    .btn--ghost:disabled {
+      opacity: 0.35;
+      cursor: default;
+    }
+
+    @keyframes dist-fade {
+      from { opacity: 0; transform: translateY(-3px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="field-screen">
+  <div class="field-content">
+
+    <div class="field-header">
+      <h2 class="heading-md" id="event-title"></h2>
+      <span class="label-xs" id="field-status">READY</span>
+    </div>
+
+    <div class="field-svg-wrap">
+      <svg id="field-svg" style="display: block; width: 100%;" height="218">
+        <g id="ruler-group"></g>
+        <g id="arcs-group"></g>
+        <g id="markers-group"></g>
+        <g id="dot-group"></g>
+      </svg>
+    </div>
+
+    <div id="athlete-queue" class="field-queue"></div>
+
+    <div class="field-controls">
+      <button class="btn--ghost" id="replay-btn" disabled>REPLAY</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ================================================================
+   FIELD EVENT ANIMATION
+   Track Star — pywebview frontend, ES5, SVG only, no ext. deps
+   ================================================================ */
+
+/* ── Display constants (all timing / sizing magic numbers live here) ── */
+var ARC_DRAW_DURATION_MS      = 700;   /* ms: arc stroke-dashoffset animation  */
+var POST_THROW_GAP_MS         = 900;   /* ms: delay after arc ends → next throw */
+var DISTANCE_REVEAL_DELAY_MS  = 220;   /* ms: within gap, when distance fades in */
+var ARC_HEIGHT_BASE_PX        = 90;    /* px: baseline arc apex above ground     */
+var ARC_HEIGHT_VARIANCE_PX    = 22;    /* px: max jitter above/below base        */
+var SVG_LEFT_PAD              = 62;    /* px: left margin inside SVG             */
+var SVG_RIGHT_PAD             = 22;    /* px: right margin inside SVG            */
+var SVG_GROUND_Y              = 150;   /* px: y of ground / landing line         */
+var SVG_RULER_LINE_Y          = 167;   /* px: y of ruler baseline                */
+var SVG_RULER_LABEL_Y         = 188;   /* px: y of ruler metre labels            */
+var SVG_TOTAL_HEIGHT          = 218;   /* px: SVG element height attribute       */
+var RULER_TICK_H              = 6;     /* px: ruler tick mark height             */
+var RULER_STEP_M              = 2;     /* m:  tick / label interval              */
+var ARC_STROKE_WIDTH          = 2;     /* px: arc stroke, NPC athletes           */
+var PLAYER_STROKE_WIDTH       = 2.5;   /* px: arc stroke, player athlete         */
+var DOT_RADIUS                = 5;     /* px: animated travelling dot            */
+var MARKER_RADIUS             = 4;     /* px: permanent landing circle           */
+var SEQUENCE_START_DELAY_MS   = 200;   /* ms: pause before first throw           */
+var REPLAY_RESET_DELAY_MS     = 80;    /* ms: brief pause before replay starts   */
+
+/* ── Colour palette — CSS variables from track_star_theme.css only ── */
+var NPC_ARC_COLORS = [
+  'var(--stat-bar)',
+  'var(--energy-high)',
+  'var(--gold)',
+  'var(--silver)',
+  'var(--bronze)',
+  'var(--stat-bar-end)',
+  'var(--energy-mid)'
+];
+var PLAYER_COLOR = 'var(--accent)';
+
+/* ── Data: edit this block to drive the animation ── */
+var FIELD_CONFIG = {
+  eventName:  'Shot Put \u2014 Varsity',
+  rulerMaxM:  18,
+  athletes: [
+    { id: 1, name: 'Marcus',  isPlayer: false, distanceM: 11.2 },
+    { id: 2, name: 'Carter',  isPlayer: false, distanceM: 12.4 },
+    { id: 3, name: 'YOU',     isPlayer: true,  distanceM: 15.8 },
+    { id: 4, name: 'Rivera',  isPlayer: false, distanceM: 14.1 },
+    { id: 5, name: 'Chen',    isPlayer: false, distanceM: 13.7 },
+    { id: 6, name: 'Brooks',  isPlayer: false, distanceM: 16.2 },
+    { id: 7, name: 'Torres',  isPlayer: false, distanceM: 10.5 },
+    { id: 8, name: 'Nguyen',  isPlayer: false, distanceM: 14.9 }
+  ]
+};
+
+/* ── Runtime state ── */
+var SVG_NS         = 'http://www.w3.org/2000/svg';
+var sequenceGen    = 0;          /* increments on each replay; cancels stale rAF/timers */
+var svgPxWidth     = 0;          /* actual pixel width of the SVG, read once at init     */
+var thrownAthletes = [];         /* athletes that have already thrown, for rank sort      */
+var pendingTimers  = [];         /* all active setTimeout ids for this sequence           */
+var markerRankEls  = {};         /* athleteId -> SVG <text> element showing rank on arc   */
+var athleteColors  = [];         /* colour per athlete, parallel to FIELD_CONFIG.athletes */
+
+/* ── Utility ── */
+
+function svgEl(tag) {
+  return document.createElementNS(SVG_NS, tag);
+}
+
+function easeInOut(t) {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
+function ordinalStr(n) {
+  var sfx = ['TH', 'ST', 'ND', 'RD'];
+  var v = n % 100;
+  return n + (sfx[(v - 20) % 10] || sfx[v] || sfx[0]);
+}
+
+/* Deterministic arc height jitter per slot using sin to avoid a magic array */
+function arcJitter(slotIndex) {
+  return Math.round(Math.sin(slotIndex * 1.4) * ARC_HEIGHT_VARIANCE_PX);
+}
+
+function xForDist(distM) {
+  var usable = svgPxWidth - SVG_LEFT_PAD - SVG_RIGHT_PAD;
+  var raw = SVG_LEFT_PAD + (distM / FIELD_CONFIG.rulerMaxM) * usable;
+  return Math.max(SVG_LEFT_PAD, Math.min(svgPxWidth - SVG_RIGHT_PAD, raw));
+}
+
+function safeTimeout(fn, delay) {
+  var id = setTimeout(fn, delay);
+  pendingTimers.push(id);
+  return id;
+}
+
+function clearAllPending() {
+  for (var i = 0; i < pendingTimers.length; i++) {
+    clearTimeout(pendingTimers[i]);
+  }
+  pendingTimers = [];
+}
+
+/* ── Colour assignment ── */
+
+function assignColors() {
+  athleteColors = [];
+  var npcIdx = 0;
+  for (var i = 0; i < FIELD_CONFIG.athletes.length; i++) {
+    if (FIELD_CONFIG.athletes[i].isPlayer) {
+      athleteColors.push(PLAYER_COLOR);
+    } else {
+      athleteColors.push(NPC_ARC_COLORS[npcIdx % NPC_ARC_COLORS.length]);
+      npcIdx++;
+    }
+  }
+}
+
+/* ── DOM: athlete queue ── */
+
+function buildQueue() {
+  var queue = document.getElementById('athlete-queue');
+  queue.innerHTML = '';
+
+  for (var i = 0; i < FIELD_CONFIG.athletes.length; i++) {
+    var a     = FIELD_CONFIG.athletes[i];
+    var color = athleteColors[i];
+
+    var row = document.createElement('div');
+    row.className = 'field-athlete-row' + (a.isPlayer ? ' row-player' : '');
+    row.id = 'row-' + a.id;
+
+    var dot = document.createElement('span');
+    dot.className = 'field-dot';
+    dot.style.background = color;
+
+    var name = document.createElement('span');
+    name.className = 'field-name' + (a.isPlayer ? ' field-name--player' : '');
+    name.textContent = a.name;
+
+    var dist = document.createElement('span');
+    dist.className = 'field-distance text-tabular';
+    dist.id = 'dist-' + a.id;
+    dist.textContent = '\u2014';
+
+    var rank = document.createElement('span');
+    rank.className = 'field-rank';
+    rank.id = 'rank-' + a.id;
+
+    row.appendChild(dot);
+    row.appendChild(name);
+    row.appendChild(dist);
+    row.appendChild(rank);
+    queue.appendChild(row);
+  }
+}
+
+/* ── SVG: ruler + ground line ── */
+
+function drawRuler() {
+  var grp    = document.getElementById('ruler-group');
+  var usable = svgPxWidth - SVG_LEFT_PAD - SVG_RIGHT_PAD;
+
+  while (grp.firstChild) { grp.removeChild(grp.firstChild); }
+
+  /* Ground / landing line */
+  var gl = svgEl('line');
+  gl.setAttribute('x1', SVG_LEFT_PAD);
+  gl.setAttribute('y1', SVG_GROUND_Y);
+  gl.setAttribute('x2', SVG_LEFT_PAD + usable);
+  gl.setAttribute('y2', SVG_GROUND_Y);
+  gl.style.stroke      = 'var(--border-medium)';
+  gl.style.strokeWidth = '1';
+  grp.appendChild(gl);
+
+  /* Foul / throw origin marker */
+  var fl = svgEl('line');
+  fl.setAttribute('x1', SVG_LEFT_PAD);
+  fl.setAttribute('y1', SVG_GROUND_Y - 24);
+  fl.setAttribute('x2', SVG_LEFT_PAD);
+  fl.setAttribute('y2', SVG_GROUND_Y + 4);
+  fl.style.stroke           = 'var(--border-accent)';
+  fl.style.strokeWidth      = '1.5';
+  fl.style.strokeDasharray  = '3 3';
+  grp.appendChild(fl);
+
+  /* Ruler baseline */
+  var rl = svgEl('line');
+  rl.setAttribute('x1', SVG_LEFT_PAD);
+  rl.setAttribute('y1', SVG_RULER_LINE_Y);
+  rl.setAttribute('x2', SVG_LEFT_PAD + usable);
+  rl.setAttribute('y2', SVG_RULER_LINE_Y);
+  rl.style.stroke      = 'var(--border-medium)';
+  rl.style.strokeWidth = '1';
+  grp.appendChild(rl);
+
+  /* Ticks and labels */
+  var d = 0;
+  while (d <= FIELD_CONFIG.rulerMaxM) {
+    var x = SVG_LEFT_PAD + (d / FIELD_CONFIG.rulerMaxM) * usable;
+
+    var tick = svgEl('line');
+    tick.setAttribute('x1', x);
+    tick.setAttribute('y1', SVG_RULER_LINE_Y);
+    tick.setAttribute('x2', x);
+    tick.setAttribute('y2', SVG_RULER_LINE_Y + RULER_TICK_H);
+    tick.style.stroke      = 'var(--border-medium)';
+    tick.style.strokeWidth = '1';
+    grp.appendChild(tick);
+
+    var lbl = svgEl('text');
+    lbl.setAttribute('x', x);
+    lbl.setAttribute('y', SVG_RULER_LABEL_Y);
+    lbl.setAttribute('text-anchor', 'middle');
+    lbl.style.fill       = 'var(--text-dim)';
+    lbl.style.fontSize   = '9px';
+    lbl.style.fontFamily = 'var(--font-mono)';
+    lbl.textContent = d + 'm';
+    grp.appendChild(lbl);
+
+    d += RULER_STEP_M;
+  }
+}
+
+/* ── SVG: clear arcs / markers / dot between replays ── */
+
+function clearSVGDynamic() {
+  var ids = ['arcs-group', 'markers-group', 'dot-group'];
+  for (var i = 0; i < ids.length; i++) {
+    var g = document.getElementById(ids[i]);
+    while (g.firstChild) { g.removeChild(g.firstChild); }
+  }
+  markerRankEls = {};
+}
+
+/* ── Animation: parabolic arc + travelling dot ── */
+
+function animateArc(opts) {
+  /* opts: pathEl, dotEl, totalLen, duration, gen, onComplete */
+  var pathEl     = opts.pathEl;
+  var dotEl      = opts.dotEl;
+  var totalLen   = opts.totalLen;
+  var duration   = opts.duration;
+  var gen        = opts.gen;
+  var onComplete = opts.onComplete;
+  var startTime  = null;
+
+  function step(ts) {
+    if (gen !== sequenceGen) { return; } /* replay cancelled */
+    if (!startTime) { startTime = ts; }
+
+    var elapsed  = ts - startTime;
+    var raw      = elapsed / duration;
+    if (raw > 1) { raw = 1; }
+    var progress = easeInOut(raw);
+
+    pathEl.style.strokeDashoffset = totalLen * (1 - progress);
+
+    var pt = pathEl.getPointAtLength(totalLen * progress);
+    dotEl.setAttribute('cx', pt.x);
+    dotEl.setAttribute('cy', pt.y);
+    dotEl.style.opacity = '1';
+
+    if (raw < 1) {
+      requestAnimationFrame(step);
+    } else {
+      var finalPt = pathEl.getPointAtLength(totalLen);
+      dotEl.setAttribute('cx', finalPt.x);
+      dotEl.setAttribute('cy', finalPt.y);
+      onComplete();
+    }
+  }
+
+  requestAnimationFrame(step);
+}
+
+/* ── Rank helpers ── */
+
+function sortedThrown() {
+  var copy = thrownAthletes.slice();
+  copy.sort(function(a, b) { return b.distanceM - a.distanceM; });
+  return copy;
+}
+
+function rankBadgeHTML(rank) {
+  var label = ordinalStr(rank);
+  if (rank === 1) { return '<span class="place-badge place-badge--1">' + label + '</span>'; }
+  if (rank === 2) { return '<span class="place-badge place-badge--2">' + label + '</span>'; }
+  if (rank === 3) { return '<span class="place-badge place-badge--3">' + label + '</span>'; }
+  return '<span class="field-rank-num">' + label + '</span>';
+}
+
+function svgRankColor(rank) {
+  if (rank === 1) { return 'var(--gold)'; }
+  if (rank === 2) { return 'var(--silver)'; }
+  if (rank === 3) { return 'var(--bronze)'; }
+  return 'var(--text-muted)';
+}
+
+function updateAllRanks() {
+  var ranked = sortedThrown();
+  for (var i = 0; i < ranked.length; i++) {
+    var a    = ranked[i];
+    var rank = i + 1;
+
+    var rowRankEl = document.getElementById('rank-' + a.id);
+    if (rowRankEl) { rowRankEl.innerHTML = rankBadgeHTML(rank); }
+
+    var svgRankEl = markerRankEls[a.id];
+    if (svgRankEl) {
+      svgRankEl.textContent = rank;
+      svgRankEl.style.fill  = svgRankColor(rank);
+    }
+  }
+}
+
+/* ── Sequence: one throw per athlete, recursive ── */
+
+function throwAthlete(idx, gen) {
+  if (gen !== sequenceGen) { return; }
+  if (idx >= FIELD_CONFIG.athletes.length) {
+    showFinalState(gen);
+    return;
+  }
+
+  var a      = FIELD_CONFIG.athletes[idx];
+  var color  = athleteColors[idx];
+  var arcH   = ARC_HEIGHT_BASE_PX + arcJitter(idx);
+  var landX  = xForDist(a.distanceM);
+  var ctrlX  = (SVG_LEFT_PAD + landX) / 2;
+  var ctrlY  = SVG_GROUND_Y - arcH;
+
+  /* Status */
+  document.getElementById('field-status').textContent =
+    'THROW ' + (idx + 1) + ' / ' + FIELD_CONFIG.athletes.length;
+
+  /* Highlight row */
+  var row    = document.getElementById('row-' + a.id);
+  var distEl = document.getElementById('dist-' + a.id);
+  if (row) { row.classList.add('row-active'); }
+
+  /* Arc path */
+  var pathD = 'M ' + SVG_LEFT_PAD + ',' + SVG_GROUND_Y +
+              ' Q ' + ctrlX + ',' + ctrlY +
+              ' '   + landX + ',' + SVG_GROUND_Y;
+
+  var arcsGrp = document.getElementById('arcs-group');
+  var path    = svgEl('path');
+  path.setAttribute('d', pathD);
+  path.setAttribute('fill', 'none');
+  path.style.stroke      = color;
+  path.style.strokeWidth = a.isPlayer ? PLAYER_STROKE_WIDTH : ARC_STROKE_WIDTH;
+  path.style.opacity     = a.isPlayer ? '1' : '0.72';
+  arcsGrp.appendChild(path);
+
+  var totalLen = path.getTotalLength();
+  path.style.strokeDasharray  = totalLen;
+  path.style.strokeDashoffset = totalLen;
+
+  /* Travelling dot */
+  var dotGrp = document.getElementById('dot-group');
+  var dot    = svgEl('circle');
+  dot.setAttribute('r', DOT_RADIUS);
+  dot.style.fill    = color;
+  dot.style.opacity = '0';
+  dotGrp.appendChild(dot);
+
+  /* Animate — closure captures: a, color, row, distEl, landX, gen, idx */
+  animateArc({
+    pathEl:   path,
+    dotEl:    dot,
+    totalLen: totalLen,
+    duration: ARC_DRAW_DURATION_MS,
+    gen:      gen,
+    onComplete: function() {
+      if (gen !== sequenceGen) { return; }
+
+      /* Hide travelling dot */
+      dot.style.opacity = '0';
+
+      /* Landing marker: circle, tick, rank text */
+      var mkGrp = document.getElementById('markers-group');
+
+      var mCircle = svgEl('circle');
+      mCircle.setAttribute('cx', landX);
+      mCircle.setAttribute('cy', SVG_GROUND_Y);
+      mCircle.setAttribute('r',  MARKER_RADIUS);
+      mCircle.style.fill    = color;
+      mCircle.style.opacity = a.isPlayer ? '1' : '0.82';
+      mkGrp.appendChild(mCircle);
+
+      var mTick = svgEl('line');
+      mTick.setAttribute('x1', landX);
+      mTick.setAttribute('y1', SVG_GROUND_Y);
+      mTick.setAttribute('x2', landX);
+      mTick.setAttribute('y2', SVG_GROUND_Y + 10);
+      mTick.style.stroke      = color;
+      mTick.style.strokeWidth = '1.5';
+      mTick.style.opacity     = '0.6';
+      mkGrp.appendChild(mTick);
+
+      var mRank = svgEl('text');
+      mRank.setAttribute('x', landX);
+      mRank.setAttribute('y', SVG_GROUND_Y - 8);
+      mRank.setAttribute('text-anchor', 'middle');
+      mRank.style.fontSize   = '9px';
+      mRank.style.fontFamily = 'var(--font-mono)';
+      mRank.style.fontWeight = '700';
+      mRank.style.fill       = 'var(--text-dim)';
+      mRank.textContent      = '\u2013';
+      mkGrp.appendChild(mRank);
+
+      markerRankEls[a.id] = mRank;
+
+      /* Record throw, update all visible ranks */
+      thrownAthletes.push(a);
+      updateAllRanks();
+
+      /* Reveal distance in queue row */
+      safeTimeout(function() {
+        if (gen !== sequenceGen) { return; }
+        if (row) { row.classList.remove('row-active'); }
+        if (distEl) {
+          distEl.textContent = a.distanceM.toFixed(2) + 'm';
+          distEl.classList.add('revealed');
+        }
+      }, DISTANCE_REVEAL_DELAY_MS);
+
+      /* Schedule next athlete */
+      safeTimeout(function() {
+        throwAthlete(idx + 1, gen);
+      }, POST_THROW_GAP_MS);
+    }
+  });
+}
+
+/* ── Final state ── */
+
+function showFinalState(gen) {
+  if (gen !== sequenceGen) { return; }
+  document.getElementById('field-status').textContent = 'FINAL';
+  document.getElementById('replay-btn').disabled = false;
+}
+
+/* ── Replay ── */
+
+function replay() {
+  clearAllPending();
+  sequenceGen++;
+
+  thrownAthletes = [];
+  markerRankEls  = {};
+
+  document.getElementById('replay-btn').disabled = true;
+  document.getElementById('field-status').textContent = 'READY';
+
+  for (var i = 0; i < FIELD_CONFIG.athletes.length; i++) {
+    var a = FIELD_CONFIG.athletes[i];
+    var rowEl  = document.getElementById('row-' + a.id);
+    var distEl = document.getElementById('dist-' + a.id);
+    var rankEl = document.getElementById('rank-' + a.id);
+    if (rowEl)  { rowEl.classList.remove('row-active'); }
+    if (distEl) { distEl.textContent = '\u2014'; distEl.classList.remove('revealed'); }
+    if (rankEl) { rankEl.innerHTML = ''; }
+  }
+
+  clearSVGDynamic();
+
+  var gen = sequenceGen;
+  safeTimeout(function() { throwAthlete(0, gen); }, REPLAY_RESET_DELAY_MS);
+}
+
+/* ── Init ── */
+
+function init() {
+  var svg = document.getElementById('field-svg');
+  svgPxWidth = svg.getBoundingClientRect().width;
+
+  /* If layout hasn't completed yet, retry next frame */
+  if (svgPxWidth < 100) {
+    requestAnimationFrame(init);
+    return;
+  }
+
+  document.getElementById('event-title').textContent = FIELD_CONFIG.eventName;
+
+  assignColors();
+  buildQueue();
+  drawRuler();
+
+  document.getElementById('replay-btn').addEventListener('click', replay);
+
+  var gen = sequenceGen;
+  safeTimeout(function() { throwAthlete(0, gen); }, SEQUENCE_START_DELAY_MS);
+}
+
+window.addEventListener('load', init);
+</script>
+
+</body>
+</html>

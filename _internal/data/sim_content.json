@@ -1,0 +1,34 @@
+{
+  "race_strategy_descriptions": {
+    "Take It Easy": "Safe, predictable -- lower mark, zero variance, no injury risk.",
+    "Technical Focus": "Controlled execution -- gain Technique.",
+    "Compete to Win": "Standard Effort -- balanced risk and reward.",
+    "Push the Limits": "High intensity -- gain your primary stat, but high variance.",
+    "All Out Effort": "Maximum output -- peak performance, but strains Recovery."
+  },
+  "training_descriptions": {
+    "Recovery Run": "+Stamina, +Recovery - Restores +12 energy",
+    "Weight Room": "+Strength, +Toughness -7 energy",
+    "Blocks & Acceleration": "+Speed, +Technique -9 energy",
+    "Speed Endurance": "+Speed, +Stamina -8 energy",
+    "Sprints Race Simulation": "+Speed, +Agility, +Mentality -7 energy",
+    "Hurdle Drills": "+Technique, +Agility -9 energy",
+    "Stride Cycle Work": "+Speed, +Technique -8 energy",
+    "Hurdler Race Simulation": "+Agility, +Mentality -7 energy",
+    "Tempo Runs": "+Stamina, +Speed -8 energy",
+    "Track Intervals": "+Stamina, +Strength -10 energy",
+    "Middle Distance Race Simulation": "+Stamina, +Mentality -7 energy",
+    "Long Slow Distance": "+Stamina, +Recovery -7 energy",
+    "Hill Repeats": "+Speed, +Stamina -10 energy",
+    "Long Distance Race Simulation": "+Stamina, +Mentality -7 energy",
+    "Plyometrics": "+Agility, +Speed -9 energy",
+    "Approach & Takeoff Drills": "+Technique, +Agility -8 energy",
+    "Jumping Competition Sim": "+Technique, +Mentality -7 energy",
+    "Implement Drills": "+Technique, +Strength -8 energy",
+    "Explosive Power Work": "+Strength, +Speed -10 energy",
+    "Throwing Competition Sim": "+Strength, +Mentality -7 energy"
+  },
+  "training_messages": {
+    "recovery_run_exclusive": "Recovery Run must be the only training session when selected."
+  }
+}

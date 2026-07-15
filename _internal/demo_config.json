@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "demo_mode": true
+  },
+  "season": {
+    "seasons_total": 2
+  },
+  "demo": {
+    "steam_url": "https://store.steampowered.com/app/4538830/Track_Star/?utm_source=steam_demo&utm_medium=referral&utm_campaign=demo_cta",
+    "full_game_features": [
+      "Junior and Senior seasons \u2014 two more years of growth, rivalry, and competition",
+      "Active college recruiting \u2014 get scouted during senior season, field scholarship offers, and choose your school",
+      "Career epilogues \u2014 see where your athlete ends up after high school",
+      "Hall of Fame \u2014 track your best careers across playthroughs",
+      "Full achievement tree \u2014 25+ achievements spanning all four seasons",
+      "Multiple save slots \u2014 run parallel careers with different builds",
+      "Expanded rivalry arcs \u2014 watch rivalries evolve over four full years",
+      "World events that reference your Junior and Senior year context"
+    ],
+    "roadmap_items": [
+      "Live athlete rankings \u2014 league, class, state, and national boards in a persistent competitive world",
+      "Team results and club standings",
+      "Relays",
+      "Mod support for naming schools and rivals",
+      "All-time leaderboards",
+      "Increased event and rivalry content",
+      "Audio and ambient music",
+      "Steam Cloud saves",
+      "And more"
+    ],
+    "demo_end_message": "You just finished your Sophomore season. In the full game, your career is only halfway done."
+  }
+}

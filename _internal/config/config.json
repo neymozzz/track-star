@@ -1,0 +1,2398 @@
+{
+  "meta": {
+    "version": "1.2",
+    "stat_scale_min": 1,
+    "stat_scale_max": 100
+  },
+  "steam": {
+    "app_id": 4538830,
+    "callback_interval_ms": 100,
+    "achievement_map": {
+      "ach_first_win": "ACH_FIRST_WIN",
+      "ach_first_pb": "ACH_FIRST_PB",
+      "ach_first_podium": "ACH_FIRST_PODIUM",
+      "ach_first_rivalry_win": "ACH_FIRST_RIVALRY_WIN",
+      "ach_three_pbs_season": "ACH_THREE_PBS_SEASON",
+      "ach_energy_manager": "ACH_ENERGY_MANAGER",
+      "ach_back_to_back_wins": "ACH_BACK_TO_BACK_WINS",
+      "ach_four_season_athlete": "ACH_FOUR_SEASON_ATHLETE",
+      "ach_top_five_nationals": "ACH_TOP_FIVE_NATIONALS",
+      "ach_multi_event_podium": "ACH_MULTI_EVENT_PODIUM",
+      "ach_championship_hat_trick": "ACH_CHAMPIONSHIP_HAT_TRICK",
+      "ach_clean_hurdles": "ACH_CLEAN_HURDLES",
+      "ach_state_champion": "ACH_STATE_CHAMPION",
+      "ach_regional_podium": "ACH_REGIONAL_PODIUM",
+      "ach_regional_champion": "ACH_REGIONAL_CHAMPION",
+      "ach_national_podium": "ACH_NATIONAL_PODIUM",
+      "ach_national_champion": "ACH_NATIONAL_CHAMPION",
+      "ach_pb_at_nationals": "ACH_PB_AT_NATIONALS",
+      "ach_sprint_sub12": "ACH_SPRINT_SUB12",
+      "ach_sprint_elite": "ACH_SPRINT_ELITE",
+      "ach_distance_sub5": "ACH_DISTANCE_SUB5",
+      "ach_distance_elite": "ACH_DISTANCE_ELITE",
+      "ach_throw_15m": "ACH_THROW_15M",
+      "ach_javelin_60m": "ACH_JAVELIN_60M",
+      "ach_jump_7m": "ACH_JUMP_7M",
+      "ach_hurdle_state_win": "ACH_HURDLE_STATE_WIN",
+      "ach_rival_win": "ACH_RIVAL_WIN",
+      "ach_rival_streak": "ACH_RIVAL_STREAK",
+      "ach_qual_class": "ACH_QUAL_CLASS",
+      "ach_qual_state": "ACH_QUAL_STATE",
+      "ach_qual_regional": "ACH_QUAL_REGIONAL",
+      "ach_qual_national": "ACH_QUAL_NATIONAL",
+      "ach_rival_three_wins_season": "ACH_RIVAL_THREE_WINS_SEASON",
+      "ach_season_no_very_low": "ACH_SEASON_NO_VERY_LOW",
+      "ach_final_year_pb": "ACH_FINAL_YEAR_PB",
+      "ach_800m_sub2": "ACH_800M_SUB2",
+      "ach_800m_elite": "ACH_800M_ELITE",
+      "ach_high_jump_180": "ACH_HIGH_JUMP_180",
+      "ach_high_jump_200": "ACH_HIGH_JUMP_200",
+      "ach_triple_jump_13m": "ACH_TRIPLE_JUMP_13M",
+      "ach_triple_jump_15m": "ACH_TRIPLE_JUMP_15M",
+      "ach_discus_40m": "ACH_DISCUS_40M",
+      "ach_discus_55m": "ACH_DISCUS_55M",
+      "ms_three_titles": "ACH_MS_THREE_TITLES",
+      "ms_state_stage": "ACH_MS_STATE_STAGE",
+      "ms_five_pbs": "ACH_MS_FIVE_PBS",
+      "ms_rival_crusher": "ACH_MS_RIVAL_CRUSHER",
+      "ms_iron_body": "ACH_MS_IRON_BODY",
+      "ms_big_meet_performer": "ACH_MS_BIG_MEET_PERFORMER",
+      "ms_consistent_professional": "ACH_MS_CONSISTENT_PROFESSIONAL",
+      "ms_decorated_athlete": "ACH_MS_DECORATED_ATHLETE"
+    }
+  },
+  "player_builder": {
+    "base_stat_value": 40,
+    "starting_points_pool": 100,
+    "difficulty_budgets": {
+      "easy": 120,
+      "normal": 100,
+      "hard": 60
+    },
+    "max_stat_at_start": 65,
+    "min_stat_at_start": 30,
+    "event_group_bonus": 5,
+    "event_group_bonus_slots": 1
+  },
+  "stats": {
+    "Speed": {},
+    "Agility": {},
+    "Strength": {},
+    "Stamina": {},
+    "Toughness": {},
+    "Mentality": {},
+    "Technique": {
+      "variance_reduction_factor": 0.003
+    },
+    "Recovery": {
+      "energy_regen_bonus_per_point": 0.08
+    }
+  },
+  "stat_descriptions": {
+    "Speed": "Primary driver of sprint and jump performance.",
+    "Agility": "Improves acceleration, direction changes, and hurdle or jump mechanics.",
+    "Strength": "Adds power for starts, throws, and takeoff.",
+    "Stamina": "Sustains pace in longer races and late-race pushes.",
+    "Toughness": "Reduces fatigue effects and keeps form under strain.",
+    "Mentality": "Handles pressure and keeps performance steady in big moments.",
+    "Technique": "Reduces result variance. Critical for hurdles, jumps, and throws.",
+    "Recovery": "Increases weekly energy regeneration. Enables heavier training loads."
+  },
+  "energy_system": {
+    "min": 0,
+    "max": 100,
+    "base_weekly_regen": 10,
+    "low_energy_threshold": 35,
+    "very_low_energy_threshold": 20,
+    "fatigue_curve": {
+      "onset_energy": 60,
+      "exhausted_energy_threshold": 10,
+      "pct_at_low": 0.015,
+      "pct_at_very_low": 0.05,
+      "pct_at_exhausted": 0.09
+    },
+    "training_injury_extra_energy_cost": 15,
+    "multi_event_cost_multipliers": [
+      1.0,
+      1.75,
+      2.75
+    ]
+  },
+  "narrative_max_per_week": 1,
+  "season": {
+    "seasons_total": 4,
+    "weeks_per_season": 13,
+    "regular_season_weeks": 8,
+    "bye_week_mode": "training_only",
+    "schedule": {
+      "1": {
+        "meet_type": "regular_season",
+        "name": "League Meet 1"
+      },
+      "2": {
+        "meet_type": "regular_season",
+        "name": "League Meet 2"
+      },
+      "3": {
+        "meet_type": "regular_season",
+        "name": "League Meet 3"
+      },
+      "4": {
+        "meet_type": "regular_season",
+        "name": "League Meet 4"
+      },
+      "5": {
+        "meet_type": "regular_season",
+        "name": "League Meet 5"
+      },
+      "6": {
+        "meet_type": "regular_season",
+        "name": "League Meet 6"
+      },
+      "7": {
+        "meet_type": "regular_season",
+        "name": "League Meet 7"
+      },
+      "8": {
+        "meet_type": "regular_season",
+        "name": "League Meet 8"
+      },
+      "9": {
+        "meet_type": "club_championship",
+        "name": "Club Championship"
+      },
+      "10": {
+        "meet_type": "class_meet",
+        "name": "Class Meet"
+      },
+      "11": {
+        "meet_type": "state_meet",
+        "name": "State Meet"
+      },
+      "12": {
+        "meet_type": "regional_meet",
+        "name": "Regional Meet"
+      },
+      "13": {
+        "meet_type": "national_meet",
+        "name": "National Meet"
+      }
+    }
+  },
+  "event_groups": {
+    "Sprints": {
+      "events": [
+        "100m",
+        "200m",
+        "400m"
+      ],
+      "primary_stats": [
+        "Speed",
+        "Agility",
+        "Strength"
+      ],
+      "secondary_stats": [
+        "Technique",
+        "Mentality"
+      ],
+      "training_efficiency": 1.0,
+      "description": "Primary stats: Speed, Agility, Strength. Events: 100m, 200m, 400m. Flavor: Explosive straight-line speed and power.",
+      "flavor": "Explosive straight-line speed and power."
+    },
+    "Hurdler": {
+      "events": {
+        "men": [
+          "110mH",
+          "400mH"
+        ],
+        "women": [
+          "100mH",
+          "400mH"
+        ]
+      },
+      "primary_stats": [
+        "Speed",
+        "Agility",
+        "Technique"
+      ],
+      "secondary_stats": [
+        "Mentality",
+        "Stamina"
+      ],
+      "training_efficiency": 1.0,
+      "description": "Primary stats: Speed, Agility, Technique. Events: 110mH, 400mH. Flavor: Rhythm and precision over barriers.",
+      "flavor": "Rhythm and precision over barriers."
+    },
+    "Middle Distance": {
+      "events": [
+        "800m",
+        "1600m"
+      ],
+      "primary_stats": [
+        "Stamina",
+        "Mentality",
+        "Toughness"
+      ],
+      "secondary_stats": [
+        "Speed",
+        "Technique"
+      ],
+      "training_efficiency": 1.0,
+      "description": "Primary stats: Stamina, Mentality, Toughness. Events: 800m, 1600m. Flavor: Balanced engine for tactical races.",
+      "flavor": "Balanced engine for tactical races."
+    },
+    "Long Distance": {
+      "events": [
+        "1600m",
+        "3200m"
+      ],
+      "primary_stats": [
+        "Stamina",
+        "Toughness",
+        "Recovery"
+      ],
+      "secondary_stats": [
+        "Mentality",
+        "Technique"
+      ],
+      "training_efficiency": 1.0,
+      "description": "Primary stats: Stamina, Toughness, Recovery. Events: 1600m, 3200m. Flavor: Relentless endurance and recovery.",
+      "flavor": "Relentless endurance and recovery."
+    },
+    "Throwing": {
+      "events": [
+        "Shot Put",
+        "Discus",
+        "Javelin"
+      ],
+      "primary_stats": [
+        "Strength",
+        "Technique"
+      ],
+      "secondary_stats": [
+        "Toughness",
+        "Mentality"
+      ],
+      "training_efficiency": 1.0,
+      "description": "Primary stats: Strength, Technique. Events: Shot Put, Discus, Javelin. Flavor: Power and mechanics to launch big marks.",
+      "flavor": "Power and mechanics to launch big marks."
+    },
+    "Jumping": {
+      "events": [
+        "Long Jump",
+        "High Jump",
+        "Triple Jump"
+      ],
+      "primary_stats": [
+        "Speed",
+        "Agility",
+        "Technique"
+      ],
+      "secondary_stats": [
+        "Strength",
+        "Mentality"
+      ],
+      "training_efficiency": 1.0,
+      "description": "Primary stats: Speed, Agility, Technique. Events: Long Jump, High Jump, Triple Jump. Flavor: Elastic speed and timing in the air.",
+      "flavor": "Elastic speed and timing in the air."
+    }
+  },
+  "events": {
+    "100m": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 13.0,
+          "min_time": 9.9
+        },
+        "women": {
+          "base_time": 14.4,
+          "min_time": 10.95
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.48,
+        "Agility": 0.28,
+        "Strength": 0.1,
+        "Technique": 0.07,
+        "Mentality": 0.07
+      },
+      "variance_std": 0.2
+    },
+    "200m": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 27.0,
+          "min_time": 20.1
+        },
+        "women": {
+          "base_time": 29.3,
+          "min_time": 22.4
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.43,
+        "Agility": 0.23,
+        "Stamina": 0.1,
+        "Technique": 0.13,
+        "Mentality": 0.11
+      },
+      "variance_std": 0.27
+    },
+    "400m": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 59.0,
+          "min_time": 44.5
+        },
+        "women": {
+          "base_time": 66.0,
+          "min_time": 50.6
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.34,
+        "Stamina": 0.22,
+        "Agility": 0.1,
+        "Technique": 0.15,
+        "Toughness": 0.06,
+        "Mentality": 0.13
+      },
+      "variance_std": 0.37
+    },
+    "800m": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 154.0,
+          "min_time": 106.4
+        },
+        "women": {
+          "base_time": 170.0,
+          "min_time": 120.0
+        }
+      },
+      "stat_weights": {
+        "Stamina": 0.39,
+        "Speed": 0.16,
+        "Toughness": 0.14,
+        "Technique": 0.09,
+        "Mentality": 0.22
+      },
+      "variance_std": 0.35
+    },
+    "1600m": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 333.0,
+          "min_time": 237.1
+        },
+        "women": {
+          "base_time": 370.0,
+          "min_time": 266.0
+        }
+      },
+      "stat_weights": {
+        "Stamina": 0.39,
+        "Toughness": 0.18,
+        "Technique": 0.14,
+        "Mentality": 0.19,
+        "Recovery": 0.1
+      },
+      "variance_std": 0.45
+    },
+    "3200m": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 727.0,
+          "min_time": 514.1
+        },
+        "women": {
+          "base_time": 805.0,
+          "min_time": 570.0
+        }
+      },
+      "stat_weights": {
+        "Stamina": 0.43,
+        "Toughness": 0.18,
+        "Recovery": 0.12,
+        "Technique": 0.07,
+        "Mentality": 0.2
+      },
+      "variance_std": 0.6
+    },
+    "400mH": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 64.0,
+          "min_time": 49.4
+        },
+        "women": {
+          "base_time": 74.0,
+          "min_time": 53.7
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.26,
+        "Agility": 0.25,
+        "Technique": 0.24,
+        "Stamina": 0.13,
+        "Mentality": 0.12
+      },
+      "variance_std": 0.22,
+      "hurdle_mechanics": {
+        "technique_error_threshold": 50,
+        "agility_error_threshold": 50,
+        "small_error_chance": 0.6,
+        "error_time_penalty": 0.35,
+        "major_error_chance_at_very_low_stats": 0.1,
+        "major_error_threshold": 35,
+        "major_error_time_penalty": 0.9
+      }
+    },
+    "110mH": {
+      "type": "track",
+      "categories": {
+        "men": {
+          "base_time": 17.2,
+          "min_time": 13.1
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.34,
+        "Agility": 0.29,
+        "Technique": 0.22,
+        "Stamina": 0.08,
+        "Mentality": 0.07
+      },
+      "variance_std": 0.18,
+      "hurdle_mechanics": {
+        "technique_error_threshold": 50,
+        "agility_error_threshold": 50,
+        "small_error_chance": 0.6,
+        "error_time_penalty": 0.22,
+        "major_error_chance_at_very_low_stats": 0.12,
+        "major_error_threshold": 35,
+        "major_error_time_penalty": 0.6
+      }
+    },
+    "100mH": {
+      "type": "track",
+      "categories": {
+        "women": {
+          "base_time": 19.4,
+          "min_time": 13.0
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.34,
+        "Agility": 0.29,
+        "Technique": 0.22,
+        "Stamina": 0.08,
+        "Mentality": 0.07
+      },
+      "variance_std": 0.18,
+      "hurdle_mechanics": {
+        "technique_error_threshold": 50,
+        "agility_error_threshold": 50,
+        "small_error_chance": 0.6,
+        "error_time_penalty": 0.22,
+        "major_error_chance_at_very_low_stats": 0.12,
+        "major_error_threshold": 35,
+        "major_error_time_penalty": 0.6
+      }
+    },
+    "Shot Put": {
+      "type": "field",
+      "categories": {
+        "men": {
+          "base_mark": 10.5,
+          "max_mark": 23.5,
+          "endgame_max_mark": 25.3
+        },
+        "women": {
+          "base_mark": 7.5,
+          "max_mark": 17.5,
+          "endgame_max_mark": 19.1
+        }
+      },
+      "stat_weights": {
+        "Strength": 0.42,
+        "Technique": 0.24,
+        "Toughness": 0.12,
+        "Mentality": 0.22
+      },
+      "variance_std": 0.45
+    },
+    "Discus": {
+      "type": "field",
+      "categories": {
+        "men": {
+          "base_mark": 27.0,
+          "max_mark": 72.1,
+          "endgame_max_mark": 76.6
+        },
+        "women": {
+          "base_mark": 18.0,
+          "max_mark": 59.5,
+          "endgame_max_mark": 64.6
+        }
+      },
+      "stat_weights": {
+        "Strength": 0.36,
+        "Technique": 0.31,
+        "Toughness": 0.1,
+        "Mentality": 0.23
+      },
+      "variance_std": 0.8
+    },
+    "Javelin": {
+      "type": "field",
+      "categories": {
+        "men": {
+          "base_mark": 29.0,
+          "max_mark": 78.0
+        },
+        "women": {
+          "base_mark": 18.0,
+          "max_mark": 56.0
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.35,
+        "Technique": 0.35,
+        "Strength": 0.15,
+        "Agility": 0.05,
+        "Mentality": 0.1
+      },
+      "variance_std": 0.5
+    },
+    "Long Jump": {
+      "type": "field",
+      "categories": {
+        "men": {
+          "base_mark": 4.8,
+          "max_mark": 8.1
+        },
+        "women": {
+          "base_mark": 3.5,
+          "max_mark": 6.82
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.33,
+        "Agility": 0.25,
+        "Technique": 0.24,
+        "Strength": 0.1,
+        "Mentality": 0.04,
+        "Toughness": 0.04
+      },
+      "variance_std": 0.2
+    },
+    "High Jump": {
+      "type": "field",
+      "categories": {
+        "men": {
+          "base_mark": 1.42,
+          "max_mark": 2.3
+        },
+        "women": {
+          "base_mark": 1.2,
+          "max_mark": 1.95
+        }
+      },
+      "stat_weights": {
+        "Agility": 0.35,
+        "Technique": 0.3,
+        "Strength": 0.15,
+        "Mentality": 0.2
+      },
+      "variance_std": 0.06
+    },
+    "Triple Jump": {
+      "type": "field",
+      "categories": {
+        "men": {
+          "base_mark": 10.2,
+          "max_mark": 16.1
+        },
+        "women": {
+          "base_mark": 8.0,
+          "max_mark": 13.5
+        }
+      },
+      "stat_weights": {
+        "Speed": 0.27,
+        "Agility": 0.28,
+        "Technique": 0.24,
+        "Strength": 0.1,
+        "Toughness": 0.06,
+        "Mentality": 0.05
+      },
+      "variance_std": 0.25
+    }
+  },
+  "pressure_system": {
+    "meet_pressure": {
+      "regular_season": 0.0,
+      "club_championship": 0.05,
+      "class_meet": 0.08,
+      "state_meet": 0.12,
+      "regional_meet": 0.16,
+      "national_meet": 0.2
+    },
+    "mentality_resistance_factor": 0.003
+  },
+  "rivalry_system": {
+    "enabled": true,
+    "mentality_low": 55,
+    "mentality_high": 75,
+    "time_penalty_low": 0.015,
+    "time_bonus_high": -0.01,
+    "mark_penalty_low": -0.015,
+    "mark_bonus_high": 0.01,
+    "cooldown_weeks": 2,
+    "cooldown_exempt_meets": [
+      "club_championship",
+      "class_meet",
+      "state_meet"
+    ],
+    "rivalry_level_labels": {
+      "1": "Rival",
+      "2": "Fierce Rival",
+      "3": "Nemesis"
+    }
+  },
+  "qualification": {
+    "class_meet": {
+      "method": "time_or_place",
+      "time_thresholds": {
+        "men": {
+          "100m": 11.85,
+          "200m": 24.28,
+          "400m": 55.08,
+          "110mH": 15.5,
+          "400mH": 57.5,
+          "800m": 130.0,
+          "1600m": 285.0,
+          "3200m": 620.0
+        },
+        "women": {
+          "100m": 13.2,
+          "200m": 27.0,
+          "400m": 62.0,
+          "100mH": 16.6,
+          "400mH": 65.0,
+          "800m": 143.5,
+          "1600m": 316.0,
+          "3200m": 685.0
+        }
+      },
+      "mark_thresholds": {
+        "men": {
+          "Shot Put": 17.05,
+          "Discus": 45.0,
+          "Javelin": 47.0,
+          "Long Jump": 6.1,
+          "High Jump": 1.76,
+          "Triple Jump": 12.5
+        },
+        "women": {
+          "Shot Put": 10.98,
+          "Discus": 30.0,
+          "Javelin": 28.0,
+          "Long Jump": 4.8,
+          "High Jump": 1.5,
+          "Triple Jump": 10.2
+        }
+      },
+      "place_lte_previous_meet": 3
+    },
+    "state_meet": {
+      "method": "time_or_place",
+      "time_thresholds": {
+        "men": {
+          "100m": 11.53,
+          "200m": 23.46,
+          "400m": 53.04,
+          "110mH": 15.0,
+          "400mH": 55.0,
+          "800m": 126.0,
+          "1600m": 277.0,
+          "3200m": 603.0
+        },
+        "women": {
+          "100m": 12.8,
+          "200m": 26.1,
+          "400m": 59.8,
+          "100mH": 15.9,
+          "400mH": 62.5,
+          "800m": 138.5,
+          "1600m": 306.0,
+          "3200m": 658.0
+        }
+      },
+      "mark_thresholds": {
+        "men": {
+          "Shot Put": 18.85,
+          "Discus": 52.6,
+          "Javelin": 54.0,
+          "Long Jump": 6.3,
+          "High Jump": 1.81,
+          "Triple Jump": 13.1
+        },
+        "women": {
+          "Shot Put": 13.11,
+          "Discus": 36.8,
+          "Javelin": 33.0,
+          "Long Jump": 5.2,
+          "High Jump": 1.58,
+          "Triple Jump": 10.8
+        }
+      },
+      "place_lte_previous_meet": 3
+    },
+    "regional_meet": {
+      "method": "time_or_place",
+      "time_thresholds": {
+        "men": {
+          "100m": 11.05,
+          "200m": 22.7,
+          "400m": 51.14,
+          "110mH": 14.28,
+          "400mH": 52.2,
+          "800m": 122.14,
+          "1600m": 268.9,
+          "3200m": 575.24
+        },
+        "women": {
+          "100m": 12.25,
+          "200m": 25.2,
+          "400m": 57.5,
+          "100mH": 15.1,
+          "400mH": 59.5,
+          "800m": 133.5,
+          "1600m": 296.0,
+          "3200m": 628.0
+        }
+      },
+      "mark_thresholds": {
+        "men": {
+          "Shot Put": 20.65,
+          "Discus": 59.9,
+          "Javelin": 62.0,
+          "Long Jump": 7.04,
+          "High Jump": 2.0,
+          "Triple Jump": 13.87
+        },
+        "women": {
+          "Shot Put": 14.8,
+          "Discus": 42.4,
+          "Javelin": 38.0,
+          "Long Jump": 5.6,
+          "High Jump": 1.67,
+          "Triple Jump": 11.5
+        }
+      },
+      "place_lte_previous_meet": 2
+    },
+    "national_meet": {
+      "method": "time_or_place",
+      "time_thresholds": {
+        "men": {
+          "100m": 10.22,
+          "200m": 20.55,
+          "400m": 47.0,
+          "110mH": 13.3,
+          "400mH": 52.3,
+          "800m": 113.3,
+          "1600m": 256.0,
+          "3200m": 548.0
+        },
+        "women": {
+          "100m": 11.31,
+          "200m": 22.85,
+          "400m": 53.5,
+          "100mH": 13.55,
+          "400mH": 58.5,
+          "800m": 127.3,
+          "1600m": 289.0,
+          "3200m": 607.0
+        }
+      },
+      "mark_thresholds": {
+        "men": {
+          "Shot Put": 23.45,
+          "Discus": 72.0,
+          "Javelin": 69.0,
+          "Long Jump": 7.95,
+          "High Jump": 2.23,
+          "Triple Jump": 15.1
+        },
+        "women": {
+          "Shot Put": 17.45,
+          "Discus": 59.3,
+          "Javelin": 47.0,
+          "Long Jump": 6.55,
+          "High Jump": 1.93,
+          "Triple Jump": 12.55
+        }
+      },
+      "place_lte_previous_meet": 1
+    }
+  },
+  "endgame_scoring": {
+    "personal_best_weight": 0.5,
+    "championship_weight": 0.35,
+    "achievements_weight": 0.15,
+    "pb_event_cap": 1,
+    "championship_target_points": 18.0,
+    "consistency_scale": 1.25
+  },
+  "recruiting": {
+    "enabled": true,
+    "senior_year": 4,
+    "beats": {
+      "beat_1": {
+        "timing": "preseason"
+      },
+      "beat_2": {
+        "timing": "after_week",
+        "week": 6
+      },
+      "beat_3": {
+        "timing": "after_meet",
+        "meet_type": "state_meet"
+      },
+      "finale": {
+        "timing": "after_meet",
+        "meet_type": "national_meet"
+      }
+    },
+    "score_weights": {
+      "personal_best": 0.35,
+      "championship": 0.2,
+      "consistency": 0.2,
+      "trend": 0.15,
+      "intangibles": 0.1
+    },
+    "score_calibration": {
+      "scale": 1.1,
+      "offset": 0.0
+    },
+    "trend": {
+      "trend_window_weeks": 6,
+      "trend_bonus_max": 15.0,
+      "trend_penalty_min": -10.0
+    },
+    "interest_tiers": [
+      {
+        "id": "tier_elite_d1",
+        "min_score": 88,
+        "label": "Elite D1 Interest"
+      },
+      {
+        "id": "tier_power5_d1",
+        "min_score": 80,
+        "label": "Power 5 D1 Interest"
+      },
+      {
+        "id": "tier_mid_major_d1",
+        "min_score": 70,
+        "label": "Mid-Major D1 Interest"
+      },
+      {
+        "id": "tier_d2",
+        "min_score": 55,
+        "label": "D2 Interest"
+      },
+      {
+        "id": "tier_d3",
+        "min_score": 38,
+        "label": "D3 / Academic Interest"
+      },
+      {
+        "id": "tier_club_run",
+        "min_score": 0,
+        "label": "Club / Walk-On"
+      }
+    ],
+    "offer_generation": {
+      "beat_1_offers": 0,
+      "beat_2_offers": 0,
+      "beat_3_offers": 2,
+      "finale_max_offers": 4,
+      "include_safety_tier": true,
+      "reach_offer_chance": 0.3,
+      "reach_threshold_proximity": 5.0,
+      "scholarship_labels": {
+        "tier_elite_d1": "Full",
+        "tier_power5_d1": "Full",
+        "tier_mid_major_d1": "Partial",
+        "tier_d2": "Partial",
+        "tier_d3": "Academic Aid",
+        "tier_club_run": "None"
+      }
+    }
+  },
+  "perks": {
+    "perk_energy_regen_1": {
+      "name": "Recovery Edge",
+      "description": "Weekly energy regeneration +1.",
+      "effects": {
+        "energy_regen_bonus": 1
+      }
+    },
+    "perk_energy_max_3": {
+      "name": "Bounce Back",
+      "description": "+3 Recovery.",
+      "effects": {
+        "stat_bonus": {
+          "Recovery": 3
+        }
+      }
+    },
+    "perk_tech_focus": {
+      "name": "Technique Focus",
+      "description": "+1 Technique.",
+      "effects": {
+        "stat_bonus": {
+          "Technique": 1
+        }
+      }
+    },
+    "perk_mental_edge": {
+      "name": "Mental Edge",
+      "description": "+1 Mentality.",
+      "effects": {
+        "stat_bonus": {
+          "Mentality": 1
+        }
+      }
+    },
+    "perk_strength_edge": {
+      "name": "Strength Edge",
+      "description": "+1 Strength.",
+      "effects": {
+        "stat_bonus": {
+          "Strength": 1
+        }
+      }
+    },
+    "perk_speed_edge": {
+      "name": "Speed Edge",
+      "description": "+1 Speed.",
+      "effects": {
+        "stat_bonus": {
+          "Speed": 1
+        }
+      }
+    },
+    "perk_agility_edge": {
+      "name": "Agility Edge",
+      "description": "+1 Agility.",
+      "effects": {
+        "stat_bonus": {
+          "Agility": 1
+        }
+      }
+    },
+    "perk_stamina_edge": {
+      "name": "Stamina Edge",
+      "description": "+1 Stamina.",
+      "effects": {
+        "stat_bonus": {
+          "Stamina": 1
+        }
+      }
+    },
+    "perk_toughness_edge": {
+      "name": "Toughness Edge",
+      "description": "+1 Toughness.",
+      "effects": {
+        "stat_bonus": {
+          "Toughness": 1
+        }
+      }
+    },
+    "perk_recovery_edge": {
+      "name": "Recovery Boost",
+      "description": "+1 Recovery.",
+      "effects": {
+        "stat_bonus": {
+          "Recovery": 1
+        }
+      }
+    },
+    "perk_burst_mechanics": {
+      "name": "Burst Mechanics",
+      "description": "+1 Speed, +1 Agility.",
+      "effects": {
+        "stat_bonus": {
+          "Speed": 1,
+          "Agility": 1
+        }
+      }
+    },
+    "perk_rhythm_lock": {
+      "name": "Rhythm Lock",
+      "description": "+1 Speed, +1 Technique.",
+      "effects": {
+        "stat_bonus": {
+          "Speed": 1,
+          "Technique": 1
+        }
+      }
+    },
+    "perk_finishing_kick": {
+      "name": "Finishing Kick",
+      "description": "+1 Stamina, +1 Speed.",
+      "effects": {
+        "stat_bonus": {
+          "Stamina": 1,
+          "Speed": 1
+        }
+      }
+    },
+    "perk_aerobic_engine": {
+      "name": "Aerobic Engine",
+      "description": "+1 Stamina, +1 Recovery.",
+      "effects": {
+        "stat_bonus": {
+          "Stamina": 1,
+          "Recovery": 1
+        }
+      }
+    },
+    "perk_power_chain": {
+      "name": "Power Chain",
+      "description": "+1 Strength, +1 Technique.",
+      "effects": {
+        "stat_bonus": {
+          "Strength": 1,
+          "Technique": 1
+        }
+      }
+    },
+    "perk_elastic_spring": {
+      "name": "Elastic Spring",
+      "description": "+1 Agility, +1 Technique.",
+      "effects": {
+        "stat_bonus": {
+          "Agility": 1,
+          "Technique": 1
+        }
+      }
+    },
+    "perk_competitors_poise": {
+      "name": "Competitor's Poise",
+      "description": "+1 Mentality, +1 Toughness.",
+      "effects": {
+        "stat_bonus": {
+          "Mentality": 1,
+          "Toughness": 1
+        }
+      }
+    },
+    "perk_race_sharpened": {
+      "name": "Race Sharpened",
+      "description": "+1 Technique, +1 Mentality.",
+      "effects": {
+        "stat_bonus": {
+          "Technique": 1,
+          "Mentality": 1
+        }
+      }
+    },
+    "perk_iron_constitution": {
+      "name": "Iron Constitution",
+      "description": "+3 Toughness.",
+      "effects": {
+        "stat_bonus": {
+          "Toughness": 3
+        }
+      }
+    },
+    "perk_second_wind": {
+      "name": "Second Wind",
+      "description": "+2 Recovery.",
+      "effects": {
+        "stat_bonus": {
+          "Recovery": 2
+        }
+      }
+    }
+  },
+  "season_goals": {
+    "Sprints": {
+      "1": [
+        {
+          "id": "goal_sp_y1_pb",
+          "name": "First Mark",
+          "description": "Set a personal best in any sprint event.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_speed_edge"
+        },
+        {
+          "id": "goal_sp_y1_club",
+          "name": "Club Level",
+          "description": "Compete at the Club Championship.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "club_championship"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_sp_y1_rival",
+          "name": "First Blood",
+          "description": "Beat at least one rival.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_agility_edge"
+        }
+      ],
+      "2": [
+        {
+          "id": "goal_sp_y2_sub12",
+          "name": "Break 12",
+          "name_by_category": {
+            "women": "Break 13.3"
+          },
+          "description": "Run sub-12.0 in the 100m.",
+          "description_by_category": {
+            "women": "Run sub-13.3 in the 100m."
+          },
+          "condition": {
+            "type": "value_lte_event",
+            "event": "100m",
+            "value": 12.0,
+            "value_by_category": {
+              "men": 12.0,
+              "women": 13.3
+            }
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_sp_y2_state",
+          "name": "State Bound",
+          "description": "Reach the State Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "state_meet"
+          },
+          "reward_perk": "perk_speed_edge"
+        },
+        {
+          "id": "goal_sp_y2_rivals",
+          "name": "Winning Streak",
+          "description": "Beat rivals at least twice.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_agility_edge"
+        }
+      ],
+      "3": [
+        {
+          "id": "goal_sp_y3_regional",
+          "name": "Regional Bound",
+          "description": "Reach the Regional Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "regional_meet"
+          },
+          "reward_perk": "perk_mental_edge"
+        },
+        {
+          "id": "goal_sp_y3_energy",
+          "name": "Full Tank",
+          "description": "Never hit very-low energy.",
+          "condition": {
+            "type": "season_no_very_low_energy"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_sp_y3_rivals",
+          "name": "Rivals Owned",
+          "description": "Beat rivals at least 3 times.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 3
+          },
+          "reward_perk": "perk_speed_edge"
+        }
+      ],
+      "4": [
+        {
+          "id": "goal_sp_y4_national",
+          "name": "National Stage",
+          "description": "Reach Nationals.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "national_meet"
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_sp_y4_podium",
+          "name": "Podium",
+          "description": "Finish top 3 at any championship.",
+          "condition": {
+            "type": "championship_place_lte",
+            "value": 3
+          },
+          "reward_perk": "perk_burst_mechanics"
+        },
+        {
+          "id": "goal_sp_y4_pbs",
+          "name": "Still Improving",
+          "description": "Set 2+ PBs this season.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_mental_edge"
+        }
+      ]
+    },
+    "Hurdler": {
+      "1": [
+        {
+          "id": "goal_hu_y1_pb",
+          "name": "First Mark",
+          "description": "Set a PB in any hurdle event.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_agility_edge"
+        },
+        {
+          "id": "goal_hu_y1_club",
+          "name": "Club Level",
+          "description": "Compete at the Club Championship.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "club_championship"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_hu_y1_rival",
+          "name": "First Blood",
+          "description": "Beat at least one rival.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_tech_focus"
+        }
+      ],
+      "2": [
+        {
+          "id": "goal_hu_y2_clean",
+          "name": "Clean Race",
+          "description": "No hurdle errors at a championship.",
+          "condition": {
+            "type": "achievement_unlocked_this_season",
+            "achievement_id": "ach_clean_hurdles"
+          },
+          "reward_perk": "perk_tech_focus"
+        },
+        {
+          "id": "goal_hu_y2_state",
+          "name": "State Bound",
+          "description": "Reach the State Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "state_meet"
+          },
+          "reward_perk": "perk_agility_edge"
+        },
+        {
+          "id": "goal_hu_y2_wins",
+          "name": "Two Wins",
+          "description": "Win at least 2 meets this season.",
+          "condition": {
+            "type": "season_win_count_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_energy_max_3"
+        }
+      ],
+      "3": [
+        {
+          "id": "goal_hu_y3_regional",
+          "name": "Regional Bound",
+          "description": "Reach the Regional Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "regional_meet"
+          },
+          "reward_perk": "perk_mental_edge"
+        },
+        {
+          "id": "goal_hu_y3_pbs",
+          "name": "Both Events",
+          "description": "Set PBs in both hurdle events.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_tech_focus"
+        },
+        {
+          "id": "goal_hu_y3_rivals",
+          "name": "Rivals Owned",
+          "description": "Beat rivals at least 3 times.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 3
+          },
+          "reward_perk": "perk_agility_edge"
+        }
+      ],
+      "4": [
+        {
+          "id": "goal_hu_y4_national",
+          "name": "National Stage",
+          "description": "Reach Nationals.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "national_meet"
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_hu_y4_podium",
+          "name": "Championship Podium",
+          "description": "Top 3 at any championship.",
+          "condition": {
+            "type": "championship_place_lte",
+            "value": 3
+          },
+          "reward_perk": "perk_rhythm_lock"
+        },
+        {
+          "id": "goal_hu_y4_energy",
+          "name": "Healthy Finish",
+          "description": "Never hit very-low energy.",
+          "condition": {
+            "type": "season_no_very_low_energy"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        }
+      ]
+    },
+    "Middle Distance": {
+      "1": [
+        {
+          "id": "goal_md_y1_pb",
+          "name": "First Mark",
+          "description": "Set a PB in any middle distance event.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_stamina_edge"
+        },
+        {
+          "id": "goal_md_y1_club",
+          "name": "Club Level",
+          "description": "Compete at the Club Championship.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "club_championship"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_md_y1_rival",
+          "name": "First Blood",
+          "description": "Beat at least one rival.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_recovery_edge"
+        }
+      ],
+      "2": [
+        {
+          "id": "goal_md_y2_energy",
+          "name": "Stay Strong",
+          "description": "Never hit very-low energy.",
+          "condition": {
+            "type": "season_no_very_low_energy"
+          },
+          "reward_perk": "perk_toughness_edge"
+        },
+        {
+          "id": "goal_md_y2_state",
+          "name": "State Bound",
+          "description": "Reach the State Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "state_meet"
+          },
+          "reward_perk": "perk_stamina_edge"
+        },
+        {
+          "id": "goal_md_y2_wins",
+          "name": "Two Wins",
+          "description": "Win at least 2 meets this season.",
+          "condition": {
+            "type": "season_win_count_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_energy_max_3"
+        }
+      ],
+      "3": [
+        {
+          "id": "goal_md_y3_regional",
+          "name": "Regional Bound",
+          "description": "Reach the Regional Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "regional_meet"
+          },
+          "reward_perk": "perk_mental_edge"
+        },
+        {
+          "id": "goal_md_y3_pbs",
+          "name": "Two PBs",
+          "description": "Set PBs in 2+ events.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_stamina_edge"
+        },
+        {
+          "id": "goal_md_y3_rivals",
+          "name": "Rivals Owned",
+          "description": "Beat rivals at least 3 times.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 3
+          },
+          "reward_perk": "perk_recovery_edge"
+        }
+      ],
+      "4": [
+        {
+          "id": "goal_md_y4_national",
+          "name": "National Stage",
+          "description": "Reach Nationals.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "national_meet"
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_md_y4_podium",
+          "name": "Championship Podium",
+          "description": "Top 3 at any championship.",
+          "condition": {
+            "type": "championship_place_lte",
+            "value": 3
+          },
+          "reward_perk": "perk_finishing_kick"
+        },
+        {
+          "id": "goal_md_y4_pb",
+          "name": "End on a High",
+          "description": "Set at least one PB in your final season.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_mental_edge"
+        }
+      ]
+    },
+    "Long Distance": {
+      "1": [
+        {
+          "id": "goal_ld_y1_pb",
+          "name": "First Mark",
+          "description": "Set a PB in any distance event.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_stamina_edge"
+        },
+        {
+          "id": "goal_ld_y1_club",
+          "name": "Club Level",
+          "description": "Compete at the Club Championship.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "club_championship"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_ld_y1_rival",
+          "name": "First Blood",
+          "description": "Beat at least one rival.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_toughness_edge"
+        }
+      ],
+      "2": [
+        {
+          "id": "goal_ld_y2_energy",
+          "name": "Stay Healthy",
+          "description": "Never hit very-low energy.",
+          "condition": {
+            "type": "season_no_very_low_energy"
+          },
+          "reward_perk": "perk_recovery_edge"
+        },
+        {
+          "id": "goal_ld_y2_state",
+          "name": "State Bound",
+          "description": "Reach the State Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "state_meet"
+          },
+          "reward_perk": "perk_stamina_edge"
+        },
+        {
+          "id": "goal_ld_y2_wins",
+          "name": "Two Wins",
+          "description": "Win at least 2 meets this season.",
+          "condition": {
+            "type": "season_win_count_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_energy_max_3"
+        }
+      ],
+      "3": [
+        {
+          "id": "goal_ld_y3_regional",
+          "name": "Regional Bound",
+          "description": "Reach the Regional Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "regional_meet"
+          },
+          "reward_perk": "perk_mental_edge"
+        },
+        {
+          "id": "goal_ld_y3_pbs",
+          "name": "Two PBs",
+          "description": "Set PBs in 2+ events.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_stamina_edge"
+        },
+        {
+          "id": "goal_ld_y3_rivals",
+          "name": "Rivals Owned",
+          "description": "Beat rivals at least 3 times.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 3
+          },
+          "reward_perk": "perk_toughness_edge"
+        }
+      ],
+      "4": [
+        {
+          "id": "goal_ld_y4_national",
+          "name": "National Stage",
+          "description": "Reach Nationals.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "national_meet"
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_ld_y4_podium",
+          "name": "Championship Podium",
+          "description": "Top 3 at any championship.",
+          "condition": {
+            "type": "championship_place_lte",
+            "value": 3
+          },
+          "reward_perk": "perk_aerobic_engine"
+        },
+        {
+          "id": "goal_ld_y4_pb",
+          "name": "Still in It",
+          "description": "Set at least one PB in your final season.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_mental_edge"
+        }
+      ]
+    },
+    "Throwing": {
+      "1": [
+        {
+          "id": "goal_th_y1_pb",
+          "name": "First Mark",
+          "description": "Set a PB in any throwing event.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_strength_edge"
+        },
+        {
+          "id": "goal_th_y1_club",
+          "name": "Club Level",
+          "description": "Compete at the Club Championship.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "club_championship"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_th_y1_rival",
+          "name": "First Blood",
+          "description": "Beat at least one rival.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_tech_focus"
+        }
+      ],
+      "2": [
+        {
+          "id": "goal_th_y2_pbs",
+          "name": "Two Events",
+          "description": "Set PBs in 2+ throwing events.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_strength_edge"
+        },
+        {
+          "id": "goal_th_y2_state",
+          "name": "State Bound",
+          "description": "Reach the State Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "state_meet"
+          },
+          "reward_perk": "perk_tech_focus"
+        },
+        {
+          "id": "goal_th_y2_wins",
+          "name": "Two Wins",
+          "description": "Win at least 2 meets this season.",
+          "condition": {
+            "type": "season_win_count_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_energy_max_3"
+        }
+      ],
+      "3": [
+        {
+          "id": "goal_th_y3_regional",
+          "name": "Regional Bound",
+          "description": "Reach the Regional Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "regional_meet"
+          },
+          "reward_perk": "perk_mental_edge"
+        },
+        {
+          "id": "goal_th_y3_energy",
+          "name": "Stay Strong",
+          "description": "Never hit very-low energy.",
+          "condition": {
+            "type": "season_no_very_low_energy"
+          },
+          "reward_perk": "perk_recovery_edge"
+        },
+        {
+          "id": "goal_th_y3_rivals",
+          "name": "Rivals Owned",
+          "description": "Beat rivals at least 3 times.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 3
+          },
+          "reward_perk": "perk_strength_edge"
+        }
+      ],
+      "4": [
+        {
+          "id": "goal_th_y4_national",
+          "name": "National Stage",
+          "description": "Reach Nationals.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "national_meet"
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_th_y4_podium",
+          "name": "Championship Podium",
+          "description": "Top 3 at any championship.",
+          "condition": {
+            "type": "championship_place_lte",
+            "value": 3
+          },
+          "reward_perk": "perk_power_chain"
+        },
+        {
+          "id": "goal_th_y4_pbs",
+          "name": "Peak Season",
+          "description": "Set PBs in 2+ events.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_mental_edge"
+        }
+      ]
+    },
+    "Jumping": {
+      "1": [
+        {
+          "id": "goal_ju_y1_pb",
+          "name": "First Mark",
+          "description": "Set a PB in any jumping event.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_speed_edge"
+        },
+        {
+          "id": "goal_ju_y1_club",
+          "name": "Club Level",
+          "description": "Compete at the Club Championship.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "club_championship"
+          },
+          "reward_perk": "perk_energy_regen_1"
+        },
+        {
+          "id": "goal_ju_y1_rival",
+          "name": "First Blood",
+          "description": "Beat at least one rival.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 1
+          },
+          "reward_perk": "perk_agility_edge"
+        }
+      ],
+      "2": [
+        {
+          "id": "goal_ju_y2_pbs",
+          "name": "Two Events",
+          "description": "Set PBs in 2+ jumping events.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_tech_focus"
+        },
+        {
+          "id": "goal_ju_y2_state",
+          "name": "State Bound",
+          "description": "Reach the State Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "state_meet"
+          },
+          "reward_perk": "perk_agility_edge"
+        },
+        {
+          "id": "goal_ju_y2_wins",
+          "name": "Two Wins",
+          "description": "Win at least 2 meets this season.",
+          "condition": {
+            "type": "season_win_count_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_energy_max_3"
+        }
+      ],
+      "3": [
+        {
+          "id": "goal_ju_y3_regional",
+          "name": "Regional Bound",
+          "description": "Reach the Regional Meet.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "regional_meet"
+          },
+          "reward_perk": "perk_mental_edge"
+        },
+        {
+          "id": "goal_ju_y3_energy",
+          "name": "Stay Sharp",
+          "description": "Never hit very-low energy.",
+          "condition": {
+            "type": "season_no_very_low_energy"
+          },
+          "reward_perk": "perk_speed_edge"
+        },
+        {
+          "id": "goal_ju_y3_rivals",
+          "name": "Rivals Owned",
+          "description": "Beat rivals at least 3 times.",
+          "condition": {
+            "type": "season_rival_wins_gte",
+            "value": 3
+          },
+          "reward_perk": "perk_agility_edge"
+        }
+      ],
+      "4": [
+        {
+          "id": "goal_ju_y4_national",
+          "name": "National Stage",
+          "description": "Reach Nationals.",
+          "condition": {
+            "type": "reach_meet_type",
+            "meet_type": "national_meet"
+          },
+          "reward_perk": "perk_energy_max_3"
+        },
+        {
+          "id": "goal_ju_y4_podium",
+          "name": "Championship Podium",
+          "description": "Top 3 at any championship.",
+          "condition": {
+            "type": "championship_place_lte",
+            "value": 3
+          },
+          "reward_perk": "perk_elastic_spring"
+        },
+        {
+          "id": "goal_ju_y4_pbs",
+          "name": "Senior Leap",
+          "description": "Set PBs in 2+ events in your final season.",
+          "condition": {
+            "type": "season_pbs_gte",
+            "value": 2
+          },
+          "reward_perk": "perk_speed_edge"
+        }
+      ]
+    }
+  },
+  "milestones": [
+    {
+      "id": "ms_three_titles",
+      "name": "Title Collector",
+      "description": "Win 3 meets in your career.",
+      "type": "career_titles_gte",
+      "value": 3,
+      "reward_perk": "perk_strength_edge"
+    },
+    {
+      "id": "ms_state_stage",
+      "name": "State Stage",
+      "description": "Reach the State Meet.",
+      "type": "reach_meet_type",
+      "meet_type": "state_meet",
+      "reward_perk": "perk_speed_edge"
+    },
+    {
+      "id": "ms_five_pbs",
+      "name": "Five PBs",
+      "description": "Set 5 personal bests.",
+      "type": "career_pbs_gte",
+      "value": 5,
+      "reward_perk": "perk_energy_max_3"
+    },
+    {
+      "id": "ms_rival_crusher",
+      "name": "Rival Crusher",
+      "description": "Defeat rivals 5 times across your career.",
+      "type": "rival_wins_gte",
+      "value": 5,
+      "reward_perk": "perk_mental_edge"
+    },
+    {
+      "id": "ms_iron_body",
+      "name": "Iron Body",
+      "description": "Sustain 2 injuries and keep competing.",
+      "type": "injuries_gte",
+      "value": 2,
+      "reward_perk": "perk_toughness_edge"
+    },
+    {
+      "id": "ms_big_meet_performer",
+      "name": "Big Meet Performer",
+      "description": "Earn 3 podium finishes at championship meets.",
+      "type": "championship_podiums_gte",
+      "value": 3,
+      "reward_perk": "perk_stamina_edge"
+    },
+    {
+      "id": "ms_consistent_professional",
+      "name": "Consistent Professional",
+      "description": "Complete 2 seasons without hitting very low energy.",
+      "type": "clean_energy_seasons_gte",
+      "value": 2,
+      "reward_perk": "perk_energy_regen_1"
+    },
+    {
+      "id": "ms_decorated_athlete",
+      "name": "Decorated Athlete",
+      "description": "Unlock 6 achievements.",
+      "type": "achievements_unlocked_gte",
+      "value": 6,
+      "reward_perk": "perk_tech_focus"
+    },
+    {
+      "id": "ms_serial_winner",
+      "name": "Serial Winner",
+      "description": "Win 8 meets in your career.",
+      "type": "career_titles_gte",
+      "value": 8,
+      "reward_perk": "perk_competitors_poise"
+    },
+    {
+      "id": "ms_pb_machine",
+      "name": "PB Machine",
+      "description": "Set 10 personal bests.",
+      "type": "career_pbs_gte",
+      "value": 10,
+      "reward_perk": "perk_race_sharpened"
+    },
+    {
+      "id": "ms_championship_fixture",
+      "name": "Championship Fixture",
+      "description": "Earn 6 podium finishes at championship meets.",
+      "type": "championship_podiums_gte",
+      "value": 6,
+      "reward_perk": "perk_iron_constitution"
+    },
+    {
+      "id": "ms_rivalry_legend",
+      "name": "Rivalry Legend",
+      "description": "Defeat rivals 10 times across your career.",
+      "type": "rival_wins_gte",
+      "value": 10,
+      "reward_perk": "perk_second_wind"
+    }
+  ],
+  "offseason_cards": [
+    {
+      "id": "card_spec_speed",
+      "label": "Speed Block",
+      "description": "Intensive speed work. Big gains, but you enter the season depleted.",
+      "builds": [
+        "Sprints",
+        "Jumping"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Speed": 5
+        },
+        "starting_energy_mod": -20
+      }
+    },
+    {
+      "id": "card_spec_stamina",
+      "label": "Endurance Block",
+      "description": "Deep mileage cycle. Big stamina gains, but you enter the season depleted.",
+      "builds": [
+        "Long Distance",
+        "Middle Distance"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Stamina": 5
+        },
+        "starting_energy_mod": -20
+      }
+    },
+    {
+      "id": "card_spec_strength",
+      "label": "Strength Block",
+      "description": "Intensive lifting cycle. Big strength gains, but you enter the season depleted.",
+      "builds": [
+        "Throwing"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Strength": 5
+        },
+        "starting_energy_mod": -20
+      }
+    },
+    {
+      "id": "card_spec_agility",
+      "label": "Agility Block",
+      "description": "Intensive agility drills. Big gains, but you enter the season depleted.",
+      "builds": [
+        "Hurdler",
+        "Jumping"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Agility": 5
+        },
+        "starting_energy_mod": -20
+      }
+    },
+    {
+      "id": "card_hurdle_drills",
+      "label": "Hurdles Form Work",
+      "description": "Dedicated hurdle mechanics and clearance drills. Builds the agility and technique that win in lanes.",
+      "builds": [
+        "Hurdler"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Agility": 3,
+          "Technique": 2
+        }
+      }
+    },
+    {
+      "id": "card_hurdler_speed",
+      "label": "Race Speed Work",
+      "description": "Sprint and clearance drills at race pace. Sharpens approach speed and footwork.",
+      "builds": [
+        "Hurdler"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Speed": 2,
+          "Agility": 2
+        }
+      }
+    },
+    {
+      "id": "card_recovery",
+      "label": "Recovery Focus",
+      "description": "Low volume, intentional rest. Smaller gains but you enter the season at full energy.",
+      "builds": "all",
+      "effects": {
+        "stat_bonus": {
+          "Recovery": 5
+        }
+      }
+    },
+    {
+      "id": "card_technique",
+      "label": "Technique Camp",
+      "description": "Form work and mental reps. Balanced gains in the soft skills.",
+      "builds": "all",
+      "effects": {
+        "stat_bonus": {
+          "Technique": 3,
+          "Mentality": 2
+        }
+      }
+    },
+    {
+      "id": "card_explosiveness",
+      "label": "Explosiveness Training",
+      "description": "Power and burst work. Good for explosive events.",
+      "builds": [
+        "Sprints",
+        "Hurdler",
+        "Throwing",
+        "Jumping"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Strength": 3,
+          "Agility": 2
+        }
+      }
+    },
+    {
+      "id": "card_distance",
+      "label": "Distance Block",
+      "description": "Mileage and aerobic base. Builds deep stamina and recovery.",
+      "builds": [
+        "Long Distance",
+        "Middle Distance",
+        "Sprints"
+      ],
+      "effects": {
+        "stat_bonus": {
+          "Stamina": 4,
+          "Recovery": 1
+        }
+      }
+    },
+    {
+      "id": "card_all_around",
+      "label": "All-Around Development",
+      "description": "Well-rounded training. Small gains across four key areas.",
+      "builds": "all",
+      "effects": {
+        "stat_bonus": {
+          "Speed": 2,
+          "Strength": 1,
+          "Stamina": 1,
+          "Agility": 1
+        }
+      }
+    }
+  ],
+  "npc_generation": {
+    "stat_min": 30,
+    "stat_max": 100,
+    "tier_order": [
+      "local",
+      "club",
+      "class",
+      "state",
+      "regional",
+      "national",
+      "elite"
+    ],
+    "baseline_by_tier": {
+      "local": {
+        "mean": 53,
+        "std": 6
+      },
+      "club": {
+        "mean": 62,
+        "std": 6
+      },
+      "class": {
+        "mean": 70,
+        "std": 6
+      },
+      "state": {
+        "mean": 78,
+        "std": 5
+      },
+      "regional": {
+        "mean": 84,
+        "std": 5
+      },
+      "national": {
+        "mean": 87,
+        "std": 4
+      },
+      "elite": {
+        "mean": 88,
+        "std": 3
+      }
+    }
+  },
+  "world_events": {
+    "layer1_micro": {
+      "frequency": 0.85,
+      "max_per_week": 1,
+      "cooldown_weeks": 2
+    },
+    "layer2_world": {
+      "frequency": 0.45,
+      "max_per_week": 2,
+      "cooldown_weeks": 2
+    },
+    "layer3_major": {
+      "frequency": 0.07,
+      "max_per_week": 1,
+      "cooldown_weeks": 4
+    },
+    "default_label_cooldown_weeks": 2,
+    "effect_ranges": {
+      "minor": {
+        "stat_delta_max": 1,
+        "energy_delta_max": 2
+      },
+      "moderate": {
+        "stat_delta_max": 2,
+        "energy_delta_max": 5
+      },
+      "significant": {
+        "stat_delta_max": 5,
+        "energy_delta_max": 10
+      }
+    }
+  },
+  "balance": {
+    "long_distance_events": [
+      "1600m",
+      "3200m"
+    ],
+    "long_distance_variance_scale": 0.85,
+    "performance_skill_floor": 40,
+    "performance_curve_exponent": 1.6,
+    "championship_meets": [
+      "club_championship",
+      "class_meet",
+      "state_meet",
+      "regional_meet",
+      "national_meet"
+    ]
+  },
+  "npc_annual_growth": {
+    "meets": [
+      "regular_season",
+      "club_championship"
+    ],
+    "per_year": 6,
+    "stat_max_cap": 77
+  },
+  "npc_named_annual_growth": {
+    "per_year": 3,
+    "stat_cap": 99
+  },
+  "records": {
+    "school_record_skill": 79,
+    "championship_record_skills": {
+      "class_meet": 82,
+      "state_meet": 88,
+      "regional_meet": 93,
+      "national_meet": 97
+    },
+    "skill_jitter": 4,
+    "year_min": 2010,
+    "year_max": 2022,
+    "record_watch_pct": 0.02
+  },
+  "rankings": {
+    "enabled": true,
+    "wire_race_probability": 0.3,
+    "board_depths": {
+      "league": 12,
+      "class": 15,
+      "state": 25,
+      "regional": 25,
+      "national": 25
+    },
+    "cohort": {
+      "bands": {
+        "league": {
+          "count_min": 12,
+          "count_max": 14,
+          "tiers": [
+            "local",
+            "local",
+            "club"
+          ]
+        },
+        "class": {
+          "count_min": 14,
+          "count_max": 16,
+          "tiers": [
+            "club",
+            "club",
+            "class"
+          ]
+        },
+        "state": {
+          "count_min": 15,
+          "count_max": 20,
+          "tiers": [
+            "state"
+          ]
+        },
+        "regional": {
+          "count_min": 10,
+          "count_max": 12,
+          "tiers": [
+            "regional"
+          ]
+        },
+        "national": {
+          "count_min": 8,
+          "count_max": 10,
+          "tiers": [
+            "national",
+            "elite"
+          ]
+        }
+      },
+      "double_event_probability": 0.35,
+      "class_year_weights": {
+        "1": 0.25,
+        "2": 0.25,
+        "3": 0.25,
+        "4": 0.25
+      },
+      "annual_growth": {
+        "league": {
+          "per_year": 6,
+          "stat_cap": 79.5
+        },
+        "class": {
+          "per_year": 0,
+          "stat_cap": 82
+        },
+        "state": {
+          "per_year": 0,
+          "stat_cap": 90
+        },
+        "regional": {
+          "per_year": 0,
+          "stat_cap": 94
+        },
+        "national": {
+          "per_year": 0,
+          "stat_cap": 99
+        }
+      },
+      "freshman_year_scaling": true
+    },
+    "program_strength": {
+      "player_range": [
+        40,
+        55
+      ],
+      "strong_range": [
+        75,
+        90
+      ],
+      "above_avg_range": [
+        60,
+        75
+      ],
+      "avg_weak_range": [
+        30,
+        60
+      ],
+      "stat_skew": 0.08,
+      "annual_drift": 5,
+      "min": 20,
+      "max": 95
+    }
+  }
+}

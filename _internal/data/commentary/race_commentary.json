@@ -1,0 +1,268 @@
+{
+  "sprint": {
+    "start": [
+      "Clean break across the lanes as {player_name} snaps out fast.",
+      "{player_name} is sharp from the blocks and already in rhythm.",
+      "Big first steps from {rival_name}, but {player_name} answers quickly.",
+      "The field explodes forward and {leader_name} takes the first edge.",
+      "{player_name} gets a tidy launch and stays level with the leaders.",
+      "Quick reaction from {player_name}; no wasted motion off the gun.",
+      "{rival_name} is driving hard early, and {player_name} is right there.",
+      "Fast open from lane to lane with {leader_name} setting the tone.",
+      "{player_name} finds top speed early and holds form cleanly.",
+      "They are flying already, and {player_name} is in the fight."
+    ],
+    "mid": [
+      "{leader_name} holds a narrow lead as the race tightens.",
+      "{player_name} is pressing now, trying to reel in {leader_name}.",
+      "Strong transition phase from {player_name} in the middle meters.",
+      "{rival_name} keeps pressure on, but {player_name} stays composed.",
+      "The lanes are stretched out, and {leader_name} still has the edge.",
+      "{player_name} is running tall and gaining through the center.",
+      "Halfway through and it is still anyone's race up front.",
+      "{leader_name} and {player_name} are matching strides right now.",
+      "{rival_name} surges, and {player_name} responds immediately.",
+      "This is a clean sprint pattern, with {player_name} moving well."
+    ],
+    "finish": [
+      "Into the final meters and {winner_name} finds one more gear.",
+      "{player_name} drives to the line as {winner_name} closes it out.",
+      "Photo-finish energy, but {winner_name} leans first at the tape.",
+      "{winner_name} takes it at the line after a furious close.",
+      "Late charge from {player_name}, yet {winner_name} holds on.",
+      "{winner_name} stays strong through the tape and secures the win.",
+      "The crowd rises as {winner_name} finishes first.",
+      "{player_name} fights all the way, but {winner_name} gets there.",
+      "A powerful finish from {winner_name} seals this sprint final.",
+      "The tape breaks for {winner_name} after a fast closing burst."
+    ]
+  },
+  "middle_distance": {
+    "start": [
+      "Controlled start from the pack as {player_name} settles early.",
+      "{leader_name} glides to the front, but no one is panicking.",
+      "{player_name} sits in good position and avoids early traffic.",
+      "Measured opening lap with {rival_name} tracking the leaders.",
+      "{player_name} holds a calm tempo and stays on the rail.",
+      "The field stays compact while {leader_name} sets a steady pace.",
+      "No rush yet; {player_name} is racing with patience.",
+      "{rival_name} edges up on the outside as {player_name} stays smooth.",
+      "Early jostling settles and {player_name} keeps clean mechanics.",
+      "A tactical opening phase with {leader_name} controlling the front."
+    ],
+    "mid": [
+      "{leader_name} tests the pace, and {player_name} answers.",
+      "{player_name} moves up a spot and looks comfortable.",
+      "The pace lifts through the middle, and the pack starts to string out.",
+      "{rival_name} makes a move, forcing {player_name} to respond.",
+      "{player_name} keeps contact with the leaders through this surge.",
+      "{leader_name} still leads, but the margin is shrinking.",
+      "This is becoming a true race now, and {player_name} is engaged.",
+      "{player_name} stays relaxed while others begin to labor.",
+      "{rival_name} pushes wide, and {player_name} protects position.",
+      "Mid-race pressure building with {leader_name} still in command."
+    ],
+    "bell_lap": [
+      "Bell lap is on, and {player_name} is right where it matters.",
+      "One lap left as {leader_name} tries to break them.",
+      "{player_name} launches a move at the bell and closes quickly.",
+      "{rival_name} attacks first, but {player_name} goes with it.",
+      "The bell changes everything, and the pace jumps hard.",
+      "{leader_name} leads into the final lap with {player_name} stalking.",
+      "{player_name} swings out and starts the long drive home.",
+      "Bell lap tactics now: hold form, hold nerve, and go.",
+      "{rival_name} digs in at the bell while {player_name} looks strong.",
+      "Final lap underway and {player_name} is in striking distance."
+    ],
+    "finish": [
+      "{winner_name} times the kick perfectly and takes it late.",
+      "{player_name} storms home, but {winner_name} edges the finish.",
+      "A hard final straight and {winner_name} wins the duel.",
+      "{winner_name} separates in the last meters to secure victory.",
+      "{player_name} gives everything, yet {winner_name} has the answer.",
+      "What a close, with {winner_name} getting the nod at the line.",
+      "{winner_name} closes with authority and claims the race.",
+      "Brilliant finishing speed from {winner_name} to take first.",
+      "{player_name} battles through the tape, but {winner_name} prevails.",
+      "The final kick belongs to {winner_name}."
+    ]
+  },
+  "distance": {
+    "start": [
+      "Patient opening from {player_name} as the long race begins.",
+      "{leader_name} takes the lead, but the pace is controlled.",
+      "{player_name} stays tucked in and avoids spending early.",
+      "The pack forms quickly with {rival_name} near the front.",
+      "No panic from {player_name}; this race is about timing.",
+      "{leader_name} sets an honest rhythm through the first stretch.",
+      "{player_name} holds efficient form and lets it develop.",
+      "Early meters are calm, with {rival_name} watching the tempo.",
+      "{player_name} runs smooth and keeps contact with the group.",
+      "The field is together, and {leader_name} dictates the pace."
+    ],
+    "mid": [
+      "Middle laps now, and {player_name} remains well-positioned.",
+      "{leader_name} keeps grinding while the field starts to thin.",
+      "{rival_name} probes the pace and {player_name} covers.",
+      "{player_name} moves up quietly as others drift back.",
+      "A steady surge from {leader_name} is stretching the pack.",
+      "{player_name} stays efficient and refuses to lose touch.",
+      "The race settles into attrition, and positions begin to harden.",
+      "{rival_name} and {player_name} are trading momentum.",
+      "{leader_name} remains in front, but pressure is growing behind.",
+      "{player_name} looks composed in a demanding middle phase."
+    ],
+    "bell_lap": [
+      "Bell lap sounds, and {player_name} prepares to commit.",
+      "One lap to go as {leader_name} tries to break clear.",
+      "{player_name} makes a decisive move when the bell rings.",
+      "{rival_name} kicks first, and {player_name} locks on.",
+      "The bell lap turns tactical patience into full attack.",
+      "{leader_name} enters the bell lap under heavy pressure.",
+      "{player_name} leaves the rail and starts a long drive.",
+      "Bell lap urgency now, with every stride counting.",
+      "{rival_name} digs deep, but {player_name} is matching it.",
+      "Final lap begins and {player_name} is in contention."
+    ],
+    "finish": [
+      "{winner_name} outlasts the field and wins the distance test.",
+      "{player_name} closes hard, but {winner_name} holds firm.",
+      "A grinding finish and {winner_name} reaches the line first.",
+      "{winner_name} finds the final reserves to take the race.",
+      "Late resistance from {player_name}, but {winner_name} prevails.",
+      "{winner_name} seals it with strength in the final straight.",
+      "The endurance battle ends with {winner_name} on top.",
+      "{player_name} empties the tank, yet {winner_name} gets there.",
+      "Strong closing rhythm from {winner_name} secures first place.",
+      "{winner_name} wins a tough and tactical distance race."
+    ]
+  },
+  "hurdles": {
+    "start": [
+      "Sharp start from {player_name} into the first barrier.",
+      "{leader_name} attacks hurdle one cleanly and leads early.",
+      "{player_name} keeps a quick rhythm over the opening hurdles.",
+      "{rival_name} starts fast, but {player_name} is in sync.",
+      "Great first clearance from {player_name} with no hesitation.",
+      "The field hits hurdle one together; {leader_name} edges ahead.",
+      "{player_name} is smooth through the opening hurdle pattern.",
+      "{rival_name} clips slightly, and {player_name} capitalizes.",
+      "Early cadence is crisp, with {player_name} well-balanced.",
+      "{leader_name} leads to hurdle two as {player_name} tracks."
+    ],
+    "mid": [
+      "{player_name} is flowing now and gaining hurdle by hurdle.",
+      "{leader_name} keeps the rhythm under rising pressure.",
+      "{rival_name} surges mid-race, and {player_name} responds.",
+      "Clean clearances from {player_name} through the middle phase.",
+      "The race tightens as {leader_name} and {player_name} trade edges.",
+      "{player_name} shortens stride briefly, then resets cleanly.",
+      "{rival_name} attacks the barriers while {player_name} stays poised.",
+      "Midway through, hurdle technique is deciding this race.",
+      "{leader_name} still in front, but {player_name} is closing.",
+      "{player_name} keeps form intact as fatigue starts to bite."
+    ],
+    "finish": [
+      "{winner_name} clears the last hurdle first and wins it.",
+      "{player_name} drives off the final barrier, but {winner_name} holds.",
+      "Final hurdle to tape, and {winner_name} finishes strongest.",
+      "{winner_name} stays clean to the end and takes first.",
+      "{player_name} fights to the line, yet {winner_name} gets there.",
+      "A decisive last hurdle from {winner_name} seals the race.",
+      "{winner_name} powers through the finish after a clean close.",
+      "{player_name} launches late, but {winner_name} answers.",
+      "The final meters belong to {winner_name}.",
+      "{winner_name} executes the last hurdle perfectly for the win."
+    ]
+  },
+  "jumps": {
+    "approach": [
+      "{player_name} begins the approach with good acceleration.",
+      "{rival_name} builds speed steadily down the runway.",
+      "Measured steps from {player_name} into the board.",
+      "{leader_name} looks balanced on the approach.",
+      "{player_name} is upright and controlled entering takeoff.",
+      "Nice rhythm in the run-up from {rival_name}.",
+      "{player_name} quickens late and hits top speed.",
+      "The approach is clean and confident from {leader_name}.",
+      "{rival_name} attacks the runway with intent.",
+      "{player_name} adjusts stride and stays composed."
+    ],
+    "attempt": [
+      "{player_name} pops off the board with strong lift.",
+      "{rival_name} gets a powerful takeoff angle.",
+      "{leader_name} launches cleanly with great body control.",
+      "{player_name} hangs well and prepares for landing.",
+      "High-quality takeoff from {rival_name} on this attempt.",
+      "{player_name} converts speed into height and distance.",
+      "{leader_name} is airborne smoothly with no visible fade.",
+      "{player_name} drives through the phase with confidence.",
+      "{rival_name} keeps form tight through the air.",
+      "Strong mechanics from {player_name} at the board."
+    ],
+    "result": [
+      "That is a solid mark, and {leader_name} keeps the lead.",
+      "{player_name} posts a competitive jump and stays in contention.",
+      "{rival_name} lands well, and the crowd likes that effort.",
+      "Big response from {player_name}; this battle is alive.",
+      "{leader_name} answers with another quality attempt.",
+      "{player_name} improves the mark at a key moment.",
+      "{rival_name} puts pressure on the top spot.",
+      "The standings tighten after that jump from {player_name}.",
+      "{winner_name} secures first with a clutch final effort.",
+      "{winner_name} holds the best mark and wins the event."
+    ]
+  },
+  "throws": {
+    "windup": [
+      "{player_name} sets calmly in the circle before the motion.",
+      "{rival_name} starts the windup with strong balance.",
+      "{leader_name} coils tightly and prepares to release.",
+      "{player_name} begins the turn with good control.",
+      "Composed setup from {rival_name} before the throw.",
+      "{player_name} looks stable through the early phase.",
+      "{leader_name} builds power from the ground up.",
+      "{player_name} keeps posture clean in the windup.",
+      "{rival_name} sets a strong base for this attempt.",
+      "Smooth tempo from {player_name} entering release."
+    ],
+    "release": [
+      "{player_name} hits a sharp release point.",
+      "{rival_name} unloads with serious force.",
+      "{leader_name} gets excellent extension on release.",
+      "{player_name} drives through and sends it long.",
+      "Powerful release from {rival_name} with great height.",
+      "{player_name} finds a clean angle out of the hand.",
+      "{leader_name} stays centered and finishes the throw.",
+      "{player_name} connects well and follows through.",
+      "{rival_name} gets a fast, heavy release.",
+      "{player_name} puts real pressure on with that effort."
+    ],
+    "result": [
+      "That mark lands strong, and {leader_name} remains ahead.",
+      "{player_name} records a quality throw and gains ground.",
+      "{rival_name} posts a big number to challenge the lead.",
+      "The board updates, and {player_name} stays in the mix.",
+      "{leader_name} responds with another consistent mark.",
+      "{player_name} improves again at the right time.",
+      "{rival_name} makes this a tight contest for first.",
+      "Strong round overall, with {player_name} still threatening.",
+      "{winner_name} locks up the event with the top mark.",
+      "{winner_name} finishes on top after a composed series."
+    ]
+  },
+  "rivalry": {
+    "duel": [
+      "{player_name} and {rival_name} are battling stride for stride.",
+      "{rival_name} is right there with {player_name}.",
+      "{player_name} will not let {rival_name} break away.",
+      "{rival_name} pressures hard, and {player_name} answers.",
+      "{player_name} and {rival_name} are locked in a duel.",
+      "{rival_name} stays close, forcing {player_name} to respond.",
+      "{player_name} keeps pace as {rival_name} challenges.",
+      "{rival_name} draws level, and {player_name} fights back.",
+      "{player_name} and {rival_name} are trading momentum.",
+      "{rival_name} is still in striking range of {player_name}."
+    ]
+  }
+}

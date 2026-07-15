@@ -1,0 +1,2133 @@
+{
+  "beats": [
+    {
+      "id": "narr_rival_spotted",
+      "trigger": {
+        "type": "rival_new"
+      },
+      "weight": 1.1,
+      "text": [
+        "You see a name twice in the results. That's how rivalries start.",
+        "It wasn't supposed to be personal, but it is now."
+      ]
+    },
+    {
+      "id": "narr_rival_returns",
+      "trigger": {
+        "type": "rival_present"
+      },
+      "weight": 0.9,
+      "text": [
+        "You spot a familiar face in the field. The field feels sharper already.",
+        "The rivalry doesn't need a headline. It's in the warmup.",
+        "They are in the same heat again, and the air gets tighter.",
+        "You spot them during strides, and your focus sharpens.",
+        "No words needed; the matchup explains itself."
+      ]
+    },
+    {
+      "id": "narr_rival_loss",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 1.1,
+      "text": [
+        "Your rival got this one. You'll remember it.",
+        "They beat you today. That won't be the last meeting."
+      ]
+    },
+    {
+      "id": "narr_rival_win",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 1.1,
+      "text": [
+        "You finish ahead of your rival. It counts more than the result sheet says.",
+        "You got them today. The look they give you says they'll be back."
+      ]
+    },
+    {
+      "id": "narr_rival_new_notice",
+      "trigger": {
+        "type": "rival_new"
+      },
+      "weight": 1.0,
+      "text": [
+        "Same name keeps showing up next to yours. You notice.",
+        "You see them in warmups. That's the first time it feels real.",
+        "You remember their face from last week. Now you remember their time too."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_fuel",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 1.0,
+      "text": [
+        "They got you today. You file it away.",
+        "You shake hands, then walk off thinking about the rematch.",
+        "It stings, but it's clean. That's the part that stays with you."
+      ]
+    },
+    {
+      "id": "narr_rival_win_momentum",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 1.0,
+      "text": [
+        "Teammates talk about it on the bus. You just nod.",
+        "Beat your rival today. The season feels lighter.",
+        "You got them. That's momentum you can feel."
+      ]
+    },
+    {
+      "id": "narr_week_one_start",
+      "trigger": {
+        "type": "week_equals",
+        "week": 1
+      },
+      "weight": 1.2,
+      "text": [
+        "Week one. New season, same nerves.",
+        "First meet of the year. The body feels raw but ready.",
+        "You can still smell the new spikes in the bag."
+      ]
+    },
+    {
+      "id": "narr_mid_season_check",
+      "trigger": {
+        "type": "week_equals",
+        "week": 4
+      },
+      "weight": 1.0,
+      "text": [
+        "Mid-season. The training is starting to show up in the times.",
+        "Week four. You're finding your shape."
+      ]
+    },
+    {
+      "id": "narr_regular_season_finale",
+      "trigger": {
+        "type": "week_equals",
+        "week": 8
+      },
+      "weight": 1.5,
+      "text": [
+        "Final regular season meet. You want to finish sharp.",
+        "Last league date before things get real."
+      ]
+    },
+    {
+      "id": "narr_regular_season_fatigue",
+      "trigger": {
+        "type": "week_equals",
+        "week": 8
+      },
+      "weight": 1.2,
+      "text": [
+        "Week eight. The season's in your body now.",
+        "Last regular meet. You want to be clean, not flashy.",
+        "It's been a long stretch. You still line up."
+      ]
+    },
+    {
+      "id": "narr_hurdle_focus",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "400mH"
+      },
+      "weight": 1.0,
+      "text": [
+        "Four hundred hurdles is a rhythm event disguised as a sprint.",
+        "Today it's not about bravery. It's about precision.",
+        "You count strides between hurdles until you stop counting and trust the rhythm.",
+        "The hurdles don't care how tired your legs are in the final straight. You still have to clear them.",
+        "One bad hurdle reshapes everything that follows. You know this going in.",
+        "The back straight is where the legs start arguing with the stride pattern. You try not to let it break.",
+        "the 400 hurdles asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 400 hurdles become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 400 hurdles is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 400 hurdles is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_110mH",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "110mH"
+      },
+      "weight": 1.0,
+      "text": [
+        "Ten hurdles in thirteen seconds. The rhythm either holds or it doesn't.",
+        "You're not jumping over them - you're running through them as efficiently as possible.",
+        "The first three steps determine the shape of everything after. The hurdles just confirm it.",
+        "You clip one and feel the correction ripple through the next four. That's the cost.",
+        "the 110 hurdles asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 110 hurdles become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 110 hurdles is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 110 hurdles is rarely loud, but it is always visible.",
+        "You keep your shoulders calm and your effort honest.",
+        "There is a moment where the 110 hurdles asks for commitment, and it is here."
+      ]
+    },
+    {
+      "id": "narr_100m",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "100m"
+      },
+      "weight": 1.0,
+      "text": [
+        "Ten seconds to be exactly what you are.",
+        "100 meters. No tactics. No negotiation. Just speed.",
+        "Stay tall through the drive phase and trust the next ten steps.",
+        "The start is violent, then the race turns into pure mechanics.",
+        "Every tiny mistake shows up at this speed, so nothing can drift.",
+        "You do not search for rhythm in the hundred; you impose it.",
+        "By halfway, the winner is usually the one who stayed clean.",
+        "You hit max velocity and try to hold it one breath longer.",
+        "No room for correction here, only execution.",
+        "The race feels over almost as soon as it begins.",
+        "Block clearance is clean, and now it is all posture and frequency.",
+        "The crowd blurs; the lane lines are all that matter.",
+        "Your arms set the tempo and your legs have to obey.",
+        "This race rewards commitment, not hesitation.",
+        "One sharp transition can separate first from fourth."
+      ]
+    },
+    {
+      "id": "narr_200m",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "200m"
+      },
+      "weight": 1.0,
+      "text": [
+        "The 200 rewards commitment around the bend.",
+        "Drive hard into the turn. Relax. Let it open up.",
+        "You come off the curve and feel where your speed is - whether it's still there or already gone.",
+        "The stagger makes it hard to read the field. You run your own race and find out later how it placed.",
+        "There's a moment coming out of the bend where you think you can hold your form. You usually can't.",
+        "Longer than the hundred by a margin that matters. The last fifty meters ask a different question.",
+        "the 200 asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 200 become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 200 is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 200 is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_400m",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "400m"
+      },
+      "weight": 1.0,
+      "text": [
+        "A 400 is a negotiation with the back stretch.",
+        "Four hundred meters of math you can't solve until you're in it.",
+        "You know what the back straight costs. You've paid it before.",
+        "The first two hundred are a promise you have to keep for the second two.",
+        "Somewhere around two-fifty you stop thinking and just run. That's when it gets honest.",
+        "It's too long to sprint. It's too short to manage. The four hundred doesn't resolve that contradiction.",
+        "the 400 asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 400 become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 400 is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 400 is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_800m",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "800m"
+      },
+      "weight": 1.0,
+      "text": [
+        "Two laps. Fast enough to hurt, far enough to require a plan.",
+        "The 800 breaks the impatient. You've learned to wait.",
+        "You go out with the pack and try to remember that the race doesn't really start for another two hundred meters.",
+        "First lap is bookkeeping. The second lap is the accounting.",
+        "You know roughly where you need to be at the bell. You try to get there without spending too much.",
+        "The kick only works if you've saved something for it. You think you have.",
+        "the 800 asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 800 become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 800 is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 800 is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_1600m",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "1600m"
+      },
+      "weight": 1.0,
+      "text": [
+        "Four laps. The race that punishes bad pacing twice.",
+        "The mile has history. You're about to add to it.",
+        "Four laps. You know which one will be the hard one. It's always the third.",
+        "The pace feels controlled until it doesn't. You try to notice the difference early.",
+        "There's a point in the third lap where the rational part of your brain steps back. The legs carry the rest.",
+        "You don't count laps. Your body counts them for you.",
+        "the 1600 asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 1600 become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 1600 is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 1600 is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_3200m",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "3200m"
+      },
+      "weight": 1.0,
+      "text": [
+        "Eight laps. The race that doesn't start until you're already tired.",
+        "Distance running is about what's left when everything else is gone.",
+        "Eight laps is a long time to know exactly what you signed up for.",
+        "You settle in early because there's no other option. The race will come to you.",
+        "By the fifth lap, you've had time to question several decisions. You change none of them.",
+        "The last half-mile is a negotiation between what your body wants and what the clock requires.",
+        "the 3200 asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in the 3200 become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of the 3200 is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in the 3200 is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_shot_put",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "Shot Put"
+      },
+      "weight": 1.0,
+      "text": [
+        "The shot put rewards commitment. You can't fake the throw.",
+        "One explosive second. The ring is small. The margin is not.",
+        "You stand in the circle, run through the motion one more time in your head, then stop thinking.",
+        "The technique has to happen without being supervised. That's what all the practice was for.",
+        "You release and know immediately, before you look. The body reports before the eyes do.",
+        "It lands. The flag goes up or it doesn't. You have two more attempts.",
+        "shot put asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in shot put become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of shot put is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in shot put is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_discus",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "Discus"
+      },
+      "weight": 1.0,
+      "text": [
+        "The discus is a timing event disguised as a strength event.",
+        "Spin, release, watch it carry. The good ones look effortless.",
+        "The spin happens in a smaller space than people expect. So does the whole throw.",
+        "Release too early and it drifts left. Too late and it collapses short. The window is smaller than it feels.",
+        "It leaves your hand and for a half-second belongs to physics entirely.",
+        "You've thrown this disc in practice more times than you can count. Today is one more.",
+        "discus asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in discus become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of discus is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in discus is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_javelin",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "Javelin"
+      },
+      "weight": 1.0,
+      "text": [
+        "Javelin is speed and timing. The runway sets the throw.",
+        "Fast approach, clean release, long flight.",
+        "The run-up is part of the throw. You have to arrive at the right speed, not the fastest one.",
+        "You feel the javelin's weight shift just before release and try to work with it, not against it.",
+        "There's a clean throw and a thrown throw. You know which one this was before it lands.",
+        "You watch the arc and read it. That's all you can do from here.",
+        "javelin asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in javelin become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of javelin is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in javelin is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_long_jump",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "Long Jump"
+      },
+      "weight": 1.0,
+      "text": [
+        "The runway is yours. Aggressive to the board.",
+        "Long jump is a sprint with a payoff at the end.",
+        "The runway is short enough that you never quite settle before the board arrives.",
+        "You hit the board and your job becomes staying long in the air - which is mostly about what happened before you left the ground.",
+        "The pit is honest. It doesn't account for the approach or the wind. It just gives you a number.",
+        "You land and look back at the mark, as if it might tell you something you don't already know.",
+        "long jump asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in long jump become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of long jump is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in long jump is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_high_jump",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "High Jump"
+      },
+      "weight": 1.0,
+      "text": [
+        "A bar at a height you've cleared in practice. Do it again.",
+        "High jump lives and dies by approach rhythm. Find it early.",
+        "You walk the approach, counting steps, then stop and let the bar just exist for a moment.",
+        "The crossbar is set. You either clear it or you don't. There's no partial credit.",
+        "Your approach tempo has to be right before any of the rest of it matters.",
+        "You arch over the bar and feel the air just below it. You don't know how close it was until you're already down.",
+        "high jump asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in high jump become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of high jump is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in high jump is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_triple_jump",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "Triple Jump"
+      },
+      "weight": 1.0,
+      "text": [
+        "Hop, step, jump. Three decisions made in under three seconds.",
+        "The triple jump punishes hesitation.",
+        "You've rehearsed the sequence so many times it should be automatic. On the runway it never quite feels that way.",
+        "The hop sets up the step. The step sets up the jump. A bad start compounds over all three.",
+        "You land in the pit with the sense that it should have been longer.",
+        "Three contacts with the ground and then it's done. You stand up and check the flag.",
+        "triple jump asks for precision before it asks for courage.",
+        "You simplify the race plan and trust the work.",
+        "The first segment feels controlled; the hard part is staying that way.",
+        "You pick a rhythm and refuse to let the noise pull you out of it.",
+        "Small technical choices in triple jump become big outcomes late.",
+        "You stay patient while the race shape develops around you.",
+        "The middle phase of triple jump is where composure pays off.",
+        "You notice the field, then bring your focus back to your own pattern.",
+        "Execution in triple jump is rarely loud, but it is always visible."
+      ]
+    },
+    {
+      "id": "narr_100m_blocks",
+      "trigger": {
+        "type": "event_chosen",
+        "event": "100m"
+      },
+      "weight": 1.0,
+      "text": [
+        "You settle into the blocks and the world goes quiet in a way that has nothing to do with sound.",
+        "The starter holds you there longer than feels fair. You wait. Your calves know what to do.",
+        "Ten seconds from now it will be over. You have run this race a thousand times. Not once has it felt the same.",
+        "You press your fingers into the track and feel the give of it, the grain, the heat absorbed since morning.",
+        "The gun goes and you don't hear it - you just find yourself moving, already several steps in.",
+        "Your lungs don't factor in. There isn't time for them to matter.",
+        "At sixty meters you know roughly how it went. The last forty are just the body finishing what it started.",
+        "You cross the line and slow yourself against your will, legs still searching for a finish that already happened."
+      ]
+    },
+    {
+      "id": "narr_regular_grind",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regular_season"
+      },
+      "weight": 0.8,
+      "text": [
+        "Another league meet. These are the reps that build the season.",
+        "The stands are quiet. The work is not.",
+        "League meets bleed together by mid-season. You keep showing up anyway.",
+        "Nobody remembers league meets in June. Your legs will.",
+        "Small crowd, familiar lanes, honest work. That is the whole assignment.",
+        "The bus ride is short and the warmup is shorter. League track.",
+        "You check the heat sheet out of habit. Same schools, same names, same job.",
+        "There is no banner for winning a Tuesday. You race like there is.",
+        "League meets are where form gets built and bad habits get exposed. Today does both.",
+        "The timers, the clipboard coaches, the kid selling candy bars by the fence. League track has a rhythm of its own."
+      ]
+    },
+    {
+      "id": "narr_league_scene",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regular_season"
+      },
+      "weight": 0.8,
+      "text": [
+        "Overcast and windless. A workmanlike day for a workmanlike meet.",
+        "The PA crackles through the same announcements it makes every week. You stretch through all of them.",
+        "Someone's little brother is racing spikes-in-hand down the infield again. League meets.",
+        "Two schools' worth of tents, one long afternoon, and a schedule that always runs late.",
+        "The long jumpers rake the pit while the distance kids jog the fence line. Everything in its place.",
+        "You know this track's soft spots and where the wind sneaks in at the turn. Home-circuit knowledge.",
+        "An official waves down a false start in the youth heat. The afternoon settles into its usual shape."
+      ]
+    },
+    {
+      "id": "narr_league_routine",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regular_season"
+      },
+      "weight": 0.8,
+      "text": [
+        "Your warmup is muscle memory by now. That is not boredom -- that is craft.",
+        "Same drills, same order, same lane assignments taped to the fence. You find comfort in the routine.",
+        "The team jogs its lap, circles up, breaks it down. Week in, week out.",
+        "You eat the same pre-meet snack at the same time. Superstition or science, it is undefeated.",
+        "Coach gives the same speech with different names in it. You listen anyway.",
+        "Check in, get your hip number, find a patch of shade. The rituals hold the season together.",
+        "Somewhere between the second and third league meet, this stopped being new and started being yours."
+      ]
+    },
+    {
+      "id": "narr_club_championship",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "club_championship"
+      },
+      "weight": 1.0,
+      "text": [
+        "Club championship day. Everyone thinks they peaked this week.",
+        "The heat sheets look different. So do the warm-ups."
+      ]
+    },
+    {
+      "id": "narr_club_championship_nerves",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "club_championship"
+      },
+      "weight": 1.0,
+      "text": [
+        "Club champs. The first time it feels like it counts.",
+        "You can hear the timers click louder today.",
+        "It isn't State, but it isn't a normal meet either."
+      ]
+    },
+    {
+      "id": "narr_class_meet",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "class_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Class meet. The first real filter. You've been pointing here.",
+        "Every drill, every rep -- it narrows to this."
+      ]
+    },
+    {
+      "id": "narr_class_meet_focus",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "class_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Class meet. Mistakes cost spots now.",
+        "You keep your warmup tight. You don't want surprises here.",
+        "It feels like the season just got real."
+      ]
+    },
+    {
+      "id": "narr_state_meet",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "state_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "State meet morning. You breathe slower than usual.",
+        "The best in the state. You've earned the right to find out where you stand."
+      ]
+    },
+    {
+      "id": "narr_state_meet_pressure",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "state_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "State meet. The infield looks bigger, the lanes feel tighter.",
+        "You hear your name called and your stomach drops. Then you breathe.",
+        "This is the meet people talk about at school. You're in it."
+      ]
+    },
+    {
+      "id": "narr_regional_meet",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regional_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Regional. The competition is different now -- everyone here wanted this.",
+        "You look at the names in your heat. You recognize a few. So do they."
+      ]
+    },
+    {
+      "id": "narr_regional_meet_edge",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regional_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Regionals. The pace is honest from the gun.",
+        "There aren't soft heats anymore. Everyone here can perform.",
+        "You feel a different kind of focus in the warmup area."
+      ]
+    },
+    {
+      "id": "narr_national_meet",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "national_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "National championships. The end of everything you've built.",
+        "You've put in thousands of reps to stand on this line. One more."
+      ]
+    },
+    {
+      "id": "narr_national_meet_quiet",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "national_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Nationals. The warmup is quiet and serious.",
+        "You've made it this far. Now it's just one attempt.",
+        "The stadium is bigger, but the lane is the same."
+      ]
+    },
+    {
+      "id": "narr_low_energy",
+      "trigger": {
+        "type": "energy_lte",
+        "energy": 30
+      },
+      "weight": 1.0,
+      "text": [
+        "Your body feels like wet concrete. You compete anyway.",
+        "Competing on fumes today. You've done it before.",
+        "Your legs feel dull in warmups, and you cannot fake freshness.",
+        "Low energy turns simple reps into real decisions."
+      ]
+    },
+    {
+      "id": "narr_low_energy_35",
+      "trigger": {
+        "type": "energy_lte",
+        "energy": 35
+      },
+      "weight": 1.0,
+      "text": [
+        "You're a little flat today. It's on you to find it anyway.",
+        "Not hurt, just drained. The warmup feels longer.",
+        "You can feel the training load in your body.",
+        "You are near the edge where effort costs more than usual."
+      ]
+    },
+    {
+      "id": "narr_low_energy_35_regret",
+      "trigger": {
+        "type": "energy_lte",
+        "energy": 35
+      },
+      "weight": 1.0,
+      "text": [
+        "You pushed hard this week. Today's payment shows up early.",
+        "Your body isn't complaining, it's just tired.",
+        "You know you overdid one session. Now you compete with it."
+      ]
+    },
+    {
+      "id": "narr_very_low_energy",
+      "trigger": {
+        "type": "energy_lte",
+        "energy": 20
+      },
+      "weight": 1.5,
+      "text": [
+        "Everything hurts. You know what you're doing to your body. You do it anyway.",
+        "The body's already said no. Your head overrules it.",
+        "Everything feels heavy today, including the first steps.",
+        "You scale the plan down because survival matters too."
+      ]
+    },
+    {
+      "id": "narr_very_low_energy_20",
+      "trigger": {
+        "type": "energy_lte",
+        "energy": 20
+      },
+      "weight": 1.3,
+      "text": [
+        "You can feel every step. There's no hiding it today.",
+        "This is what overtraining feels like. You line up anyway.",
+        "Your body is heavy from the first rep."
+      ]
+    },
+    {
+      "id": "narr_very_low_energy_20_regret",
+      "trigger": {
+        "type": "energy_lte",
+        "energy": 20
+      },
+      "weight": 1.3,
+      "text": [
+        "You wish you'd backed off earlier in the week.",
+        "You know this one is going to hurt. It's already hurting.",
+        "The tank is empty. You try to make it count."
+      ]
+    },
+    {
+      "id": "narr_high_energy",
+      "trigger": {
+        "type": "energy_gte",
+        "energy": 85
+      },
+      "weight": 0.9,
+      "text": [
+        "You feel sharp today. Warm from the first step.",
+        "Everything is clicking. These are the days you remember.",
+        "The body feels responsive, and the pace comes easier.",
+        "You can push session quality without forcing it."
+      ]
+    },
+    {
+      "id": "narr_fully_fresh",
+      "trigger": {
+        "type": "energy_gte",
+        "energy": 95
+      },
+      "weight": 0.8,
+      "text": [
+        "Fully rested. Your stride is right. Trust the training.",
+        "One of those rare days where everything feels easy before it has to be hard.",
+        "You feel springy in warmups and sharp in the first rep.",
+        "Fresh legs let you focus on execution instead of damage control."
+      ]
+    },
+    {
+      "id": "narr_bye_week",
+      "trigger": {
+        "type": "bye_week"
+      },
+      "weight": 1.0,
+      "text": [
+        "Bye week. You train while others compete.",
+        "No meet this week. The body gets what it needs.",
+        "They compete. You prepare. Sometimes that's the harder choice.",
+        "No race this week, so the work gets quieter and more deliberate.",
+        "You treat the bye like a reset instead of a pause.",
+        "A week without spikes can still move the season forward."
+      ]
+    },
+    {
+      "id": "narr_bye_week_refocus",
+      "trigger": {
+        "type": "bye_week"
+      },
+      "weight": 1.0,
+      "text": [
+        "No meet. You lift, you stretch, you reset.",
+        "It's a quiet Saturday. You still go to the track.",
+        "You watch results online and take notes.",
+        "Without a meet looming, the details finally get full attention.",
+        "You leave the track with less noise in your head.",
+        "The bye week gives your body time to catch your ambition."
+      ]
+    },
+    {
+      "id": "narr_ach_first_win",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_first_win"
+      },
+      "weight": 2.0,
+      "text": [
+        "First place. You knew it before the results were posted.",
+        "You hold up the win. It's the first of something."
+      ]
+    },
+    {
+      "id": "narr_ach_state_champion",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_state_champion"
+      },
+      "weight": 2.0,
+      "text": [
+        "State champion. The title settles over you slowly.",
+        "You didn't just win the state meet. You owned it."
+      ]
+    },
+    {
+      "id": "narr_ach_national_champion",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_national_champion"
+      },
+      "weight": 2.0,
+      "text": [
+        "National champion. The phrase doesn't feel real yet.",
+        "You came to nationals. You won. Everything you sacrificed was worth this."
+      ]
+    },
+    {
+      "id": "narr_ach_national_podium",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_national_podium"
+      },
+      "weight": 2.0,
+      "text": [
+        "Nationals podium. You belong in this conversation now.",
+        "Top three at nationals. Some people never get here. You did."
+      ]
+    },
+    {
+      "id": "narr_ach_qual_state",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_qual_state"
+      },
+      "weight": 1.6,
+      "text": [
+        "State qualified. You check the list twice.",
+        "You got the standard. That's a different level now.",
+        "State meet on the calendar. It feels real."
+      ]
+    },
+    {
+      "id": "narr_ach_qual_regional",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_qual_regional"
+      },
+      "weight": 1.6,
+      "text": [
+        "Regional qualifier. You earned the next line.",
+        "You're moving on. Not everyone does.",
+        "Regionals. That's a bigger stage and you made it."
+      ]
+    },
+    {
+      "id": "narr_ach_rival_three_wins",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_rival_three_wins_season"
+      },
+      "weight": 1.6,
+      "text": [
+        "Three wins on your rival this season. That's a statement.",
+        "You've taken that matchup over this year.",
+        "People notice when you keep beating the same person.",
+        "Three wins on {rival_name} this season. That's ownership."
+      ]
+    },
+    {
+      "id": "narr_ach_season_no_very_low",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_season_no_very_low"
+      },
+      "weight": 1.6,
+      "text": [
+        "You managed your energy all season. That's discipline.",
+        "No very-low weeks. You kept the line.",
+        "You stayed healthy enough to keep going every week."
+      ]
+    },
+    {
+      "id": "narr_ach_final_year_pb",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_final_year_pb"
+      },
+      "weight": 1.6,
+      "text": [
+        "Senior year PB. You still had another gear.",
+        "You hit your fastest mark when it mattered most.",
+        "Year four and you still found a new best."
+      ]
+    },
+    {
+      "id": "narr_ach_sprint_sub12",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_sprint_sub12"
+      },
+      "weight": 2.0,
+      "text": [
+        "Under 12. You see the clock and feel something shift.",
+        "Sub-12. You've crossed into different territory now."
+      ]
+    },
+    {
+      "id": "narr_ach_clean_hurdles",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_clean_hurdles"
+      },
+      "weight": 2.0,
+      "text": [
+        "Clean over every barrier. That's what it looks like when technique holds.",
+        "No errors today. You ran it exactly the way it was drawn up."
+      ]
+    },
+    {
+      "id": "narr_ach_javelin_60m",
+      "trigger": {
+        "type": "achievement_unlocked",
+        "achievement_id": "ach_javelin_60m"
+      },
+      "weight": 2.0,
+      "text": [
+        "Sixty meters. That's real pop in the runway and a clean release.",
+        "You watch it carry. You knew it was big the moment it left your hand."
+      ]
+    },
+    {
+      "id": "narr_perk_energy_regen",
+      "trigger": {
+        "type": "perk_unlocked",
+        "perk_id": "perk_energy_regen_1"
+      },
+      "weight": 1.2,
+      "text": [
+        "You feel your recovery sharpen. The next week comes faster.",
+        "Coach adjusts the plan. You bounce back quicker now."
+      ]
+    },
+    {
+      "id": "narr_perk_energy_max",
+      "trigger": {
+        "type": "perk_unlocked",
+        "perk_id": "perk_energy_max_3"
+      },
+      "weight": 1.2,
+      "text": [
+        "Your legs come back faster between sessions now.",
+        "Coach fine-tunes your rest days. You absorb the work better."
+      ]
+    },
+    {
+      "id": "narr_perk_tech_focus",
+      "trigger": {
+        "type": "perk_unlocked",
+        "perk_id": "perk_tech_focus"
+      },
+      "weight": 1.2,
+      "text": [
+        "The technique work is paying off. The reps feel clean.",
+        "Everything looks a little sharper at full speed."
+      ]
+    },
+    {
+      "id": "narr_perk_mental_edge",
+      "trigger": {
+        "type": "perk_unlocked",
+        "perk_id": "perk_mental_edge"
+      },
+      "weight": 1.2,
+      "text": [
+        "Pressure sits lighter on your shoulders.",
+        "You hold your focus longer than you used to."
+      ]
+    },
+    {
+      "id": "narr_perk_strength_edge",
+      "trigger": {
+        "type": "perk_unlocked",
+        "perk_id": "perk_strength_edge"
+      },
+      "weight": 1.2,
+      "text": [
+        "You feel the power in the first steps.",
+        "Stronger now. You can feel it in the ground."
+      ]
+    },
+    {
+      "id": "narr_perk_speed_edge",
+      "trigger": {
+        "type": "perk_unlocked",
+        "perk_id": "perk_speed_edge"
+      },
+      "weight": 1.2,
+      "text": [
+        "You are a little quicker from the gun.",
+        "Speed is easier to access now."
+      ]
+    },
+    {
+      "id": "narr_season_start_goals",
+      "trigger": {
+        "type": "week_equals",
+        "week": 1
+      },
+      "weight": 1.0,
+      "text": [
+        "Coach walks the lanes before the first practice, saying little. The season already has a shape; you just can't see all of it yet.",
+        "Week one of the plan is on the whiteboard: base first, speed later. You read it twice and get to work."
+      ]
+    },
+    {
+      "id": "narr_club_champ_reminder",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "club_championship"
+      },
+      "weight": 1.0,
+      "text": [
+        "Coach keeps the warmup short and the words shorter. Club champs isn't the summit. It's the gate.",
+        "You know the assignment without being told: take care of today, and the season keeps going."
+      ]
+    },
+    {
+      "id": "season_summary_regular",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "regular_season"
+      },
+      "weight": 1.0,
+      "text": [
+        "The regular season is finished. Every meet was a data point -- and the data says you're getting better.",
+        "Eight meets, eight lessons. You showed up every week and that counts for more than it seems.",
+        "You earned your spot on the line every single week. That's the foundation everything else is built on."
+      ]
+    },
+    {
+      "id": "season_summary_club",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "club_championship"
+      },
+      "weight": 1.0,
+      "text": [
+        "Club Championship reached. The field thinned and you were still in it.",
+        "You made it past the regular season -- that's further than most. Next year you'll know what to expect."
+      ]
+    },
+    {
+      "id": "season_summary_class",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "class_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "A Class Meet appearance. You're competing at a level that tests what you're made of.",
+        "Class level competition. You found out how good you really are -- now you know what to fix."
+      ]
+    },
+    {
+      "id": "season_summary_state",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "state_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "State. That's a resume line you'll always have.",
+        "You competed at the State level. Not many athletes ever get to say that.",
+        "The State Meet stage is different. You've been there now -- use that."
+      ]
+    },
+    {
+      "id": "season_summary_regional",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "regional_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Regionals. You outran nearly everyone in the state to be there.",
+        "A Regional appearance is elite company. You belong in that conversation.",
+        "You made Regionals. This season was something to build on."
+      ]
+    },
+    {
+      "id": "season_summary_national",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "national_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "You ran at Nationals. That's the pinnacle of high school track -- and you were there.",
+        "National level. Whatever happens next, nobody can take this season away from you.",
+        "The national stage. You've reached as far as this sport goes at this level. Remember how this feels."
+      ]
+    },
+    {
+      "id": "narr_rival_present_watchful",
+      "trigger": {
+        "type": "rival_present"
+      },
+      "weight": 0.9,
+      "text": [
+        "Your rival is already warming up when you arrive. You note it and say nothing.",
+        "You see them on the other side of the infield. Same routine, same focus. Good."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_quiet",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 1.0,
+      "text": [
+        "Loss to your rival. You don't say much on the bus home.",
+        "They got you clean today. No excuses. Just a number to chase.",
+        "You finish behind them and feel it in your chest for hours."
+      ]
+    },
+    {
+      "id": "narr_rival_win_clean",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 1.0,
+      "text": [
+        "You beat your rival today and it wasn't close. That's new.",
+        "You cross ahead and don't look back. You already know.",
+        "Clean win on your rival. The gap is yours to defend now."
+      ]
+    },
+    {
+      "id": "narr_rival_new_watching",
+      "trigger": {
+        "type": "rival_new"
+      },
+      "weight": 1.0,
+      "text": [
+        "You watch their event before yours. You file it away.",
+        "First time you've matched up. Their form is good. So is yours."
+      ]
+    },
+    {
+      "id": "narr_rival_present_tension",
+      "trigger": {
+        "type": "rival_present"
+      },
+      "weight": 1.0,
+      "text": [
+        "The warmup lane feels smaller when they're in it.",
+        "You catch their splits from the last meet scrolling through your head.",
+        "Same event, same rival. The field notices."
+      ]
+    },
+    {
+      "id": "narr_rival_present_respect",
+      "trigger": {
+        "type": "rival_present"
+      },
+      "weight": 0.9,
+      "text": [
+        "You nod at {rival_name} during warmups. They nod back. That's enough.",
+        "{rival_name} is here. You both know what that means.",
+        "Respect is easy when it's earned. {rival_name} has earned it."
+      ]
+    },
+    {
+      "id": "narr_rival_present_routine",
+      "trigger": {
+        "type": "rival_present"
+      },
+      "weight": 0.9,
+      "text": [
+        "You've seen their warmup so many times you could run it yourself.",
+        "By now, you don't even check the heat sheet. You just know.",
+        "Same face, different week. The routine sharpens you."
+      ]
+    },
+    {
+      "id": "narr_rival_present_late",
+      "trigger": {
+        "type": "rival_present",
+        "year": "senior"
+      },
+      "weight": 1.1,
+      "text": [
+        "Four years of this. You'll miss it when it's gone.",
+        "You've been chasing each other since freshman year. The finish line keeps moving.",
+        "Senior season. {rival_name} across the infield. One last run at it."
+      ]
+    },
+    {
+      "id": "narr_rival_present_edge",
+      "trigger": {
+        "type": "rival_present"
+      },
+      "weight": 0.9,
+      "text": [
+        "{rival_name} is in the field. Your warmup gets two minutes longer.",
+        "You see {rival_name} checking the conditions. Competitor's habit."
+      ]
+    },
+    {
+      "id": "narr_rival_win_exhale",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 1.0,
+      "text": [
+        "You breathe out for the first time since warmups.",
+        "Win against {rival_name}. The bus ride home is quieter in a good way.",
+        "That one mattered and everyone in the field knew it."
+      ]
+    },
+    {
+      "id": "narr_rival_win_statement",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 1.0,
+      "text": [
+        "You made your point today. {rival_name} heard it.",
+        "That wasn't close. {rival_name} knows the gap.",
+        "Statement win. You don't need to say anything."
+      ]
+    },
+    {
+      "id": "narr_rival_win_proving",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 1.0,
+      "text": [
+        "You've been waiting for that matchup all week.",
+        "Results posted. Your name above {rival_name}. That's the order now.",
+        "Some wins are just wins. That one was proof."
+      ]
+    },
+    {
+      "id": "narr_rival_win_noticed",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 0.9,
+      "text": [
+        "Coach gives you a look after the race. That's the nod that means something.",
+        "Teammates saw who you beat. They don't say it out loud. They don't have to.",
+        "{rival_name} shakes your hand. Firm grip. They'll be ready next time."
+      ]
+    },
+    {
+      "id": "narr_rival_win_building",
+      "trigger": {
+        "type": "rival_win"
+      },
+      "weight": 0.9,
+      "text": [
+        "Another one on {rival_name}. The record between you is getting clear.",
+        "You're stacking wins in this matchup now.",
+        "The head-to-head isn't close anymore. You've made sure of that."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_close",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 1.0,
+      "text": [
+        "Close enough to taste it. Not close enough to take it.",
+        "You replay the last 50 meters on the drive home.",
+        "The margin was nothing. The result was everything."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_respect",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 0.9,
+      "text": [
+        "{rival_name} was better today. Simple as that.",
+        "You tip your head. They earned that one clean.",
+        "No excuses. {rival_name} ran their race and you couldn't answer."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_frustration",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 1.0,
+      "text": [
+        "You slam your bag down after the race. Nobody asks.",
+        "Second to {rival_name} again. The pattern needs to break.",
+        "That one sits in your chest through the whole cool-down."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_resolve",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 0.9,
+      "text": [
+        "You write down {rival_name}'s mark before you leave.",
+        "Loss logged. Training plan adjusted.",
+        "You already know what you need to work on Monday."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_gap",
+      "trigger": {
+        "type": "rival_loss"
+      },
+      "weight": 0.8,
+      "text": [
+        "{rival_name} is pulling away in this rivalry. You feel the shift.",
+        "The gap was bigger today. That's harder to ignore than a close loss.",
+        "You're chasing now. That hasn't been true before."
+      ]
+    },
+    {
+      "id": "narr_rival_new_spark",
+      "trigger": {
+        "type": "rival_new"
+      },
+      "weight": 1.0,
+      "text": [
+        "Something about {rival_name}'s warmup tells you this won't be the last time.",
+        "You check the results. {rival_name} is right there. Noted.",
+        "New name in your head after today: {rival_name}."
+      ]
+    },
+    {
+      "id": "narr_rival_new_sizing",
+      "trigger": {
+        "type": "rival_new"
+      },
+      "weight": 1.0,
+      "text": [
+        "{rival_name} looked over at you before the start. You looked back.",
+        "First real matchup with {rival_name}. You both came to compete."
+      ]
+    },
+    {
+      "id": "narr_rival_streak_dominant",
+      "trigger": {
+        "type": "rival_streak_gte",
+        "value": 3
+      },
+      "weight": 1.1,
+      "text": [
+        "Three straight on your rival. The matchup isn't a question anymore.",
+        "You own this rivalry right now. They know it.",
+        "Win streak on {rival_name}. The field watches different when it's not close."
+      ]
+    },
+    {
+      "id": "narr_rival_streak_command",
+      "trigger": {
+        "type": "rival_streak_gte",
+        "value": 3
+      },
+      "weight": 1.0,
+      "text": [
+        "{rival_name} hasn't beaten you in a while. You can see it in their warmup.",
+        "The streak is real. You've figured {rival_name} out."
+      ]
+    },
+    {
+      "id": "narr_week_two",
+      "trigger": {
+        "type": "week_equals",
+        "week": 2
+      },
+      "weight": 1.0,
+      "text": [
+        "Second week. The newness is gone. Now it's just work.",
+        "Week two. You know the routine. You want better than last week.",
+        "The early-season jitters are fading. Good."
+      ]
+    },
+    {
+      "id": "narr_week_three",
+      "trigger": {
+        "type": "week_equals",
+        "week": 3
+      },
+      "weight": 1.0,
+      "text": [
+        "Week three. You're starting to find your shape for the season.",
+        "Three weeks in. The times are honest now.",
+        "You're not surprised by your body anymore. That's progress."
+      ]
+    },
+    {
+      "id": "narr_week_six",
+      "trigger": {
+        "type": "week_equals",
+        "week": 6
+      },
+      "weight": 1.0,
+      "text": [
+        "Week six. The season is in the body now. You feel it.",
+        "Two more regular meets. You want to be peaking, not just surviving.",
+        "This is the stretch where seasons are made or lost."
+      ]
+    },
+    {
+      "id": "narr_week_seven",
+      "trigger": {
+        "type": "week_equals",
+        "week": 7
+      },
+      "weight": 1.0,
+      "text": [
+        "Second-to-last regular meet. You want sharp, not flashy.",
+        "Week seven. One more before the finale. Stay focused.",
+        "So close to postseason. Don't leave anything on the track today."
+      ]
+    },
+    {
+      "id": "narr_regular_grind_compete",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regular_season"
+      },
+      "weight": 0.8,
+      "text": [
+        "The regular season teaches you something about yourself every week. Today is no different.",
+        "Not every meet is a statement. Some are just reps.",
+        "Today isn't the story. It's a sentence in it.",
+        "You won't remember this meet by name. You'll remember how it felt to show up anyway.",
+        "This meet won't define your season. Skipping the effort might.",
+        "Some days you race for a place. Today you just race for the rep.",
+        "Nobody's grading this one on a curve. That's kind of the point."
+      ]
+    },
+    {
+      "id": "narr_regular_grind_focus",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regular_season"
+      },
+      "weight": 0.8,
+      "text": [
+        "League meet. You don't take them lightly. You've seen people slip here.",
+        "The scoreboard matters less than the execution today.",
+        "You run your race. Not someone else's.",
+        "You've seen good athletes slip at meets like this. Don't be the lesson.",
+        "Watch the matchups less. Watch your own execution more.",
+        "It isn't about who's in the next lane today. It's about your race plan.",
+        "Today's job is simple: execute, then do it again next week."
+      ]
+    },
+    {
+      "id": "narr_class_meet_arrive",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "class_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Class meet. You find your name on the heat sheet. You belong here.",
+        "The travel is longer. The warmup is quieter. The meet matters more.",
+        "First postseason meet. You remember why you put in all those early mornings."
+      ]
+    },
+    {
+      "id": "narr_state_meet_composed",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "state_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "State meet. You've run this race in your head a hundred times.",
+        "The facility is bigger. You pretend it isn't.",
+        "You look at the field. They're good. So are you."
+      ]
+    },
+    {
+      "id": "narr_regional_meet_earned",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "regional_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Regionals. You don't take the bib for granted. You know what it took to get here.",
+        "The warmup area is quieter than you expected. Everyone here means business.",
+        "You've been to smaller meets with bigger attitudes. This field is different."
+      ]
+    },
+    {
+      "id": "narr_national_meet_arrive",
+      "trigger": {
+        "type": "meet_type_is",
+        "meet_type": "national_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Nationals. You've watched this meet on a screen for years. You're in it now.",
+        "You recognize a few names in your event. They've recognized you too.",
+        "The national meet is every rep you didn't skip, arriving all at once."
+      ]
+    },
+    {
+      "id": "season_summary_regular_alt",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "regular_season"
+      },
+      "weight": 1.0,
+      "text": [
+        "Regular season done. You know your numbers. Now comes the part that counts.",
+        "Eight meets. You weren't perfect but you were consistent. That's the job.",
+        "The regular season is a long argument. You made your case."
+      ]
+    },
+    {
+      "id": "season_summary_club_alt",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "club_championship"
+      },
+      "weight": 1.0,
+      "text": [
+        "Club Champs. You competed at the first level that filters the field. You made it.",
+        "A lot of athletes end their season here. You pushed through."
+      ]
+    },
+    {
+      "id": "season_summary_class_alt",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "class_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Class level. A step most don't reach. You know what it took -- you'll build on it.",
+        "You competed at Class this year. Something to be proud of. Something to push past."
+      ]
+    },
+    {
+      "id": "season_summary_state_alt",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "state_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "State qualifier. That name goes on your record and stays there.",
+        "You ran at State. Whatever else this season was, that's the line."
+      ]
+    },
+    {
+      "id": "season_summary_regional_alt",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "regional_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "Regionals. You were one of the best in the state this season. It's not a small thing.",
+        "Regional qualifier. The work it took to get there doesn't show in the results -- but you know."
+      ]
+    },
+    {
+      "id": "season_summary_national_alt",
+      "trigger": {
+        "type": "season_summary",
+        "tier": "national_meet"
+      },
+      "weight": 1.0,
+      "text": [
+        "You ran at Nationals. That's a sentence you'll still be saying in thirty years.",
+        "National-level athlete. You ran with the best in the country. That's the season."
+      ]
+    },
+    {
+      "id": "narr_year_freshman_opener",
+      "trigger": {
+        "type": "week_equals",
+        "week": 1,
+        "year": "freshman"
+      },
+      "weight": 1,
+      "text": [
+        "Everything still feels new, and every routine takes extra focus.",
+        "Coach reminds you this season starts with learning before winning."
+      ]
+    },
+    {
+      "id": "narr_year_sophomore_opener",
+      "trigger": {
+        "type": "week_equals",
+        "week": 1,
+        "year": "sophomore"
+      },
+      "weight": 1,
+      "text": [
+        "You know the tempo now, so the opener feels less chaotic.",
+        "Second-year confidence shows up in the little decisions."
+      ]
+    },
+    {
+      "id": "narr_year_junior_opener",
+      "trigger": {
+        "type": "week_equals",
+        "week": 1,
+        "year": "junior"
+      },
+      "weight": 1,
+      "text": [
+        "Junior year opens with bigger expectations and less room for drift.",
+        "You are not new anymore, and your standards reflect it."
+      ]
+    },
+    {
+      "id": "narr_year_senior_opener",
+      "trigger": {
+        "type": "week_equals",
+        "week": 1,
+        "year": "senior"
+      },
+      "weight": 1,
+      "text": [
+        "Senior season starts with urgency; every week feels finite.",
+        "You treat the opener like a statement, not a warmup."
+      ]
+    },
+    {
+      "id": "narr_year_freshman_championship",
+      "trigger": {
+        "type": "meet_type_is",
+        "year": "freshman",
+        "meet_type": "class_meet"
+      },
+      "weight": 1,
+      "text": [
+        "Your first championship week brings new pressure and louder noise.",
+        "Coach keeps it simple: compete clean, learn fast, stay composed."
+      ]
+    },
+    {
+      "id": "narr_year_sophomore_championship",
+      "trigger": {
+        "type": "meet_type_is",
+        "year": "sophomore",
+        "meet_type": "class_meet"
+      },
+      "weight": 1,
+      "text": [
+        "Championship week feels familiar now, but the margins are tighter.",
+        "You trust your preparation and race with fewer wasted thoughts."
+      ]
+    },
+    {
+      "id": "narr_year_junior_championship",
+      "trigger": {
+        "type": "meet_type_is",
+        "year": "junior",
+        "meet_type": "class_meet"
+      },
+      "weight": 1,
+      "text": [
+        "Junior championship races demand execution from start to finish.",
+        "This is the year where good habits either cash in or fall short."
+      ]
+    },
+    {
+      "id": "narr_year_senior_championship",
+      "trigger": {
+        "type": "meet_type_is",
+        "year": "senior",
+        "meet_type": "class_meet"
+      },
+      "weight": 1,
+      "text": [
+        "Senior championship week carries weight you can feel in warmups.",
+        "You race like every round is part of your closing chapter."
+      ]
+    },
+    {
+      "id": "narr_year_freshman_bye",
+      "trigger": {
+        "type": "bye_week",
+        "bye_week": true,
+        "year": "freshman"
+      },
+      "weight": 1,
+      "text": [
+        "The bye week is a chance to absorb what freshman racing has taught you.",
+        "You review mistakes without panic and reset for the next meet."
+      ]
+    },
+    {
+      "id": "narr_year_sophomore_bye",
+      "trigger": {
+        "type": "bye_week",
+        "bye_week": true,
+        "year": "sophomore"
+      },
+      "weight": 1,
+      "text": [
+        "Sophomore bye weeks are about sharpening details, not rebuilding basics.",
+        "You use the gap to clean up form and restore energy."
+      ]
+    },
+    {
+      "id": "narr_year_junior_bye",
+      "trigger": {
+        "type": "bye_week",
+        "bye_week": true,
+        "year": "junior"
+      },
+      "weight": 1,
+      "text": [
+        "Junior year byes feel strategic; every adjustment has a purpose.",
+        "You recover just enough, then get back to quality work."
+      ]
+    },
+    {
+      "id": "narr_year_senior_bye",
+      "trigger": {
+        "type": "bye_week",
+        "bye_week": true,
+        "year": "senior"
+      },
+      "weight": 1,
+      "text": [
+        "Senior bye weeks are precious, so you spend them with intention.",
+        "You protect the legs, then sharpen for what is left."
+      ]
+    },
+    {
+      "id": "narr_year_freshman_ending",
+      "trigger": {
+        "type": "week_equals",
+        "week": 13,
+        "year": "freshman"
+      },
+      "weight": 1,
+      "text": [
+        "The freshman season closes with more clarity than it started with.",
+        "You finish year one knowing what this level actually asks of you."
+      ]
+    },
+    {
+      "id": "narr_year_sophomore_ending",
+      "trigger": {
+        "type": "week_equals",
+        "week": 13,
+        "year": "sophomore"
+      },
+      "weight": 1,
+      "text": [
+        "Sophomore year ends with steadier performances and fewer surprises.",
+        "You leave this season feeling like your foundation is real."
+      ]
+    },
+    {
+      "id": "narr_year_junior_ending",
+      "trigger": {
+        "type": "week_equals",
+        "week": 13,
+        "year": "junior"
+      },
+      "weight": 1,
+      "text": [
+        "Junior season finishes with the pressure of what comes next.",
+        "You can see the final step now, and it looks close."
+      ]
+    },
+    {
+      "id": "narr_year_senior_ending",
+      "trigger": {
+        "type": "week_equals",
+        "week": 13,
+        "year": "senior"
+      },
+      "weight": 1,
+      "text": [
+        "Senior season ending hits differently; every result feels final.",
+        "You take a last look at the track and let it sink in."
+      ]
+    },
+    {
+      "id": "narr_pr_set",
+      "trigger": {
+        "type": "pr_set"
+      },
+      "weight": 1.2,
+      "text": [
+        "A new personal best. Something in the season just clicked.",
+        "The mark is yours now. Everything before this was practice.",
+        "Personal best. You say it quietly, like it might not stick if you announce it.",
+        "The number goes in the book. That one took all season to find."
+      ]
+    },
+    {
+      "id": "narr_pr_set_champ",
+      "trigger": {
+        "type": "pr_set",
+        "meet_type": "state_meet"
+      },
+      "weight": 1.5,
+      "text": [
+        "A personal best at the state meet. You picked the right day.",
+        "Best time of your life, best meet of the season. You will not forget this one."
+      ]
+    },
+    {
+      "id": "narr_race_win",
+      "trigger": {
+        "type": "place_equals",
+        "value": 1
+      },
+      "weight": 1.2,
+      "text": [
+        "First across. The result belongs to you.",
+        "You win. The time can be improved. This cannot be taken back.",
+        "The field finishes behind you. That does not happen by accident.",
+        "First. You let the result settle before saying anything."
+      ]
+    },
+    {
+      "id": "narr_race_win_rival",
+      "trigger": {
+        "type": "place_equals",
+        "value": 1
+      },
+      "weight": 0.9,
+      "text": [
+        "You cross first and feel it mean more than the placement alone.",
+        "Win logged. The season has a reference point now."
+      ]
+    },
+    {
+      "id": "narr_podium_finish",
+      "trigger": {
+        "type": "place_lte",
+        "value": 3
+      },
+      "weight": 0.9,
+      "text": [
+        "Top three. The season is working.",
+        "A podium finish. You can see what first place looks like from here.",
+        "You finish on the podium. Now figure out how to move up it.",
+        "Third or better. That is the floor. You are building toward more."
+      ]
+    },
+    {
+      "id": "narr_podium_near_miss",
+      "trigger": {
+        "type": "place_lte",
+        "value": 3
+      },
+      "weight": 0.7,
+      "text": [
+        "Top three. Close enough to first to understand the gap.",
+        "Podium. The result is good. The margin tells a different story."
+      ]
+    },
+    {
+      "id": "narr_qual_gained",
+      "trigger": {
+        "type": "qualification_gained"
+      },
+      "weight": 1.1,
+      "text": [
+        "You see your name on the qualifying list. The season just extended itself.",
+        "Qualified. The next level is now your problem.",
+        "You made the cut. Another meet to run.",
+        "The qualification is official. There is another race waiting."
+      ]
+    },
+    {
+      "id": "narr_qual_gained_champ",
+      "trigger": {
+        "type": "qualification_gained",
+        "meet_type": "state_meet"
+      },
+      "weight": 1.2,
+      "text": [
+        "You qualified at state. The season gets harder and better from here.",
+        "State punches your ticket forward. You take that."
+      ]
+    },
+    {
+      "id": "narr_injury_week",
+      "trigger": {
+        "type": "injury_occurred"
+      },
+      "weight": 1.0,
+      "text": [
+        "The body sends a signal you cannot ignore. You file it away and adapt.",
+        "Not the week you planned. Injuries have their own schedule.",
+        "Something gives. You manage through it and recalculate.",
+        "You catalog the damage and figure out what still works."
+      ]
+    },
+    {
+      "id": "narr_injury_setback",
+      "trigger": {
+        "type": "injury_occurred"
+      },
+      "weight": 0.8,
+      "text": [
+        "The setback is real. So is the decision to keep going.",
+        "You adjust the plan. That is part of the job."
+      ]
+    },
+    {
+      "id": "narr_senior_season",
+      "trigger": {
+        "type": "season_last"
+      },
+      "weight": 0.6,
+      "text": [
+        "Senior year. You notice things you did not bother to notice before.",
+        "Every rep this season has a number attached. You are counting down.",
+        "The meets feel different this year. Maybe you do too.",
+        "Final season. You stopped pretending the clock was not running."
+      ]
+    },
+    {
+      "id": "narr_senior_midseason",
+      "trigger": {
+        "type": "season_last",
+        "meet_type": "regular_season"
+      },
+      "weight": 0.7,
+      "text": [
+        "Senior regular season. These meets always felt routine. They do not anymore.",
+        "One of these league meets is your last. You do not know which one yet."
+      ]
+    },
+    {
+      "id": "narr_early_career",
+      "trigger": {
+        "type": "season_not_last"
+      },
+      "weight": 0.35,
+      "text": [
+        "There is time yet. Use this year as data.",
+        "You are still in the middle of this. Act accordingly."
+      ]
+    },
+    {
+      "id": "narr_pr_set_regional",
+      "trigger": {
+        "type": "pr_set",
+        "meet_type": "regional_meet"
+      },
+      "weight": 1.5,
+      "text": [
+        "A personal best at regionals. You found something you did not know you had.",
+        "Best mark of your life at the biggest meet of the year. That is timing.",
+        "The clock does not lie. Regional PR. You belonged here all along."
+      ]
+    },
+    {
+      "id": "narr_pr_set_national",
+      "trigger": {
+        "type": "pr_set",
+        "meet_type": "national_meet"
+      },
+      "weight": 1.8,
+      "text": [
+        "National stage, personal best. You chose the right moment.",
+        "A PR at nationals. You will tell this story for the rest of your life.",
+        "The biggest meet. Your best performance. Some athletes wait four years for that to happen."
+      ]
+    },
+    {
+      "id": "narr_win_champ",
+      "trigger": {
+        "type": "place_equals",
+        "value": 1,
+        "meet_type": "state_meet"
+      },
+      "weight": 1.6,
+      "text": [
+        "State champion. Two words that do not shrink over time.",
+        "You won the thing. The rest of this season is bonus.",
+        "First at states. The certificate will yellow. The memory will not."
+      ]
+    },
+    {
+      "id": "narr_win_regional",
+      "trigger": {
+        "type": "place_equals",
+        "value": 1,
+        "meet_type": "regional_meet"
+      },
+      "weight": 1.5,
+      "text": [
+        "Regional champion. You beat everyone in the room today.",
+        "First place at regionals. You did not come here to be second.",
+        "Won the regional. Now prove it means something at nationals."
+      ]
+    },
+    {
+      "id": "narr_rival_loss_champ",
+      "trigger": {
+        "type": "rival_loss",
+        "meet_type": "state_meet"
+      },
+      "weight": 1.4,
+      "text": [
+        "{rival_name} got you at states. That one will stay with you until next year.",
+        "Lost to {rival_name} at the state meet. Now you know exactly what you are chasing.",
+        "{rival_name} beats you when it matters most. That is the lesson and the motivation at the same time."
+      ]
+    },
+    {
+      "id": "narr_energy_low_distance",
+      "trigger": {
+        "type": "energy_lte",
+        "value": 30,
+        "build": "Long Distance"
+      },
+      "weight": 1.1,
+      "text": [
+        "Your legs feel like they belong to someone else. Distance training has a tax.",
+        "Mileage debt. You collected interest all season and now the bill is here.",
+        "The aerobic engine is still there. Everything around it is just tired."
+      ]
+    },
+    {
+      "id": "narr_energy_low_throwing",
+      "trigger": {
+        "type": "energy_lte",
+        "value": 30,
+        "build": "Throwing"
+      },
+      "weight": 1.1,
+      "text": [
+        "Your shoulders feel the week. Throwing volume catches up to you in unexpected ways.",
+        "Heavy lifting and heavy throws. You are empty and you know it.",
+        "The implement feels heavier than it did Monday. That is the accumulated cost."
+      ]
+    },
+    {
+      "id": "narr_qual_gained_regional",
+      "trigger": {
+        "type": "qualification_gained",
+        "level": "regional"
+      },
+      "weight": 1.3,
+      "text": [
+        "Regional qualifier. You did what you came to do.",
+        "Punched the ticket to regionals. Now make sure you earn the trip.",
+        "Qualified for the regional meet. The field gets harder from here. Good."
+      ]
+    },
+    {
+      "id": "narr_senior_rival_lead",
+      "trigger": {
+        "type": "season_last",
+        "require_rival_name": true
+      },
+      "weight": 0.65,
+      "text": [
+        "Senior year and {rival_name} is still out there. That story does not have an ending yet.",
+        "Final season. Everything unfinished with {rival_name} has to get finished this year.",
+        "You have competed against {rival_name} for three years. This is your last chance to write the ending."
+      ]
+    },
+    {
+      "id": "narr_injury_tough",
+      "trigger": {
+        "type": "injury_occurred"
+      },
+      "weight": 1.0,
+      "text": [
+        "Down time teaches patience you did not ask for.",
+        "Hurt. All you can do is be smart about coming back.",
+        "Sidelined. You learn things about your event from the outside that you never noticed from the inside."
+      ]
+    }
+  ]
+}

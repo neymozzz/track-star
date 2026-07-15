@@ -1,0 +1,2383 @@
+{
+  "world_events": {
+    "layer1_micro": [
+      {
+        "id": "we_l1_gen_rest_day",
+        "layer": 1,
+        "label": "body_check",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Rest day. You slept ten hours and felt it in warmups.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_gen_sharpness",
+        "layer": 1,
+        "label": "body_check",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Everything felt sharp in warmups. Hard to say why. You take it and move on.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_gen_tired_through",
+        "layer": 1,
+        "label": "body_check",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "You were tired from the minute you showed up. You did the work anyway.",
+        "effect": {
+          "type": "stat",
+          "stat": "Recovery",
+          "delta": -1
+        }
+      },
+      {
+        "id": "we_l1_ld_second_wind",
+        "layer": 1,
+        "label": "body_check",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Long Distance"
+          ]
+        },
+        "text": "Hit the wall and worked through it. That's the adaptation you're after.",
+        "effect": {
+          "type": "stat",
+          "stat": "Recovery",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_gen_coach_note",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Coach made a point of flagging your effort today. Doesn't say it often.",
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_hu_clearance_fix",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Hurdler"
+          ]
+        },
+        "text": "Coach adjusted your lead-leg angle. Clearance margin improved within two reps.",
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_ju_video_review",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Jumping"
+          ]
+        },
+        "text": "Coach pulled film -- your jump next to a reference athlete. Now you see it.",
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_md_tactical_run",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Middle Distance"
+          ]
+        },
+        "text": "Coach ran a tactical scenario -- pace, kick, position. You handled it.",
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_sp_curve_work",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Sprints"
+          ]
+        },
+        "text": "Three extra curve reps. Something is clicking in the lean.",
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_th_coach_cue",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": "One cue on entry angle. You adjusted, and the distance improved noticeably.",
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_bye_week_reset",
+        "layer": 1,
+        "label": "bye_week_rest",
+        "weight": 1.0,
+        "triggers": {
+          "requires_bye": true
+        },
+        "text": [
+          "No meet this week. You use the extra time to train well and rest better.",
+          "Bye week -- a chance to dial things in without the pressure of a result.",
+          "No race to prepare for. You put in solid work and let the body recover."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 5
+        }
+      },
+      {
+        "id": "l1_cold_session",
+        "layer": 1,
+        "label": "micro_energy",
+        "weight": 1.0,
+        "triggers": {
+          "week_range": [
+            1,
+            4
+          ]
+        },
+        "text": [
+          "Cold morning practice. Your joints take extra time to come around.",
+          "Hard to get warm in this weather. You fight through the first 30 minutes.",
+          "Early season cold -- the kind that makes every rep feel like twice the work."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -2
+        }
+      },
+      {
+        "id": "l1_fresh_legs",
+        "layer": 1,
+        "label": "micro_energy",
+        "weight": 1.0,
+        "triggers": {
+          "energy_gte": 70
+        },
+        "text": [
+          "Your legs are light and responsive. Good week to push.",
+          "Full tank heading into practice. Every step felt loaded.",
+          "You've been sleeping well. It shows."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "l1_recovery_day",
+        "layer": 1,
+        "label": "micro_energy",
+        "weight": 0.8,
+        "text": [
+          "A genuine recovery day -- pool work, foam rolling, eight hours of sleep.",
+          "Coach kept it light. You come out the other side feeling recharged.",
+          "You resist the urge to go hard and it pays off. Body feels ready."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "l1_rough_day",
+        "layer": 1,
+        "label": "micro_energy",
+        "weight": 1.0,
+        "text": [
+          "Nothing clicked today. The body just wasn't cooperating.",
+          "You got through practice, but it felt like dragging weight the whole time.",
+          "Off day. You do the work anyway and try not to read too much into it."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -1
+        }
+      },
+      {
+        "id": "l1_tired_grind",
+        "layer": 1,
+        "label": "micro_energy",
+        "weight": 1.0,
+        "triggers": {
+          "energy_lte": 45
+        },
+        "text": [
+          "You're running on fumes but you grind through it. The body remembers.",
+          "Heavy legs, slow warmup. You get through the session on will alone.",
+          "Everything costs more right now. You do it anyway."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -2
+        }
+      },
+      {
+        "id": "l1_mental_reset",
+        "layer": 1,
+        "label": "micro_focus",
+        "weight": 0.9,
+        "text": [
+          "You take a few minutes before practice to just breathe. Clears the noise.",
+          "A quiet moment between warmup sets. You find your focus and hold it.",
+          "Something about today -- the air, the light -- put you fully in the present."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_pre_meet_focus",
+        "layer": 1,
+        "label": "micro_focus",
+        "weight": 1.0,
+        "triggers": {
+          "week_range": [
+            9,
+            13
+          ]
+        },
+        "text": [
+          "Championship season. Scenarios run through your head all day.",
+          "The closer it gets, the sharper the focus. Everything becomes preparation.",
+          "You know what's coming. You've been building toward it for months."
+        ],
+        "effect": null
+      },
+      {
+        "id": "l1_form_click",
+        "layer": 1,
+        "label": "micro_form",
+        "weight": 1.0,
+        "triggers": {
+          "builds": [
+            "Hurdler",
+            "Jumping",
+            "Throwing"
+          ]
+        },
+        "text": [
+          "Something clicked in warmups. The angle was right and the timing followed.",
+          "Coach adjusted one cue and suddenly the mechanics felt natural.",
+          "A small tweak in your setup and the whole movement pattern cleaned up."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_new_drill",
+        "layer": 1,
+        "label": "micro_form",
+        "weight": 0.9,
+        "text": [
+          "New drill from coach today. Awkward at first, but you feel what it targets.",
+          "New warmup pattern. Takes a while to click, but something starts to shift.",
+          "You spend extra time on a drill coach has been emphasizing. The reps add up."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_distance_base",
+        "layer": 1,
+        "label": "micro_training",
+        "weight": 1.0,
+        "triggers": {
+          "builds": [
+            "Long Distance",
+            "Middle Distance"
+          ]
+        },
+        "text": [
+          "Another long run in the books. The base keeps building.",
+          "Easy miles this morning. Nothing dramatic, just the accumulation of work.",
+          "You hit every mark on the long run. The aerobic base is there."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Toughness",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_early_groove",
+        "layer": 1,
+        "label": "micro_training",
+        "weight": 0.9,
+        "triggers": {
+          "week_range": [
+            1,
+            3
+          ]
+        },
+        "text": [
+          "Finding the rhythm early in the season. The mechanics aren't sharp yet, but they're coming.",
+          "First week back in full swing. You're rusty, but you remember.",
+          "Early season momentum. A little rough, but you're building toward something."
+        ],
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_explosive_set",
+        "layer": 1,
+        "label": "micro_training",
+        "weight": 1.0,
+        "triggers": {
+          "builds": [
+            "Sprints",
+            "Throwing",
+            "Jumping"
+          ]
+        },
+        "text": [
+          "You hit a set that felt almost effortless -- pure power output.",
+          "The starts were explosive and the follow-through felt locked in.",
+          "Best power numbers of the week. The legs had something extra today."
+        ],
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_pace_locked",
+        "layer": 1,
+        "label": "micro_training",
+        "weight": 1.0,
+        "triggers": {
+          "builds": [
+            "Middle Distance",
+            "Long Distance"
+          ]
+        },
+        "text": [
+          "Every interval clicked to the right split. Something about today just worked.",
+          "The pace felt automatic. You barely had to think about it.",
+          "Effortless rhythm. Coach barely said a word -- nothing to correct."
+        ],
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_peak_window",
+        "layer": 1,
+        "label": "micro_training",
+        "weight": 1.0,
+        "triggers": {
+          "week_range": [
+            6,
+            10
+          ]
+        },
+        "text": [
+          "Everything feels aligned this week. You're in a groove.",
+          "Mid-season form -- the best kind. Fit, sharp, and not yet worn down.",
+          "The work from earlier in the year is showing up now. You can feel it in the numbers."
+        ],
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "l1_solid_session",
+        "layer": 1,
+        "label": "micro_training",
+        "weight": 1.2,
+        "text": [
+          "Every rep clicked today. The session ran clean from warmup to cooldown.",
+          "One of those days where nothing felt like work. You came out of it sharper.",
+          "Clean technique, good pace, no wasted effort. Everything landed."
+        ],
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_gen_focus_session",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "You stayed after practice to work on something nagging. Now it's better.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_hu_trail_leg",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Hurdler"
+          ]
+        },
+        "text": "Extra reps on trail-leg mechanics. Won't show in a time, but it's there.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_ju_takeoff_snap",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Jumping"
+          ]
+        },
+        "text": "The pop off the board felt loaded. You've worked weeks for that feeling.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_ld_easy_miles",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Long Distance"
+          ]
+        },
+        "text": "An easy run turned into one of those rare days. You could have gone forever.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_md_breathing",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Middle Distance"
+          ]
+        },
+        "text": "Your breathing was controlled through the whole session. Didn't tighten up once.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_md_late_rep",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Middle Distance"
+          ]
+        },
+        "text": "The last rep was the best one. That's the stuff you can take into a race.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_sp_stride_feel",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Sprints"
+          ]
+        },
+        "text": "Stride out of the blocks felt cleaner today. Hard to explain, but it was there.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_th_consistency",
+        "layer": 1,
+        "label": "practice_moment",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": "Eight of ten throws landed in the same sector. That's not luck.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_gen_weight_pr",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Hit a lifetime PR in the weight room today. Small number, but it counts.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_hu_drive_phase",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Hurdler"
+          ]
+        },
+        "text": "The drive phase into the first hurdle was sharp. You attacked it clean.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_hu_rhythm_drill",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Hurdler"
+          ]
+        },
+        "text": "Spacing felt natural for a full set today. Rare this early in the week.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_ju_approach_locked",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Jumping"
+          ]
+        },
+        "text": "Your approach counted out perfectly today. Every step where it should be.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_ju_landing_drill",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Jumping"
+          ]
+        },
+        "text": "Landing mechanics work -- repetitive, but you came out of it more controlled.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_ld_long_run",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Long Distance"
+          ]
+        },
+        "text": "Twelve miles at a steady clip. The kind of work that compounds.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_ld_morning_grind",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Long Distance"
+          ]
+        },
+        "text": "Five AM run in the dark. The first mile was rough. The rest wasn't.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_md_tempo_click",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Middle Distance"
+          ]
+        },
+        "text": "Every tempo interval hit exactly where it should. Didn't check the watch once.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_sp_blocks_clean",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Sprints"
+          ]
+        },
+        "text": "Your block clearance felt clean today. Low and driving, the way it should be.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_sp_weight_session",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Sprints"
+          ]
+        },
+        "text": "Heavy squats today. You hit your top set and didn't grind it.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_th_implement_work",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": "Forty throws on release angle today. It's starting to feel automatic.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_th_power_set",
+        "layer": 1,
+        "label": "training_feedback",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": "Strong power cleans before throwing. You felt it in the hip drive.",
+        "effect": null
+      },
+      {
+        "id": "we_l1_bus_breakdown",
+        "layer": 1,
+        "label": "logistics",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Team bus breaks down. Warmup time gets cut short.",
+        "effect": {
+          "delta": -1,
+          "stat": null,
+          "type": "energy"
+        }
+      },
+      {
+        "id": "we_l1_weather_cancel",
+        "layer": 1,
+        "label": "schedule",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Practice gets canceled for weather. You switch to recovery work.",
+        "effect": {
+          "delta": 2,
+          "stat": null,
+          "type": "energy"
+        }
+      },
+      {
+        "id": "we_l1_teammate_record",
+        "layer": 1,
+        "label": "teammate_success",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "A teammate breaks the school record. The whole group feels sharper.",
+        "effect": {
+          "delta": 1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_local_paper_mention",
+        "layer": 1,
+        "label": "media",
+        "weight": 0.8,
+        "cooldown_weeks": 4,
+        "trigger": {},
+        "text": "Local paper mentions your last meet. Expectations tick upward.",
+        "effect": {
+          "delta": 1,
+          "stat": null,
+          "type": "pressure_mod"
+        }
+      },
+      {
+        "id": "we_l1_speed_blocks_focus",
+        "layer": 1,
+        "label": "coach_feedback",
+        "weight": 1,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Sprints",
+            "Hurdler"
+          ]
+        },
+        "text": [
+          "You stayed after practice for block starts. Ten more, coach said. It was closer to twenty.",
+          "Extra block work in the empty stadium after everyone left. The last few starts felt like they belonged to a faster athlete.",
+          "Coach crouched behind the blocks and watched your first step over and over. By the end, the track came up to meet you quicker."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": null,
+          "type": "training_gain_mod"
+        }
+      },
+      {
+        "id": "we_l1_distance_mileage_bump",
+        "layer": 1,
+        "label": "training_adjust",
+        "weight": 1,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Middle Distance",
+            "Long Distance"
+          ]
+        },
+        "text": [
+          "The week's mileage went up and the junk miles came out. Every run had a job this week.",
+          "Coach added a mile to the morning runs and cut the shakeout nobody was recovering from. Your legs noticed both.",
+          "More volume this week, but cleaner -- long runs with purpose, no filler. You finished Friday tired in the right way."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": "Stamina",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_throw_release_tune",
+        "layer": 1,
+        "label": "technique_adjust",
+        "weight": 1,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": [
+          "Your throwing coach moved your release a half-beat earlier. The implement stopped wobbling and started carrying.",
+          "Release timing work all week. By Thursday the flight looked flat and clean, the way it does on film.",
+          "One adjustment at the point of release, and the throw sounded different coming off your hand. Better different."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": "Technique",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_team_captain_huddle",
+        "layer": 1,
+        "label": "team_culture",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": [
+          "The captain pulled everyone in before reps. Thirty seconds, no speech, just a reminder of what the group is building. It worked.",
+          "A quick huddle before the main set. The captain said one true thing and broke it down. The whole session ran hotter after.",
+          "Before reps, the captain called the group up. You've heard longer talks that did less."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_double_session_wear",
+        "layer": 1,
+        "label": "training_overload",
+        "weight": 1.2,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "training_load_gte": 2,
+          "training_load_lte": 2
+        },
+        "text": [
+          "Two sessions in the same day gets the work done, but your body keeps a little of the bill.",
+          "You stacked a double this week. Useful, but the recovery cost is not imaginary.",
+          "A two-session day leaves a little residue in the legs. Nothing dramatic. Just there."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Recovery",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_triple_session_drag",
+        "layer": 1,
+        "label": "training_overload",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {
+          "training_load_gte": 3,
+          "training_load_lte": 3
+        },
+        "text": [
+          "Three sessions in a week like this buys progress, but you can feel the recovery lag behind.",
+          "You pushed through a triple. Good work, but the body is slower to bounce back now.",
+          "A heavy training stack this week leaves you feeling just a step less fresh."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Recovery",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_quad_session_cost",
+        "layer": 1,
+        "label": "training_overload",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "training_load_gte": 4
+        },
+        "text": [
+          "Four sessions in one week is a statement. It also takes something real out of you.",
+          "You emptied a lot into training this week. The cost shows up in recovery and general resilience.",
+          "A full overload block leaves your body feeling tougher in some ways and more fragile in others."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Recovery",
+          "type": "stat"
+        },
+        "effects": [
+          {
+            "delta": -1,
+            "stat": "Toughness",
+            "type": "stat"
+          }
+        ]
+      },
+      {
+        "id": "we_l1_confidence_dip",
+        "layer": 1,
+        "label": "competitive_slide",
+        "weight": 7.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "regular_season_bad_finishes_gte": 3
+        },
+        "text": [
+          "Three rough regular-season meets in the same year and you can feel the doubt trying to creep in.",
+          "Another bad league result and the self-talk gets louder. You have to work to shut it down.",
+          "A run of weak finishes starts to linger in your head longer than you want it to."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_training_hero_meet_ghost",
+        "layer": 1,
+        "label": "competitive_slide",
+        "weight": 7.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "take_it_easy_bad_streak_gte": 2
+        },
+        "text": [
+          "You are stacking training weeks, but the meets tell a harsher story. It is getting harder to ignore.",
+          "Practice says one thing. Race day says another. After two flat results in a row, that gap starts to sting.",
+          "You know the body is improving, but coasting through races is starting to cost you mentally."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_competitive_rust",
+        "layer": 1,
+        "label": "competitive_slide",
+        "weight": 6.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "week_range": [
+            6,
+            13
+          ],
+          "regular_season_podiums_lte": 0
+        },
+        "text": [
+          "Half the season is gone without a regular-season podium. You can feel your edge dulling.",
+          "No podiums yet, and the sport starts to feel like something happening to you instead of something you control.",
+          "Race rhythm is hard to fake. Without a real result to build on, the season starts to wear on you."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Toughness",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_body_takes_the_load",
+        "layer": 1,
+        "label": "competitive_slide",
+        "weight": 6.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "heavy_training_poor_weeks_gte": 3
+        },
+        "text": [
+          "You keep piling on hard work, but the results are not there yet. The grind starts to feel heavier.",
+          "Three heavy weeks with little payoff. Your body keeps showing up, but the wear is real.",
+          "The volume is there. The outcomes are not. That kind of mismatch takes something out of you."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Toughness",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_rival_owns_the_narrative",
+        "layer": 1,
+        "type": "breaking_news",
+        "severity": 3,
+        "headline": "RIVALRY TURNS AGAINST YOU",
+        "label": "rival_escalation",
+        "weight": 7.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "season_max_rival_losses_gte": 3
+        },
+        "text": [
+          "The same rival keeps getting the better of you, and people are starting to notice.",
+          "You lost to the same rival again. It stops feeling random after the third time.",
+          "One matchup is turning into a story, and right now you are on the wrong side of it."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_coach_intervention",
+        "layer": 1,
+        "type": "breaking_news",
+        "severity": 3,
+        "headline": "COACH INTERVENTION",
+        "label": "coach_feedback",
+        "weight": 6.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "week_range": [
+            6,
+            13
+          ],
+          "regular_season_avg_place_gte": 5.5
+        },
+        "text": [
+          "Coach pulls you aside after another rough result. The message is direct, and it lands hard.",
+          "Midseason check-in. Coach does not sugarcoat it: the results are not good enough, and everyone knows it.",
+          "Coach intervention comes this week. The feedback is useful, but it still feels like a blow."
+        ],
+        "effect": {
+          "delta": -1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l1_throw_release_drill",
+        "layer": 1,
+        "label": "coach_tip",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": [
+          "Your throwing coach spends extra time on your release angle. Small tweak, real payoff.",
+          "Release point work today. You feel the difference on the first full throw after.",
+          "Coach keys in on your wrist position at release. Something to think about in competition."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_sprint_block_work",
+        "layer": 1,
+        "label": "coach_tip",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "builds": [
+            "Sprints",
+            "Hurdler"
+          ]
+        },
+        "text": [
+          "Extra block start work. Your first step has been sharper since.",
+          "Coach keeps you on the track after practice to drill reaction time. It is working.",
+          "Block refinement today. You can feel the difference in your first ten meters."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Speed",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_hurdle_clearance_drill",
+        "layer": 1,
+        "label": "coach_tip",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "builds": [
+            "Hurdler"
+          ]
+        },
+        "text": [
+          "Your hurdle coach adjusts your trail leg mechanics. Your clearance tightens noticeably.",
+          "Lead leg drills with the hurdles flat. Your coach wants more precision. You deliver.",
+          "Step pattern work between hurdles. The rhythm is cleaner now."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_jump_takeoff_work",
+        "layer": 1,
+        "label": "coach_tip",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "builds": [
+            "Jumping"
+          ]
+        },
+        "text": [
+          "Your jump coach works your penultimate step. Your takeoff has more pop now.",
+          "Approach mechanics today. The small adjustments to your last two steps show up in height and distance.",
+          "Coach films your takeoff and plays it back. What you see surprises you. So does the improvement after."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Agility",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l1_distance_pacing_lesson",
+        "layer": 1,
+        "label": "coach_tip",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "builds": [
+            "Long Distance",
+            "Middle Distance"
+          ]
+        },
+        "text": [
+          "Your coach walks you through your splits from the last meet. The pacing tells a story. You listen.",
+          "Tempo run today with specific split targets. You hit them all. That is the mental side of distance.",
+          "Your coach talks about the first 200 meters killing careers. You file that away."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      }
+    ],
+    "layer2_world": [
+      {
+        "id": "we_l2_meet_easy_field",
+        "layer": 2,
+        "label": "meet_buzz",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Top athletes scratched from the upcoming meet. The field thinned overnight.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_meet_home_venue",
+        "layer": 2,
+        "label": "meet_buzz",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "This week's meet is at your home track. You know every inch of it.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_meet_scout_added",
+        "layer": 2,
+        "label": "meet_buzz",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "A college scout added next week's meet to their schedule. Source is reliable.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_meet_strong_field",
+        "layer": 2,
+        "label": "meet_buzz",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "The posted entries for next week's meet are out. It's a loaded field.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_meet_wind_forecast",
+        "layer": 2,
+        "label": "meet_buzz",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Wind forecast on meet day. You start thinking through what that changes.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_rival_good_time",
+        "layer": 2,
+        "label": "rival_update",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "A competitor from across the district posted a standout performance at an invitational this weekend. The region is paying attention.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_rival_injury_rumor",
+        "layer": 2,
+        "label": "rival_update",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Rumor on the circuit: a top regional athlete is dealing with a hamstring.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_rival_new_pb",
+        "layer": 2,
+        "label": "rival_update",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "A PR from the athlete ranked ahead of you. A narrow margin, but it counts. You note it and move on.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_rival_scratch",
+        "layer": 2,
+        "label": "rival_update",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Your main competition scratched from the last invitational. Reason unknown.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_team_meeting",
+        "layer": 2,
+        "label": "team_update",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Coach called a team meeting. Message was clear: standards are rising.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_team_travel_fatigue",
+        "layer": 2,
+        "label": "team_update",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Long bus ride to a scrimmage and back. Not ideal recovery, but the reps counted.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -2
+        }
+      },
+      {
+        "id": "we_l2_teammate_pr",
+        "layer": 2,
+        "label": "teammate_success",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Your teammate PR'd in practice today. Energy in the room is high.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_teammate_struggle",
+        "layer": 2,
+        "label": "team_update",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "A teammate is grinding through a rough stretch. You keep your focus and say nothing.",
+        "effect": null
+      },
+      {
+        "id": "l2_championship_buzz",
+        "layer": 2,
+        "label": "world_buzz",
+        "weight": 1.0,
+        "triggers": {
+          "week_range": [
+            9,
+            13
+          ]
+        },
+        "text": [
+          "Championship is already getting talked about. The field looks deep.",
+          "Hallway chatter about who shows up at championships. Your name comes up.",
+          "The whole conference is tracking results as championship season approaches."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": -1
+        }
+      },
+      {
+        "id": "l2_scout_rumor",
+        "layer": 2,
+        "label": "world_buzz",
+        "weight": 0.9,
+        "triggers": {
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": [
+          "A few college programs have been tracking regional results. Word travels.",
+          "A D1 assistant was at last week's invitational. Watching who, nobody knows.",
+          "Recruiting season is running in the background. Results are being watched."
+        ],
+        "effect": null
+      },
+      {
+        "id": "l2_injury_on_circuit",
+        "layer": 2,
+        "label": "world_circuit",
+        "weight": 0.8,
+        "text": [
+          "A competitor went down with an injury at a recent meet. Sobering reminder.",
+          "Tough news on the circuit: a solid athlete from a rival school is out for the season.",
+          "One of the region's top runners is injured. You process it quietly."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -2
+        }
+      },
+      {
+        "id": "l2_national_results",
+        "layer": 2,
+        "label": "world_circuit",
+        "weight": 1.0,
+        "triggers": {
+          "week_range": [
+            10,
+            13
+          ]
+        },
+        "text": [
+          "National results are out. The marks at the top of the country are circulating.",
+          "Someone in the group chat posts the national rankings. The numbers are serious.",
+          "You look at the national leaderboard. Then at your own marks."
+        ],
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "l2_coach_feedback",
+        "layer": 2,
+        "label": "world_coach",
+        "weight": 1.0,
+        "text": [
+          "Coach pulls you aside after practice. 'Your form is cleaning up. Keep it up.'",
+          "Coach texts after reviewing splits. Short message: 'This is the work.'",
+          "A quiet word from coach after the session. 'I can see it all coming together.'"
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l2_film_session",
+        "layer": 2,
+        "label": "world_coach",
+        "weight": 0.9,
+        "triggers": {
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": [
+          "Coach pulls film from last year. The difference in your mechanics is visible to everyone.",
+          "Video review today. Watching yourself from two seasons ago is strange.",
+          "Coach plays your year-one form next to last week. Progress."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_world_college_szn",
+        "layer": 2,
+        "label": "world_context",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "College track season is underway. Marks are circulating. You keep a mental note.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_world_heat",
+        "layer": 2,
+        "label": "world_context",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "Unseasonably hot this week. Practice moved to early morning to beat the heat.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -2
+        }
+      },
+      {
+        "id": "we_l2_world_newspaper",
+        "layer": 2,
+        "label": "world_context",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {},
+        "text": "The local paper ran a preview of the district championship. Your name is in it.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_world_rain",
+        "layer": 2,
+        "label": "world_context",
+        "weight": 0.9,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "Rain cancelled outdoor practice Thursday. Coach adjusted the week on the fly.",
+        "effect": null
+      },
+      {
+        "id": "we_l2_world_rankings",
+        "layer": 2,
+        "label": "world_context",
+        "weight": 1.0,
+        "cooldown_weeks": 2,
+        "trigger": {},
+        "text": "State rankings updated. You moved up two spots.",
+        "effect": null
+      },
+      {
+        "id": "l2_bye_week_rest",
+        "layer": 2,
+        "label": "bye_week_rest",
+        "weight": 1.0,
+        "triggers": {
+          "requires_bye": true
+        },
+        "text": [
+          "No meet this week. You use the downtime to genuinely recover.",
+          "Bye week and you actually took it seriously. You feel the difference.",
+          "The extra rest was the right call. Your body needed this window."
+        ],
+        "effect": null
+      },
+      {
+        "id": "l2_rival_big_time",
+        "layer": 2,
+        "label": "world_rival",
+        "weight": 1.0,
+        "trigger": {
+          "active_rivals_gte": 1
+        },
+        "text": [
+          "Word travels fast: {rival_name} posted a mark this week that will turn heads.",
+          "The results from a nearby invitational are in. {rival_name} had a big day.",
+          "Someone screenshots the results and sends them around. {rival_name} ran well."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": -1
+        }
+      },
+      {
+        "id": "l2_rival_struggling",
+        "layer": 2,
+        "label": "world_rival",
+        "weight": 0.8,
+        "trigger": {
+          "active_rivals_gte": 1
+        },
+        "text": [
+          "Buzz on the circuit: {rival_name} has been dealing with an off-stretch lately.",
+          "Heard through the grapevine that {rival_name} missed a meet this weekend.",
+          "Reports from other coaches suggest {rival_name} isn't quite right physically."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l2_rival_film_room",
+        "layer": 2,
+        "label": "world_rival",
+        "weight": 0.9,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "active_rivals_gte": 1
+        },
+        "text": [
+          "Coach pulls up film of {rival_name}. One habit stands out immediately.",
+          "You spend ten minutes in the film room with {rival_name}'s last meet on loop.",
+          "A small pattern shows up on video: {rival_name} gives away more than they think."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_rival_buzz_matchup",
+        "layer": 2,
+        "label": "rival_update",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "max_rival_level_gte": 2
+        },
+        "text": [
+          "People keep circling the same matchup this week: you and {rival_name}.",
+          "The talk around the meet is not subtle. Everyone expects you and {rival_name} to be near each other.",
+          "Even teammates are asking about {rival_name} now. The matchup has a life of its own."
+        ],
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_rival_bye_week_lingers",
+        "layer": 2,
+        "label": "world_rival",
+        "weight": 0.7,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "requires_bye": true
+        },
+        "text": [
+          "No meet this week, but {rival_name} is still in your head during training.",
+          "Bye week. Somehow that gives you more time to think about {rival_name}, not less.",
+          "With no meet on the schedule, the rivalry with {rival_name} gets quieter but not smaller."
+        ],
+        "effect": null
+      },
+      {
+        "id": "we_l2_rival_respect_builds",
+        "layer": 2,
+        "label": "rival_update",
+        "weight": 0.8,
+        "cooldown_weeks": 3,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "season_rival_wins_gte": 2
+        },
+        "text": [
+          "You can feel it in the way people talk: you've made {rival_name} a real measuring stick.",
+          "Two good results against {rival_name}, and now the rivalry feels official.",
+          "The matchup with {rival_name} is turning into a reference point for your whole season."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      },
+      {
+        "id": "l2_flat_team_week",
+        "layer": 2,
+        "label": "world_team",
+        "weight": 0.9,
+        "triggers": {
+          "week_range": [
+            5,
+            8
+          ]
+        },
+        "text": [
+          "The team feels flat this week. Mid-season fatigue hitting everyone at once.",
+          "Practices are quiet. Nobody's dragging their feet, but the spark isn't there.",
+          "Something about this stretch always wears people down. This year is no different."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -3
+        }
+      },
+      {
+        "id": "l2_home_energy",
+        "layer": 2,
+        "label": "world_team",
+        "weight": 0.9,
+        "text": [
+          "Big energy in the building today. Home meet, and people actually showed up.",
+          "The crowd is loud for a regular-season meet. It picks everyone up.",
+          "Home crowd today. Teammates are pumped and the energy carries into warmups."
+        ],
+        "effect": null
+      },
+      {
+        "id": "l2_teammate_pr",
+        "layer": 2,
+        "label": "teammate_success",
+        "weight": 1.0,
+        "cooldown_weeks": 3,
+        "text": [
+          "A teammate crushed a PR in practice today. The energy in the room shifted immediately.",
+          "Good news from the team: two others hit season bests in this morning's time trial.",
+          "The training group is peaking. A teammate's big PR in practice lifts everyone."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 1
+        }
+      },
+      {
+        "id": "we_l2_coach_plan_shift",
+        "layer": 2,
+        "label": "program_shift",
+        "weight": 0.8,
+        "cooldown_weeks": 4,
+        "trigger": {},
+        "text": [
+          "Coach rewrote the week on Sunday night: fewer sessions, sharper ones. You could feel the difference by Wednesday.",
+          "The training plan changed this week -- less grinding, more precision. Practice ended earlier and meant more.",
+          "Coach cut two junk workouts and doubled down on the ones that matter. The week felt lighter and heavier at the same time."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": null,
+          "type": "training_gain_mod"
+        }
+      },
+      {
+        "id": "we_l2_rival_transfer_news",
+        "layer": 2,
+        "label": "rival_transfer",
+        "weight": 0.7,
+        "cooldown_weeks": 60,
+        "trigger": {},
+        "text": "Word is a strong rival transferred into your district this month.",
+        "effect": {
+          "delta": 1,
+          "stat": null,
+          "type": "pressure_mod"
+        }
+      },
+      {
+        "id": "we_l2_facility_upgrade",
+        "layer": 2,
+        "label": "facility",
+        "weight": 0.6,
+        "cooldown_weeks": 6,
+        "trigger": {},
+        "text": [
+          "New plates and a rebuilt rack showed up in the weight room Monday. Small thing. The sessions run different now.",
+          "The school finally replaced the equipment everyone had learned to work around. A week of training without improvising.",
+          "Fresh equipment in the training room this week. Nobody made a speech about it, but every session ran cleaner."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": null,
+          "type": "training_gain_mod"
+        }
+      },
+      {
+        "id": "we_l2_team_captain_message",
+        "layer": 2,
+        "label": "team_culture",
+        "weight": 0.7,
+        "cooldown_weeks": 4,
+        "trigger": {},
+        "text": [
+          "The captain started calling out missed reps this week -- their own first. The standard moved and everyone felt it.",
+          "New rule from the captain, enforced by example: nobody coasts the last rep. The week sharpened around it.",
+          "The captain ran every cooldown with the slowest group this week. Nobody talked about it. Everybody noticed."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": "Mentality",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l2_schedule_compression",
+        "layer": 2,
+        "label": "schedule",
+        "weight": 0.7,
+        "cooldown_weeks": 4,
+        "trigger": {},
+        "text": [
+          "Two away trips and a test week landed on the same seven days. Sleep lost the negotiation.",
+          "The bus, the homework, the make-up quiz -- the week never left you a full night. You trained through it anyway.",
+          "Everything scheduled itself into the same week. Recovery happened in the gaps, when it happened at all."
+        ],
+        "effect": {
+          "delta": -2,
+          "stat": null,
+          "type": "energy"
+        }
+      },
+      {
+        "id": "we_l2_speed_mechanics_block",
+        "layer": 2,
+        "label": "training_adjust",
+        "weight": 0.8,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "builds": [
+            "Sprints",
+            "Hurdler"
+          ]
+        },
+        "text": [
+          "A full week on drive phase and posture. Boring reps, until Friday, when the first thirty meters came easy.",
+          "Coach filmed your drive phase Monday and again Thursday. The second video looked like the athlete you're trying to become.",
+          "Mechanics block this week: wall drills, sled pulls, posture cues on a loop. Your shadow started looking right."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": "Technique",
+          "type": "stat"
+        }
+      },
+      {
+        "id": "we_l2_distance_threshold_week",
+        "layer": 2,
+        "label": "training_adjust",
+        "weight": 0.8,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "builds": [
+            "Middle Distance",
+            "Long Distance"
+          ]
+        },
+        "text": [
+          "Threshold week. Every run lived right at the edge of comfortable, and by Friday the edge had moved.",
+          "A week of tempo work at the red line without crossing it. You finished sessions tired but never broken.",
+          "Coach parked the whole week at threshold pace. Ugly on Tuesday, manageable on Thursday, almost smooth by Saturday."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": null,
+          "type": "training_gain_mod"
+        }
+      },
+      {
+        "id": "we_l2_throw_ring_refit",
+        "layer": 2,
+        "label": "facility",
+        "weight": 0.7,
+        "cooldown_weeks": 5,
+        "trigger": {
+          "builds": [
+            "Throwing"
+          ]
+        },
+        "text": [
+          "The throwing circle got resurfaced over the weekend. Your feet stopped negotiating and started working.",
+          "New surface in the ring this week. The first few throws felt strange. The rest felt planted.",
+          "They finally fixed the worn spot in the circle where every spin used to slip. Full turns, full trust."
+        ],
+        "effect": {
+          "delta": 1,
+          "stat": "Technique",
+          "type": "stat"
+        }
+      }
+    ],
+    "layer3_major": [
+      {
+        "id": "we_l3_empty_tank_break",
+        "layer": 3,
+        "label": "breakthrough_signal",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "energy_lte": 35
+        },
+        "text": "Running on empty for weeks. Something clicked today. You came out of practice feeling like yourself again.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 10
+        }
+      },
+      {
+        "id": "we_l3_peak_feeling",
+        "layer": 3,
+        "label": "breakthrough_signal",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "week_range": [
+            5,
+            11
+          ]
+        },
+        "text": "Everything in your body is telling you this is the week. You can't explain it, so you don't try.",
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 3
+        }
+      },
+      {
+        "id": "l3_breakthrough",
+        "layer": 3,
+        "label": "major_breakthrough",
+        "weight": 1.0,
+        "text": [
+          "Something snapped into place during warmups. Stride, breathing, arm swing -- it all synced at once.",
+          "An ordinary practice turned into something else. You leave with the feeling that a ceiling just moved.",
+          "You can't explain it, but everything worked today. Coach noticed. You noticed. Something shifted."
+        ],
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 3
+        }
+      },
+      {
+        "id": "l3_perfect_conditions",
+        "layer": 3,
+        "label": "major_conditions",
+        "headline": "Perfect Conditions",
+        "weight": 1.0,
+        "triggers": {
+          "week_range": [
+            8,
+            13
+          ]
+        },
+        "text": [
+          "Race day forecast: no wind, perfect temperature. Every athlete in the field will be going for it.",
+          "Conditions are ideal today. The kind that show up a few times a season at most.",
+          "Zero wind, cool and dry. Coach says it plainly: 'Everyone's going to run fast today.'"
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": 5
+        }
+      },
+      {
+        "id": "l3_injury_scare",
+        "layer": 3,
+        "label": "major_injury",
+        "headline": "Injury Scare",
+        "weight": 0.8,
+        "text": [
+          "You feel a sharp pull midway through a drill. You stop, breathe, and walk it off. Nothing serious -- but a warning.",
+          "A moment of alarm during intervals. Something twinges and your heart rate spikes. You back off and it clears.",
+          "You tweak something coming out of a rep. It eases in a few minutes, but the session is over."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -8
+        }
+      },
+      {
+        "id": "l3_media_feature",
+        "layer": 3,
+        "label": "major_media",
+        "headline": "Press Coverage",
+        "weight": 0.9,
+        "triggers": {
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": [
+          "A regional prep blog ran a feature on you by name. Strange to see yourself in print.",
+          "Someone screenshots a prep article and sends it to the team chat. There you are, in print.",
+          "A regional outlet covered the district standings and highlighted your progression. It's strange to read."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l3_joint_practice",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": "The local college program invited you to a joint practice. You went rep-for-rep with older athletes for two full hours.",
+        "effect": {
+          "type": "training_gain_mod",
+          "stat": null,
+          "delta": 3
+        }
+      },
+      {
+        "id": "we_l3_mentor_session",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 0.9,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": "An athlete you respect spent an hour working with you after practice. You left with two things to fix and a clearer picture of where you're headed.",
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 3
+        }
+      },
+      {
+        "id": "l3_rival_transfer",
+        "layer": 3,
+        "label": "rival_transfer",
+        "headline": "Rival Transfer News",
+        "weight": 1.0,
+        "cooldown_weeks": 60,
+        "triggers": {
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": [
+          "Stunning news: your most dangerous rival just transferred into your conference.",
+          "You find out at the same time as everyone else -- your biggest competition is now in your section.",
+          "The transfer news hits the group chat hard. You read it twice to make sure."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": -2
+        }
+      },
+      {
+        "id": "l3_scout_attending",
+        "layer": 3,
+        "label": "major_scout",
+        "headline": "Scout in the Stands",
+        "weight": 1.0,
+        "triggers": {
+          "year_range": [
+            2,
+            4
+          ],
+          "week_range": [
+            8,
+            13
+          ]
+        },
+        "text": [
+          "Word reaches you before warmups: a Division I assistant made the trip to watch regional prospects today.",
+          "Coach pulls you aside before the meet. 'There's a college scout in the stands. Just run your race.'",
+          "You spot the unfamiliar face on the infield with a clipboard. Someone's watching today."
+        ],
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l3_illness_setback",
+        "layer": 3,
+        "label": "major_setback",
+        "weight": 0.8,
+        "cooldown_weeks": 5,
+        "trigger": {},
+        "text": "You spent two days this week fighting something off. You trained through it, but it cost you.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -10
+        }
+      },
+      {
+        "id": "l3_coaching_change",
+        "layer": 3,
+        "label": "major_staff",
+        "headline": "Coaching Change",
+        "weight": 0.7,
+        "text": [
+          "Mid-season shakeup: your assistant coach took a job at another program. New voice in the building.",
+          "The coaching staff changed this week. You adjust to a different set of cues and expectations.",
+          "Unexpected news at practice: a key coach is gone. The program doesn't pause -- but you notice the gap."
+        ],
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -5
+        }
+      },
+      {
+        "id": "we_l3_rival_shows_up",
+        "layer": 3,
+        "label": "rival_escalation",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "year_range": [
+            2,
+            4
+          ]
+        },
+        "text": [
+          "You end up in the same warm-up area as {rival_name} at an invitational. Neither of you acknowledges it.",
+          "{rival_name} takes the lane next to yours in warmups and acts like it means nothing.",
+          "You and {rival_name} go through the same drills ten yards apart. Nobody has to say anything."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": -2
+        }
+      },
+      {
+        "id": "we_l3_rival_feature_story",
+        "layer": 3,
+        "label": "major_media",
+        "weight": 0.8,
+        "cooldown_weeks": 5,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "max_rival_level_gte": 2,
+          "week_range": [
+            7,
+            13
+          ]
+        },
+        "text": [
+          "A local write-up frames the meet around one storyline: you against {rival_name}.",
+          "By meet day, the matchup with {rival_name} is bigger than just your event group.",
+          "People are talking about you and {rival_name} like the result has been scheduled in advance."
+        ],
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 3
+        }
+      },
+      {
+        "id": "we_l3_rival_scouting_breakthrough",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 0.8,
+        "cooldown_weeks": 5,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "season_rival_losses_gte": 2
+        },
+        "text": [
+          "Coach sees something on film against {rival_name} and rebuilds part of the plan around it.",
+          "A scouting session on {rival_name} gives you one adjustment you trust immediately.",
+          "You finally spot the detail in {rival_name}'s approach that had been bothering you all season."
+        ],
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l3_rival_last_chapter",
+        "layer": 3,
+        "label": "major_rival",
+        "weight": 0.7,
+        "cooldown_weeks": 6,
+        "trigger": {
+          "active_rivals_gte": 1,
+          "year_range": [
+            4,
+            4
+          ]
+        },
+        "text": [
+          "Senior year changes the feel of it. Every week with {rival_name} now has an edge to it.",
+          "You realize there are only so many more times you'll see {rival_name} on a heat sheet.",
+          "The rivalry with {rival_name} feels heavier this year because both of you know it ends soon."
+        ],
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l3_scout_warmups",
+        "layer": 3,
+        "label": "scout_visit",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "year_range": [
+            2,
+            4
+          ],
+          "week_range": [
+            7,
+            13
+          ]
+        },
+        "text": "A scout from the state university was spotted at warmups. Word travels fast. You try not to think about it.",
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l3_time_trial_shock",
+        "layer": 3,
+        "label": "major_breakthrough",
+        "weight": 0.9,
+        "cooldown_weeks": 5,
+        "trigger": {
+          "builds": [
+            "Sprints",
+            "Hurdler",
+            "Middle Distance",
+            "Long Distance"
+          ]
+        },
+        "text": "Your time trial was so fast they had to double-check the stopwatches.",
+        "effect": {
+          "type": "stat",
+          "stat": "Speed",
+          "delta": 2
+        }
+      },
+      {
+        "id": "we_l3_staff_technique_session",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 0.9,
+        "cooldown_weeks": 5,
+        "trigger": {},
+        "text": "The coaching staff spent extra time with you after practice working on technique.",
+        "effect": {
+          "type": "stat",
+          "stat": "Technique",
+          "delta": 3
+        }
+      },
+      {
+        "id": "we_l3_sports_psych",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 0.9,
+        "cooldown_weeks": 8,
+        "trigger": {
+          "year_range": [
+            3,
+            3
+          ]
+        },
+        "text": "Coach brought the team's top athletes in to see a sports psychologist.",
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 3
+        }
+      },
+      {
+        "id": "we_l3_viral_illness",
+        "layer": 3,
+        "label": "major_setback",
+        "weight": 0.8,
+        "cooldown_weeks": 6,
+        "trigger": {
+          "week_range": [
+            1,
+            4
+          ]
+        },
+        "text": "A virus swept through the locker room. You tried to train through it. You should not have trained through it.",
+        "effect": {
+          "type": "energy",
+          "stat": null,
+          "delta": -12
+        }
+      },
+      {
+        "id": "we_l3_home_crowd",
+        "layer": 3,
+        "label": "major_conditions",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {},
+        "text": "The stands filled up for this one. Every athlete on the team has people in the crowd tonight.",
+        "effect": {
+          "type": "pressure_mod",
+          "stat": null,
+          "delta": 5
+        }
+      },
+      {
+        "id": "we_l3_feeling_down",
+        "layer": 3,
+        "label": "major_setback",
+        "weight": 0.8,
+        "cooldown_weeks": 6,
+        "trigger": {
+          "season_max_rival_losses_gte": 5
+        },
+        "text": "Sleepless nights wondering if you are really good enough to win at states.",
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": -2
+        }
+      },
+      {
+        "id": "we_l3_colleges_buzzing",
+        "layer": 3,
+        "label": "major_media",
+        "weight": 1.0,
+        "cooldown_weeks": 4,
+        "trigger": {
+          "year_range": [
+            4,
+            4
+          ]
+        },
+        "text": "Rumors of scouts and scholarships swirl through the program. Your name keeps coming up.",
+        "effect": {
+          "type": "stat",
+          "stat": "Mentality",
+          "delta": 2
+        },
+        "effects": [
+          {
+            "type": "pressure_mod",
+            "stat": null,
+            "delta": 5
+          }
+        ]
+      },
+      {
+        "id": "we_l3_survival_practice",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 1.0,
+        "cooldown_weeks": 5,
+        "trigger": {},
+        "text": "The hardest practice of the season ended with everyone still standing. Nobody quit. You carried something off the track that wasn't there in the morning.",
+        "effect": {
+          "type": "stat",
+          "stat": "Toughness",
+          "delta": 3
+        }
+      },
+      {
+        "id": "we_l3_growth_spurt",
+        "layer": 3,
+        "label": "major_opportunity",
+        "weight": 0.9,
+        "cooldown_weeks": 8,
+        "trigger": {
+          "year_range": [
+            1,
+            2
+          ]
+        },
+        "text": "The bar moves faster than it did a month ago, and your practice shirts fit tighter through the shoulders. Your body is doing some of the work for you this year.",
+        "effect": {
+          "type": "stat",
+          "stat": "Strength",
+          "delta": 2
+        },
+        "effects": [
+          {
+            "type": "stat",
+            "stat": "Agility",
+            "delta": 2
+          }
+        ]
+      }
+    ]
+  }
+}

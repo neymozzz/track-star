@@ -1,0 +1,148 @@
+{
+  "fatigue": {
+    "minimal": [
+      "Fatigue: legs stayed fresh through the final segment.",
+      "Fatigue: energy held, so pace stayed efficient late.",
+      "Fatigue: output held steady from the midpoint through the finish.",
+      "Fatigue: strong reserves kept the finish controlled.",
+      "Fatigue: little fade, mechanics stayed live to the line.",
+      "Fatigue: your tank stayed solid in the closing meters.",
+      "Fatigue: output stayed stable across the whole effort.",
+      "Fatigue: recovery profile supported a clean late push."
+    ],
+    "moderate": [
+      "Fatigue: some late heaviness trimmed top-end pace.",
+      "Fatigue: effort rose late and the stride tightened.",
+      "Fatigue: mild fade showed up in the closing phase.",
+      "Fatigue: you held on, but late turnover softened.",
+      "Fatigue: moderate drain reduced finishing sharpness.",
+      "Fatigue: legs got heavier after the midpoint surge.",
+      "Fatigue: late-race efficiency dipped under load.",
+      "Fatigue: reserve energy ran thinner near the line."
+    ],
+    "heavy": [
+      "Fatigue: heavy legs cut into your late acceleration.",
+      "Fatigue: severe energy drain hurt the final segment.",
+      "Fatigue: deep fade arrived and pace dropped hard.",
+      "Fatigue: you pushed through heavy accumulation in the final stretch.",
+      "Fatigue: closing speed fell off under heavy load.",
+      "Fatigue: energy debt made the final push difficult.",
+      "Fatigue: late mechanics broke down from exhaustion.",
+      "Fatigue: the finish was limited by depleted reserves."
+    ]
+  },
+  "pressure": {
+    "calm": [
+      "Pressure: race context stayed calm and manageable.",
+      "Pressure: manageable stakes kept execution decisions clear.",
+      "Pressure: you raced with composure and low noise.",
+      "Pressure: the field spread early, reducing stress load.",
+      "Pressure: this pace scenario stayed under control.",
+      "Pressure: cleaner space let execution settle in.",
+      "Pressure: minimal crowding helped maintain rhythm.",
+      "Pressure: your line stayed composed in a calm race."
+    ],
+    "balanced": [
+      "Pressure: steady contest demanded consistent focus.",
+      "Pressure: moderate heat kept tactics honest.",
+      "Pressure: the race stayed competitive but controlled.",
+      "Pressure: you handled a balanced pace battle well.",
+      "Pressure: positioning mattered through each segment.",
+      "Pressure: you absorbed pressure and stayed in shape.",
+      "Pressure: lane and timing decisions shaped every phase.",
+      "Pressure: race traffic tested timing without chaos."
+    ],
+    "high": [
+      "Pressure: front-pack tension raised execution stress.",
+      "Pressure: high-stakes positioning forced quick decisions.",
+      "Pressure: leader contact kept the race intensity high.",
+      "Pressure: close placing battle increased tactical strain.",
+      "Pressure: the tempo battle kept demand consistently high.",
+      "Pressure: racing near the front amplified every technical error.",
+      "Pressure: the front pack made every positional move count.",
+      "Pressure: the closing duel pushed stress to max levels."
+    ]
+  },
+  "execution": {
+    "sprint": [
+      "Execution: your drive phase stayed sharp off the line.",
+      "Execution: acceleration mechanics held together cleanly.",
+      "Execution: turnover stayed fast and controlled.",
+      "Execution: transition to max speed looked efficient.",
+      "Execution: posture stayed strong through top speed.",
+      "Execution: sprint mechanics stayed compact under stress.",
+      "Execution: arm mechanics stayed coordinated through top-end speed.",
+      "Execution: you executed the race structure cleanly from start to finish."
+    ],
+    "hurdles": [
+      "Execution: hurdle rhythm stayed consistent end to end.",
+      "Execution: barrier clearances looked clean and quick.",
+      "Execution: approach steps stayed controlled into hurdles.",
+      "Execution: you carried cadence well between barriers.",
+      "Execution: takeoff timing over hurdles was well managed.",
+      "Execution: trail-leg recovery stayed efficient.",
+      "Execution: clearance speed off each barrier stayed quick and consistent.",
+      "Execution: lead-leg snap remained sharp through the final hurdle."
+    ],
+    "distance": [
+      "Execution: pacing stayed steady through the middle laps.",
+      "Execution: race rhythm remained efficient throughout.",
+      "Execution: stride economy held late in the effort.",
+      "Execution: split control stayed stable under fatigue.",
+      "Execution: cadence stayed composed as pressure rose.",
+      "Execution: you absorbed pace changes without losing your rhythm.",
+      "Execution: you shifted gears cleanly when the race demanded it.",
+      "Execution: effort distribution held steady into the final circuit."
+    ],
+    "jumps": [
+      "Execution: approach speed translated well into the jump.",
+      "Execution: takeoff timing looked clean at the board.",
+      "Execution: run-up rhythm stayed controlled and repeatable.",
+      "Execution: you converted runway speed effectively.",
+      "Execution: plant mechanics stayed stable at takeoff.",
+      "Execution: body control stayed solid through the attempt.",
+      "Execution: your final approach strides stayed measured and on rhythm.",
+      "Execution: flight position held compact after takeoff."
+    ],
+    "throws": [
+      "Execution: release looked smooth and on time.",
+      "Execution: throwing mechanics stayed compact through motion.",
+      "Execution: the implement left your hand cleanly.",
+      "Execution: sequencing from setup to release stayed tight.",
+      "Execution: balance held through the power phase.",
+      "Execution: finish position stayed controlled at release.",
+      "Execution: entry into the throwing position stayed controlled.",
+      "Execution: rotational energy transferred cleanly through to the implement."
+    ],
+    "clean": [
+      "Execution: technique stayed sharp from start to finish.",
+      "Execution: clean mechanics converted effort into speed.",
+      "Execution: form stayed compact under race stress.",
+      "Execution: rhythm remained crisp through each phase.",
+      "Execution: strong technique supported your final placing.",
+      "Execution: you held posture and timing all race long.",
+      "Execution: stable mechanics kept momentum uninterrupted.",
+      "Execution: technical control stayed high under pressure."
+    ],
+    "steady": [
+      "Execution: generally solid with minor form drift late.",
+      "Execution: technique held up with a few rough patches.",
+      "Execution: mostly clean, with small timing losses.",
+      "Execution: you stayed organized through most phases.",
+      "Execution: decent form, but not fully locked in.",
+      "Execution: rhythm was serviceable with brief disruptions.",
+      "Execution: moderate technical consistency across the race.",
+      "Execution: good control overall, minor inefficiency late."
+    ],
+    "breakdown": [
+      "Execution: form breakdowns cost momentum at key moments.",
+      "Execution: technique drift reduced race efficiency.",
+      "Execution: unstable rhythm disrupted your speed transfer.",
+      "Execution: mechanics unraveled under load late in race.",
+      "Execution: timing errors made the effort less efficient.",
+      "Execution: technical instability hurt your closing phase.",
+      "Execution: form losses prevented a cleaner finish.",
+      "Execution: race shape broke down in decisive segments."
+    ]
+  }
+}
