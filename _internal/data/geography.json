@@ -7,19 +7,17 @@
         "class_1": { "leagues": ["league_1", "league_2", "league_3"] }
       },
       "leagues": {
-        "league_1": {
-          "schools": ["lg1_s1", "lg1_s2", "lg1_s3", "lg1_s4", "lg1_s5", "lg1_s6", "lg1_s7", "lg1_s8"]
-        },
-        "league_2": {
-          "schools": ["lg2_s1", "lg2_s2", "lg2_s3", "lg2_s4", "lg2_s5", "lg2_s6", "lg2_s7", "lg2_s8"]
-        },
-        "league_3": {
-          "schools": ["lg3_s1", "lg3_s2", "lg3_s3", "lg3_s4", "lg3_s5", "lg3_s6", "lg3_s7", "lg3_s8"]
-        }
+        "league_1": { "schools": ["lg1_s1", "lg1_s2", "lg1_s3", "lg1_s4", "lg1_s5", "lg1_s6", "lg1_s7", "lg1_s8"] },
+        "league_2": { "schools": ["lg2_s1", "lg2_s2", "lg2_s3", "lg2_s4", "lg2_s5", "lg2_s6", "lg2_s7", "lg2_s8"] },
+        "league_3": { "schools": ["lg3_s1", "lg3_s2", "lg3_s3", "lg3_s4", "lg3_s5", "lg3_s6", "lg3_s7", "lg3_s8"] }
       },
       "state_schools": ["st_s1", "st_s2", "st_s3", "st_s4", "st_s5", "st_s6", "st_s7", "st_s8", "st_s9", "st_s10"],
       "regional_schools": ["rg_s1", "rg_s2", "rg_s3", "rg_s4", "rg_s5", "rg_s6", "rg_s7", "rg_s8", "rg_s9", "rg_s10", "rg_s11", "rg_s12", "rg_s13"],
-      "national_schools": ["nt_s1", "nt_s2", "nt_s3", "nt_s4", "nt_s5", "nt_s6", "nt_s7", "nt_s8", "nt_s9", "nt_s10", "nt_s11", "nt_s12", "nt_s13"]
+      "national_schools": ["nt_s1", "nt_s2", "nt_s3", "nt_s4", "nt_s5", "nt_s6", "nt_s7", "nt_s8", "nt_s9", "nt_s10", "nt_s11", "nt_s12", "nt_s13"],
+      
+      "college_d1_schools": ["ncaa_d1_1", "ncaa_d1_2", "ncaa_d1_3", "ncaa_d1_4", "ncaa_d1_5", "ncaa_d1_6", "ncaa_d1_7", "ncaa_d1_8"],
+      "college_d2_schools": ["ncaa_d2_1", "ncaa_d2_2", "ncaa_d2_3", "ncaa_d2_4"],
+      "pro_circuit": ["pro_sponsor_1", "pro_sponsor_2", "pro_sponsor_3", "pro_sponsor_4"]
     },
     "skins": {
       "lg1_s1": { "team_id": "jefferson_high" },
@@ -81,7 +79,24 @@
       "nt_s10": { "name": "Copper Canyon High School" },
       "nt_s11": { "name": "Northern Lights Academy" },
       "nt_s12": { "name": "Bay Harbor Prep" },
-      "nt_s13": { "name": "Kingsbridge Academy" }
+      "nt_s13": { "name": "Kingsbridge Academy" },
+      
+      "ncaa_d1_1": { "name": "Eugene Athletics" },
+      "ncaa_d1_2": { "name": "Austin Track Club" },
+      "ncaa_d1_3": { "name": "Baton Rouge Tigers" },
+      "ncaa_d1_4": { "name": "Gainesville Gators" },
+      "ncaa_d1_5": { "name": "Fayetteville Razorbacks" },
+      "ncaa_d1_6": { "name": "Lexington Wildcats" },
+      "ncaa_d1_7": { "name": "Corvallis Beavers" },
+      "ncaa_d1_8": { "name": "College Station Aggies" },
+      "ncaa_d2_1": { "name": "Fox Valley State" },
+      "ncaa_d2_2": { "name": "Highland State" },
+      "ncaa_d2_3": { "name": "Cedar Ridge State" },
+      "ncaa_d2_4": { "name": "Prairie Crossing State" },
+      "pro_sponsor_1": { "name": "Nike Bowerman Track Club" },
+      "pro_sponsor_2": { "name": "Puma Elite" },
+      "pro_sponsor_3": { "name": "Adidas Pro Circuit" },
+      "pro_sponsor_4": { "name": "Under Armour Athletics" }
     }
   }
 }
