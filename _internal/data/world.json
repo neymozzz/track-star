@@ -43,6 +43,47 @@
         "national",
         "elite"
       ]
+    },
+    "ncaa_conference_meet": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "college_d1",
+        "college_d2"
+      ]
+    },
+    "ncaa_national_meet": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "college_d1"
+      ]
+    },
+    "pro_diamond_league": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "pro",
+        "elite"
+      ]
+    },
+    "world_championship": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "world_class",
+        "elite"
+      ]
+    },
+    "olympic_trials": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "pro",
+        "college_d1",
+        "world_class"
+      ]
+    },
+    "olympic_games": {
+      "field_size": 8,
+      "npc_tags_any": [
+        "world_class"
+      ]
     }
   },
   "npc_teams_by_tier": {
