@@ -3920,7 +3920,8 @@ function initResultsScreen(report) {
     var athlete = (gs && gs.athlete) || {};
     var week = athlete.week || 1;
     var wps = (config && config.season && config.season.weeks_per_season) || 12;
-    var totalSeasons = (config && config.season && config.season.seasons_total) || 4;
+    // On étend la limite à 12 saisons
+    var totalSeasons = (config && config.season && config.season.seasons_total) || 12;
 
     btn.disabled = true;
     btn.classList.remove('btn--primary');
@@ -4597,9 +4598,12 @@ function initSeasonSummaryScreen() {
   if (!btn) return;
   btn.addEventListener('click', async function () {
     var athlete = (State.gameState && State.gameState.athlete) || {};
-    var totalSeasons = (((State.config || {}).season || {}).seasons_total) || 4;
+    // On étend la limite à 12 saisons
+    var totalSeasons = (((State.config || {}).season || {}).seasons_total) || 12;
     btn.disabled = true;
+
     if ((athlete.year || 1) >= totalSeasons) {
+      // Fin de la carrière globale (Retraite)
       try {
         var finalRes = await api('finalize_career');
         State.gameState = finalRes.game_state;
@@ -4615,7 +4619,18 @@ function initSeasonSummaryScreen() {
       }
       return;
     }
-    Router.go('offseason');
+    
+    // TRANSITIONS DE NIVEAU DE CARRIÈRE
+    if ((athlete.year || 1) === 4) {
+      // Fin du lycée : Transition vers la phase universitaire
+      Router.go('college_commitment'); // Un nouvel écran que l'on va créer
+    } else if ((athlete.year || 1) === 8) {
+      // Fin de la fac : Transition vers le circuit Pro
+      Router.go('pro_contract'); // Un nouvel écran que l'on va créer
+    } else {
+      // Année standard : Passage à la saison suivante
+      Router.go('offseason');
+    }
   });
 }
 
@@ -6570,7 +6585,7 @@ function _routeSeasonEnd() {
   var gs = State.gameState;
   var config = State.config;
   var athlete = (gs && gs.athlete) || {};
-  var totalSeasons = (config && config.season && config.season.seasons_total) || 4;
+  var totalSeasons = (config && config.season && config.season.seasons_total) || 12;
 
   if ((athlete.year || 1) >= totalSeasons) {
     api('finalize_career').then(function (result) {
