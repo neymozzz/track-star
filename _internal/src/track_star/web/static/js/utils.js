@@ -22,11 +22,16 @@ function formatMark(meters) {
 }
 
 // ---------------------------------------------------------------------------
-// seasonLabel(year) -> "Freshman" / "Sophomore" / "Junior" / "Senior"
+// seasonLabel(year) -> Affiche le bon niveau de carrière
 // ---------------------------------------------------------------------------
 function seasonLabel(year) {
-  var labels = { 1: 'Freshman', 2: 'Sophomore', 3: 'Junior', 4: 'Senior' };
-  return labels[year] || 'Year ' + year;
+  var labels = { 
+    1: 'HS Freshman', 2: 'HS Sophomore', 3: 'HS Junior', 4: 'HS Senior',
+    5: 'College Freshman', 6: 'College Sophomore', 7: 'College Junior', 8: 'College Senior',
+    9: 'Pro Rookie', 10: 'Pro Year 2', 11: 'Pro Year 3', 12: 'Pro Year 4',
+    13: 'Pro Year 5', 14: 'Pro Year 6', 15: 'Pro Year 7', 16: 'Pro Year 8'
+  };
+  return labels[year] || 'Pro Year ' + (year - 8);
 }
 
 // ---------------------------------------------------------------------------
