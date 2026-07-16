@@ -182,7 +182,7 @@ var Router = (function () {
   function go(id, data) {
     _current = id;
     var screen = _screens[id];
-    var appRoot = document.getElementById('app');
+    Root = document.getElementById('app');
     if (!screen) {
       appRoot.innerHTML =
         '<div class="error-banner">Unknown screen: ' + id + '</div>';
@@ -689,7 +689,7 @@ function initBuilderScreen(data) {
       localState.allocations[stat] = 0;
     });
 
-    var appRoot = document.getElementById('app');
+    Root = document.getElementById('app');
     appRoot.innerHTML = _renderBuilderBody(config, localState.selectedBuild, localState.difficulty, localState.category);
     if (appRoot.firstElementChild) appRoot.firstElementChild.classList.add('screen-enter');
 
@@ -3041,7 +3041,7 @@ function renderResultsScreen(report, gameState, config, worldEvents) {
 function initResultsScreen(report) {
   var rep = report || {};
   (function initRaceBoardsAnimation() {
-    var app = document.getElementById('results-app');
+     = document.getElementById('results-app');
     var managements = document.querySelectorAll('.results-right-col, .results-top-banners');
     var controls = document.querySelector('.results-controls');
     var boards = document.querySelectorAll('[data-race-board]');
@@ -4163,7 +4163,7 @@ function initPreseasonScreen() {
       var ensured = await api('ensure_goals');
       State.gameState = ensured.game_state;
       State.preseasonRecruitingBeat = State.preseasonRecruitingBeat || ensured.recruiting_beat || null;
-      var appRoot = document.getElementById('app');
+      Root = document.getElementById('app');
       appRoot.innerHTML = renderPreseasonScreen(State.gameState, State.config, State.world);
       if (appRoot.firstElementChild) appRoot.firstElementChild.classList.add('screen-enter');
       bindBegin();
@@ -6660,6 +6660,166 @@ function showError(msg) {
 }
 
 // ---------------------------------------------------------------------------
+// NEW SCREENS: College Commitment & Pro Contract
+// ---------------------------------------------------------------------------
+
+function renderCollegeCommitmentScreen(gameState, world) {
+  var gs = gameState || {};
+  var athlete = gs.athlete || {};
+  
+  var collegeTeams = ((world || {}).teams || []).filter(function(t) {
+    return String(t.id).indexOf('ncaa_d1') >= 0 || String(t.id).indexOf('ncaa_d2') >= 0;
+  });
+  
+  if (!collegeTeams.length) {
+    collegeTeams = [
+      {id: 'ncaa_d1_1', name: 'Eugene Athletics'},
+      {id: 'ncaa_d1_2', name: 'Austin Track Club'},
+      {id: 'ncaa_d2_1', name: 'Fox Valley State'}
+    ];
+  }
+
+  var offersHtml = collegeTeams.map(function(team) {
+    return (
+      '<div class="card card--selectable training-card offseason-card" data-college-id="' + _escapeHtml(team.id) + '" style="flex:1;min-width:200px;">' +
+      '<div class="heading-md">' + _escapeHtml(team.name) + '</div>' +
+      '<div class="label-sm">Athletic Scholarship Offer</div>' +
+      '<div class="training-stats"><span class="stat-pill">NCAA Division</span></div>' +
+      '</div>'
+    );
+  }).join('');
+
+  return (
+    '<div class="app screen-enter">' +
+    '<aside class="sidebar"><div class="label-xs">NATIONAL SIGNING DAY</div><div class="label-sm">It\'s time to choose your future.</div></aside>' +
+    '<main class="main-content">' +
+    '<div class="top-status-bar"><div class="top-status-item top-status-item--primary">' + _escapeHtml(athlete.name) + '</div></div>' +
+    '<div class="label-xs">COLLEGE COMMITMENT</div>' +
+    '<div class="heading-lg">Welcome to the NCAA</div>' +
+    '<div class="label-sm" style="margin-bottom:16px;">Congratulations! Your high school career has earned you multiple scholarship offers. Where will you sign?</div>' +
+    '<div id="college-offers-container" class="flex gap-6" style="flex-wrap:wrap;">' + offersHtml + '</div>' +
+    '<div style="margin-top:20px;"><button class="btn btn--primary" id="btn-sign-college" disabled>Sign National Letter of Intent</button></div>' +
+    '</main>' +
+    '</div>'
+  );
+}
+
+function initCollegeCommitmentScreen() {
+  var cards = document.querySelectorAll('[data-college-id]');
+  var signBtn = document.getElementById('btn-sign-college');
+  var selectedCollege = null;
+
+  cards.forEach(function (el) {
+    el.addEventListener('click', function () {
+      cards.forEach(function (c) { c.classList.remove('selected'); });
+      el.classList.add('selected');
+      selectedCollege = el.getAttribute('data-college-id');
+      if (signBtn) signBtn.disabled = false;
+    });
+  });
+
+  if (signBtn) {
+    signBtn.addEventListener('click', async function () {
+      if (!selectedCollege) return;
+      signBtn.disabled = true;
+      signBtn.textContent = "Signing...";
+      cards.forEach(function (c) { c.style.pointerEvents = 'none'; });
+      
+      try {
+        var result = await api('commit_to_college', selectedCollege);
+        State.gameState = result.game_state;
+        Router.go('offseason');
+      } catch (e) {
+        signBtn.disabled = false;
+        signBtn.textContent = "Sign National Letter of Intent";
+        cards.forEach(function (c) { c.style.pointerEvents = ''; });
+        showError('Error signing with college: ' + e);
+      }
+    });
+  }
+}
+
+function renderProContractScreen(gameState, world) {
+  var gs = gameState || {};
+  var athlete = gs.athlete || {};
+  
+  var sponsors = [
+    {id: 'pro_sponsor_1', name: 'Nike Bowerman Track Club', perk: '+Speed, +Recovery'},
+    {id: 'pro_sponsor_2', name: 'Puma Elite', perk: '+Agility, +Technique'},
+    {id: 'pro_sponsor_3', name: 'Adidas Pro Circuit', perk: '+Stamina, +Toughness'}
+  ];
+
+  var offersHtml = sponsors.map(function(sponsor) {
+    return (
+      '<div class="card card--selectable training-card offseason-card" data-sponsor-id="' + _escapeHtml(sponsor.id) + '" style="flex:1;min-width:200px;">' +
+      '<div class="heading-md">' + _escapeHtml(sponsor.name) + '</div>' +
+      '<div class="label-sm">Professional Contract Offer</div>' +
+      '<div class="training-stats"><span class="stat-pill">' + _escapeHtml(sponsor.perk) + '</span></div>' +
+      '</div>'
+    );
+  }).join('');
+
+  return (
+    '<div class="app screen-enter">' +
+    '<aside class="sidebar"><div class="label-xs">TURNING PRO</div><div class="label-sm">Welcome to the big leagues.</div></aside>' +
+    '<main class="main-content">' +
+    '<div class="top-status-bar"><div class="top-status-item top-status-item--primary">' + _escapeHtml(athlete.name) + '</div></div>' +
+    '<div class="label-xs">PROFESSIONAL CIRCUIT</div>' +
+    '<div class="heading-lg">Sign Your Pro Contract</div>' +
+    '<div class="label-sm" style="margin-bottom:16px;">You have graduated from the NCAA. It is time to sign with a major shoe brand and enter the global circuit.</div>' +
+    '<div id="pro-offers-container" class="flex gap-6" style="flex-wrap:wrap;">' + offersHtml + '</div>' +
+    '<div style="margin-top:20px;"><button class="btn btn--primary" id="btn-sign-pro" disabled>Sign Professional Contract</button></div>' +
+    '</main>' +
+    '</div>'
+  );
+}
+
+function initProContractScreen() {
+  var cards = document.querySelectorAll('[data-sponsor-id]');
+  var signBtn = document.getElementById('btn-sign-pro');
+  var selectedSponsor = null;
+
+  cards.forEach(function (el) {
+    el.addEventListener('click', function () {
+      cards.forEach(function (c) { c.classList.remove('selected'); });
+      el.classList.add('selected');
+      selectedSponsor = el.getAttribute('data-sponsor-id');
+      if (signBtn) signBtn.disabled = false;
+    });
+  });
+
+  if (signBtn) {
+    signBtn.addEventListener('click', async function () {
+      if (!selectedSponsor) return;
+      signBtn.disabled = true;
+      signBtn.textContent = "Signing...";
+      cards.forEach(function (c) { c.style.pointerEvents = 'none'; });
+      
+      try {
+        var result = await api('sign_pro_contract', selectedSponsor);
+        State.gameState = result.game_state;
+        Router.go('offseason');
+      } catch (e) {
+        signBtn.disabled = false;
+        signBtn.textContent = "Sign Professional Contract";
+        cards.forEach(function (c) { c.style.pointerEvents = ''; });
+        showError('Error signing pro contract: ' + e);
+      }
+    });
+  }
+}
+
+var CollegeCommitmentScreen = {
+  render: function () { return renderCollegeCommitmentScreen(State.gameState, State.world); },
+  init: function () { initCollegeCommitmentScreen(); },
+};
+
+var ProContractScreen = {
+  render: function () { return renderProContractScreen(State.gameState, State.world); },
+  init: function () { initProContractScreen(); },
+};
+
+// ---------------------------------------------------------------------------
 // App entry point
 // ---------------------------------------------------------------------------
 var App = {
@@ -6681,6 +6841,10 @@ var App = {
     Router.register('recruiting_interstitial', RecruitingInterstitialScreen);
     Router.register('tutorial', TutorialScreen);
     Router.register('settings', SettingsScreen);
+    
+    // NOUVEAUX ECRANS ICI :
+    Router.register('college_commitment', CollegeCommitmentScreen);
+    Router.register('pro_contract', ProContractScreen);
 
     // Load config and world in parallel
     try {
