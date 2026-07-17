@@ -1,0 +1,9 @@
+{
+  "meets": [
+    {"week": 3, "name": "Class Meet", "level": "class"},
+    {"week": 6, "name": "Districts", "level": "state"},
+    {"week": 9, "name": "Regionals", "level": "regional"},
+    {"week": 12, "name": "Nationals", "level": "national"}
+  ],
+  "ladder": ["class", "state", "regional", "national"]
+}

@@ -1,0 +1,7 @@
+{
+  "events": [
+    {"id": "heat_wave", "desc": "A heat wave reduces training effectiveness."},
+    {"id": "good_weather", "desc": "Nice weather helps performance."},
+    {"id": "rival_breaks_record", "desc": "A rival sets a new school record."}
+  ]
+}
