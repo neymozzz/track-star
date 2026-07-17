@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, send_file
 from core.athlete import Athlete
 from core.sim import simulate_week
 from backend.storage import save_athlete, load_athlete
@@ -8,12 +8,24 @@ from backend.storage import save_athlete, load_athlete
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 WEB_DIR = os.path.join(BASE_DIR, 'web')
 
-app = Flask(__name__, static_folder=WEB_DIR, static_url_path='')
+# Disable Flask's built-in static folder handling to avoid root conflicts; we'll serve files explicitly.
+app = Flask(__name__, static_folder=None)
 
 # Serve index.html at root
 @app.route('/')
 def index():
-    return send_from_directory(WEB_DIR, 'index.html')
+    index_path = os.path.join(WEB_DIR, 'index.html')
+    if os.path.exists(index_path):
+        return send_file(index_path)
+    return 'index.html not found', 404
+
+# Serve any static file under web/ (e.g., /index.html, /app.js, /styles.css, /static/...)
+@app.route('/<path:filename>')
+def serve_file(filename):
+    file_path = os.path.join(WEB_DIR, filename)
+    if os.path.exists(file_path):
+        return send_from_directory(WEB_DIR, filename)
+    return 'Not found', 404
 
 @app.route('/create', methods=['POST'])
 def create():
