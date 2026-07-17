@@ -1,16 +1,19 @@
-from flask import Flask, request, jsonify
+import os
+from flask import Flask, request, jsonify, send_from_directory
 from core.athlete import Athlete
 from core.sim import simulate_week
 from backend.storage import save_athlete, load_athlete
-import os
 
-# Serve the frontend static files from the 'web' folder so there's no CORS issues.
-app = Flask(__name__, static_folder='web', static_url_path='')
+# Compute absolute path to the repo root and the web static folder so Flask can serve files correctly
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+WEB_DIR = os.path.join(BASE_DIR, 'web')
+
+app = Flask(__name__, static_folder=WEB_DIR, static_url_path='')
 
 # Serve index.html at root
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return send_from_directory(WEB_DIR, 'index.html')
 
 @app.route('/create', methods=['POST'])
 def create():
@@ -45,6 +48,6 @@ def state():
 
 
 if __name__ == '__main__':
-    # Make sure working directory is repo root so paths are consistent
-    os.chdir(os.path.dirname(os.path.abspath(__file__)) + '/..')
+    # Change working directory to repo root so relative paths used elsewhere work as expected
+    os.chdir(BASE_DIR)
     app.run(port=5000, debug=True)
