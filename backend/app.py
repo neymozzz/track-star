@@ -1,22 +1,20 @@
 import os
+import sys
 from flask import Flask, request, jsonify, send_from_directory, send_file
 from core.athlete import Athlete
 from core.sim import simulate_week
 from backend.storage import save_athlete, load_athlete
 
-# Compute absolute path to the repo root and the web static folder so Flask can serve files correctly
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# Resolve base dir so static files work whether run normally, inside Docker, or when bundled with PyInstaller
+if getattr(sys, '_MEIPASS', None):
+    BASE_DIR = sys._MEIPASS
+else:
+    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 WEB_DIR = os.path.join(BASE_DIR, 'web')
 
-# Debug info
-print('DEBUG: BASE_DIR=', BASE_DIR)
-print('DEBUG: WEB_DIR=', WEB_DIR)
-print('DEBUG: index exists at startup=', os.path.exists(os.path.join(WEB_DIR, 'index.html')))
-
-# Disable Flask's built-in static folder handling; we'll serve files explicitly at the end
 app = Flask(__name__, static_folder=None)
 
-# API routes (prefix with /api to avoid conflicts with static paths)
+# --- API routes (prefix with /api) ---
 @app.route('/api/create', methods=['POST'])
 def create():
     data = request.json or {}
@@ -48,26 +46,27 @@ def state():
         return jsonify({'error': 'no athlete saved'}), 400
     return jsonify({'athlete': ath.to_dict()})
 
-# Serve index.html at root
+
+# --- Static file serving ---
 @app.route('/')
 def index():
     index_path = os.path.join(WEB_DIR, 'index.html')
-    print(f"DEBUG: request for /, resolved index_path={index_path}, exists={os.path.exists(index_path)}")
     if os.path.exists(index_path):
         return send_file(index_path)
     return 'index.html not found', 404
 
-# Serve any other static file under web/ (e.g., /index.html, /app.js, /styles.css, /static/...)
+
 @app.route('/<path:filename>')
 def serve_file(filename):
     file_path = os.path.join(WEB_DIR, filename)
-    print(f"DEBUG: request for /{filename}, resolved file_path={file_path}, exists={os.path.exists(file_path)}")
     if os.path.exists(file_path):
         return send_from_directory(WEB_DIR, filename)
     return 'Not found', 404
 
 
 if __name__ == '__main__':
-    # Change working directory to repo root so relative paths used elsewhere work as expected
+    # Ensure working dir is repo root
     os.chdir(BASE_DIR)
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get('PORT', '5000'))
+    debug = os.environ.get('DEBUG', 'False').lower() in ('1', 'true', 'yes')
+    app.run(host='0.0.0.0', port=port, debug=debug)
