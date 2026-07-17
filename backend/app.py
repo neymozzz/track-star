@@ -8,26 +8,11 @@ from backend.storage import save_athlete, load_athlete
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 WEB_DIR = os.path.join(BASE_DIR, 'web')
 
-# Disable Flask's built-in static folder handling to avoid root conflicts; we'll serve files explicitly.
+# Disable Flask's built-in static folder handling; we'll serve files explicitly at the end
 app = Flask(__name__, static_folder=None)
 
-# Serve index.html at root
-@app.route('/')
-def index():
-    index_path = os.path.join(WEB_DIR, 'index.html')
-    if os.path.exists(index_path):
-        return send_file(index_path)
-    return 'index.html not found', 404
-
-# Serve any static file under web/ (e.g., /index.html, /app.js, /styles.css, /static/...)
-@app.route('/<path:filename>')
-def serve_file(filename):
-    file_path = os.path.join(WEB_DIR, filename)
-    if os.path.exists(file_path):
-        return send_from_directory(WEB_DIR, filename)
-    return 'Not found', 404
-
-@app.route('/create', methods=['POST'])
+# API routes (prefix with /api to avoid conflicts with static paths)
+@app.route('/api/create', methods=['POST'])
 def create():
     data = request.json or {}
     name = data.get('name', 'Player')
@@ -38,7 +23,7 @@ def create():
     return jsonify({'status': 'ok', 'athlete': ath.to_dict()})
 
 
-@app.route('/week', methods=['POST'])
+@app.route('/api/week', methods=['POST'])
 def week():
     data = request.json or {}
     training = int(data.get('training_load', 30))
@@ -51,12 +36,28 @@ def week():
     return jsonify({'status': 'ok', 'result': res, 'athlete': ath.to_dict()})
 
 
-@app.route('/state', methods=['GET'])
+@app.route('/api/state', methods=['GET'])
 def state():
     ath = load_athlete()
     if ath is None:
         return jsonify({'error': 'no athlete saved'}), 400
     return jsonify({'athlete': ath.to_dict()})
+
+# Serve index.html at root
+@app.route('/')
+def index():
+    index_path = os.path.join(WEB_DIR, 'index.html')
+    if os.path.exists(index_path):
+        return send_file(index_path)
+    return 'index.html not found', 404
+
+# Serve any other static file under web/ (e.g., /index.html, /app.js, /styles.css, /static/...)
+@app.route('/<path:filename>')
+def serve_file(filename):
+    file_path = os.path.join(WEB_DIR, filename)
+    if os.path.exists(file_path):
+        return send_from_directory(WEB_DIR, filename)
+    return 'Not found', 404
 
 
 if __name__ == '__main__':
