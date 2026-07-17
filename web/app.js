@@ -1,7 +1,7 @@
 async function api(path, method='GET', body=null){
   const opts = {method, headers:{'Content-Type':'application/json'}}
   if(body) opts.body = JSON.stringify(body)
-  const res = await fetch('http://localhost:5000'+path, opts)
+  const res = await fetch(path, opts)
   return res.json()
 }
 

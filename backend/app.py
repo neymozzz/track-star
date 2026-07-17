@@ -2,8 +2,15 @@ from flask import Flask, request, jsonify
 from core.athlete import Athlete
 from core.sim import simulate_week
 from backend.storage import save_athlete, load_athlete
+import os
 
-app = Flask(__name__)
+# Serve the frontend static files from the 'web' folder so there's no CORS issues.
+app = Flask(__name__, static_folder='web', static_url_path='')
+
+# Serve index.html at root
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 @app.route('/create', methods=['POST'])
 def create():
@@ -38,4 +45,6 @@ def state():
 
 
 if __name__ == '__main__':
+    # Make sure working directory is repo root so paths are consistent
+    os.chdir(os.path.dirname(os.path.abspath(__file__)) + '/..')
     app.run(port=5000, debug=True)
