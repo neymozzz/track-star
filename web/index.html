@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track Star - MVP Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Track Star - MVP</h1>
+    <section id="create">
+      <h2>Créer un athlète</h2>
+      <label>Nom: <input id="name" value="Player"></label>
+      <label>Spécialité:
+        <select id="specialty">
+          <option value="sprint">Sprint</option>
+          <option value="distance">Distance</option>
+          <option value="jumps">Jumps</option>
+        </select>
+      </label>
+      <label>Talent (base_stat): <input id="base_stat" type="number" value="5" min="0" max="10"></label>
+      <button id="createBtn">Créer</button>
+    </section>
+
+    <section id="weekControl">
+      <h2>Avancer d'une semaine</h2>
+      <label>Charge d'entraînement (0-100): <input id="training" type="range" min="0" max="100" value="30"></label>
+      <label><input type="checkbox" id="attend"> Participer à une compétition</label>
+      <button id="weekBtn">Suivant semaine</button>
+    </section>
+
+    <section id="state">
+      <h2>Etat</h2>
+      <pre id="stateView">Aucun athlète</pre>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
