@@ -8,6 +8,11 @@ from backend.storage import save_athlete, load_athlete
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 WEB_DIR = os.path.join(BASE_DIR, 'web')
 
+# Debug info
+print('DEBUG: BASE_DIR=', BASE_DIR)
+print('DEBUG: WEB_DIR=', WEB_DIR)
+print('DEBUG: index exists at startup=', os.path.exists(os.path.join(WEB_DIR, 'index.html')))
+
 # Disable Flask's built-in static folder handling; we'll serve files explicitly at the end
 app = Flask(__name__, static_folder=None)
 
@@ -47,6 +52,7 @@ def state():
 @app.route('/')
 def index():
     index_path = os.path.join(WEB_DIR, 'index.html')
+    print(f"DEBUG: request for /, resolved index_path={index_path}, exists={os.path.exists(index_path)}")
     if os.path.exists(index_path):
         return send_file(index_path)
     return 'index.html not found', 404
@@ -55,6 +61,7 @@ def index():
 @app.route('/<path:filename>')
 def serve_file(filename):
     file_path = os.path.join(WEB_DIR, filename)
+    print(f"DEBUG: request for /{filename}, resolved file_path={file_path}, exists={os.path.exists(file_path)}")
     if os.path.exists(file_path):
         return send_from_directory(WEB_DIR, filename)
     return 'Not found', 404
