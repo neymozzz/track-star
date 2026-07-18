@@ -1,0 +1,17 @@
+# Ignore Python and build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+build/
+dist/
+.eggs/
+.venv/
+.env
+
+# Git/OS files
+.git/
+.gitignore
+
+# Docker
+*.log
